@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            Site Title
+title:            Talha Paracha
 locale:           en_US
 url:
 
@@ -26,13 +26,13 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
+  name: Muhammad Talha Paracha
   avatar: bio-photo.jpg
   bio: "Describe your self."
-  email:
+  email: 14besemparacha@seecs.edu.pk
   disqus-shortname:
   twitter: #username
-  facebook: #username
+  facebook: Paracha.Talha
   google:
     plus: #username
     analytics:
