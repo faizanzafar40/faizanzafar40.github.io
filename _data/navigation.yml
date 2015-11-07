@@ -1,7 +1,10 @@
 # Site navigation links
 
 - title: Blog Posts
-  url: /posts/
+  url: /blog-posts/
+
+- title: Projects
+  url: /projects/
 
 - title: Recommended Reading
   url: /about/

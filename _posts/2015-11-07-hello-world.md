@@ -3,6 +3,7 @@ layout: post
 title: Hello World
 modified: 2015-11-07
 comments: true
+tags: [blog]
 ---
 
 I've been thinking of starting a blog for a very long time, finally it's here. Currently, I am committing myself on doing one blog post per month though it'd be really great if I could
