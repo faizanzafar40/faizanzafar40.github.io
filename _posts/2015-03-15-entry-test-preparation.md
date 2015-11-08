@@ -36,9 +36,7 @@ Here was the total functionality of the app from end-user's perspective:
 4) If your answer is not correct and you need an explanation for the correct answer, simply click a button to notify all other users of the app that you need help regarding that specific MCQ.
 5) While exploring MCQs, keep an eye on those for which others have asked for explanations. If you think you know the reasoning behind the correct option, write a short explanation for that MCQ from the text field provided there.
 
-Here is the demonstration video for our actual app we developed:
-
-<iframe src="https://player.vimeo.com/video/145036535" width="500" height="889" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+Here is the demonstration video for the actual app we developed:
 
 ##The Code:
 
