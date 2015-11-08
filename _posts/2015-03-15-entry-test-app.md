@@ -42,7 +42,7 @@ Here was the total functionality of the app from end-user's perspective:
 
 Here is the demonstration video for the actual app we developed:
 
-<iframe src="https://player.vimeo.com/video/145036535" width="500" height="889" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/145036535" width="400" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ##The Code:
 
