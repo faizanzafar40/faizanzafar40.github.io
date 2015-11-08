@@ -10,7 +10,7 @@ tags: [project]
 
 **Total work duration:** Weekend in a Hackathon
 
-**Language(s) used:** PHP, Objective C, MySQL
+**Language(s) used:** Java, PHP, MySQL
 
 **Other team members:** Shahrukh, Asad, Gulzain
 
