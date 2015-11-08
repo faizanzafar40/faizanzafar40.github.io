@@ -18,7 +18,7 @@ tags: [project]
 
 Search Engine Optimization or SEO is the art of getting your website at the top of search results in Google, Yahoo etc. SEO is such a big deal that slight improvements in a website's ranking could affect its revenue by thousands of dollars. That's because search engines are the main source of visitors for the majority of websites. And more visitors = more money. Only now due to the advent of Social media, some focus has shifted from SEO but its importance remains nevertheless.
 
-After reading Danny Dover's book "SEO Secrets", I realized how professional SEO auditors charged monumental rates even for simple reports. Well that was because (i) the knowledge of SEO was limited and (ii) Only SEO reviewers had access to specialized tools which they used when generating audits (iii) even on simple reviews much time was spent by the reviewers since many of their tasks were manual. At that point I thought of creating an automatic tool that would firstly check for basic but important SEO factors and would secondly guide the users on how to optimize their websites by themselves based on the results from earlier checks.
+After reading Danny Dover's book "SEO Secrets", I realized how professional SEO auditors charged monumental rates even for simple reports. Well that was because (i) the knowledge of SEO was limited (ii) only SEO reviewers had access to specialized tools which they used when generating audits (iii) even on simple reviews much time was spent by the reviewers since many of their tasks were manual. At that point I thought of creating an automatic tool that would firstly check for basic but important SEO factors and would secondly guide the users on how they could optimize their websites by themselves based on the results from earlier checks.
 
 Interestingly all other tools available at the time were either too complex to be used only by SEO professionals or too dumb that they checked only a single page on a website for SEO review. So I created this tool to target those webmasters who knew only about the definition of SEO but were skilled enough in web development to optimize websites on their own when provided clear guidance.
 
@@ -43,5 +43,8 @@ Here are the sample reports generated automatically for websites of two hosting 
 
 <div markdown="0"><a href="/www.winshosting.com.pdf" class="btn">Download report for winshosting.com</a></div><div markdown="0"><a href="/pakservers.com.pdf" class="btn">Download report for pakservers.com</a></div>
 
-Since I didn't use Git or any other versioning control software when developing this, uploading source code on Github now isn't that beneficial I think. I'll upload the complete source code in .zip format as soon as I get some free time. Explore the code as much as you want but if anyone wants to extend this, kindly let me know first. At that point I could create a repo from which one can fork.
+Unfortunately I took down the actual demonstration website Webtimize.me last year due to hosting costs. I'll try to configure the project files on my XAMPP stack and record a video demonstration for this post. But in any case I'll upload the complete source code in .zip format here as soon as I get some free time. Explore the code as much as you want but if anyone wants to extend this, kindly let me know first. At that point I could create a repo from which one can fork.
+{: .notice}
+
+The post date has been modified to refer to the project completion date and not the actual publishing date
 {: .notice}
