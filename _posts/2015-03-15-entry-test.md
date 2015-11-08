@@ -3,7 +3,7 @@ layout: post
 title: OmegaBase | Entry Test Preparation App
 modified: 2015-03-15
 comments: true
-tags: [project]
+tags: [blog]
 ---
 
 **Project completion date:** March 2015
@@ -18,19 +18,19 @@ tags: [project]
 
 Our department SEECS recently organized a Social Hackathon sponsored by Telenor, Bentley & Alchaisoft. The aim of the Hackathon was to find innovative tech based solutions for some social problems relevant to our country. We built an entry test preparation app… and we won the first prize =D More project details given below
 
-##The Idea:
+The Idea:
 
 Like India, college entry test preparation is a huge industry here in Pakistan. But unlike India, no tech based solution has exploited its potential yet. In fact Toppr from India recently raised $10M in funding and has around 200k students using its platform. Thus during brainstorming as soon as the idea of building an app for this niche came up, we hung to it.
 
 Currently in Pakistan, there are specific institutions which prepare students for entry tests. Since almost all college entry tests are MCQs based here, these institutions follow a simple training procedure; they aggregate hundreds of MCQs from different subjects and then during a course of 3 months they go through them one by one explaining the reasoning for each correct option to the students. But these institutions are very expensive for the majority of students in Pakistan. So we had an opportunity to modernize this via a tech based much cheaper and effective solution.
 
-So the idea was to build an app which would contain hundreds of MCQs provided by us. Students can practice those questions but if anyone wants some explanation for an MCQ he can simply ask for it from other users of the app. Wait let me explain why it's not like Quora: 
+So the idea was to build an app which would contain hundreds of MCQs provided by us. Students can practice those questions but if anyone wants some explanation for an MCQ he can simply ask for it from other users of the app. Wait let me explain why it's not like Quora:
 
 (i) In Stackoverflow, Quora etc. people ask questions first to which the community answers. In our case the questions are already present in the app, a student just needs to click a button if he wants an explanation for any specific question.
 
 (ii) We provide an excellent motivation for students to participate in providing explanations to other students; someone proficient in Physics would gladly write short explanations for that category MCQs as he himself is also seeking for explanations from others in subjects he's not proficient at. Plus explaining a concept to others actually increases one's own understanding too.
 
-##The App:
+The App:
 
 Here was the total functionality of the app from end-user's perspective:
 
@@ -42,6 +42,6 @@ Here was the total functionality of the app from end-user's perspective:
 
 Here is the demonstration video for the actual app we developed:
 
-##The Code:
+The Code:
 
 Most of my time was spent on figuring out a nice relational database schema to hold all information effectively. Other than that, the PHP code is very trivial and contains only data insertion / retrieval calls. The API is simple too; the app calls api.php with different values in $_POST[intent] depending on what it wants from the server. I do realize that the code is far from being clean, but for the hackathon our focus was on building the MVP and not a finished product.
