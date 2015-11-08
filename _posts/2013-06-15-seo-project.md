@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Webtimize.Me: Comprehensive Website SEO Audit Generator
+title: Webtimize.Me | Comprehensive Website SEO Audit Generator
 modified: 2013-06-15
-tags: [project]
 comments: true
+tags: [project,blog]
 ---
 **Project completion date:** June 2013
 **Total work duration:** 3+ months
