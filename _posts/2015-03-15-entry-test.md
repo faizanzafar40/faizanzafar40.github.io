@@ -31,9 +31,13 @@ So the idea was to build an app which would contain hundreds of MCQs provided by
 Here was the total functionality of the app from end-user's perspective:
 
 1) Sign in / Sign up with an email address and password.
+
 2) Explore practice MCQs from any category like Physics, Mathematics etc.
+
 3) Chose the answer you think is correct from the options provided for any specific MCQ. If your answer is actually correct, move on to the next MCQ.
+
 4) If your answer is not correct and you need an explanation for the correct answer, simply click a button to notify all other users of the app that you need help regarding that specific MCQ.
+
 5) While exploring MCQs, keep an eye on those for which others have asked for explanations. If you think you know the reasoning behind the correct option, write a short explanation for that MCQ from the text field provided there.
 
 Here is the demonstration video for the actual app we developed:
@@ -44,5 +48,5 @@ Most of my time was spent on figuring out a nice relational database schema to h
 
 ###Logic for MySQL Database:
 {% gist talhaparacha/34571abb0a4209352c9f %}
-###Code for getOriginal.PHP:
+###Code for api.PHP:
 {% gist talhaparacha/a581a584a51fb5c3e405 %}
