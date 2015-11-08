@@ -42,6 +42,8 @@ Here was the total functionality of the app from end-user's perspective:
 
 Here is the demonstration video for the actual app we developed:
 
+<iframe src="https://player.vimeo.com/video/145036535" width="500" height="889" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 ##The Code:
 
 Most of my time was spent on figuring out a nice relational database schema to hold all information effectively. Other than that, the PHP code is very trivial and contains only data insertion / retrieval calls. The API is simple too; the app calls api.php with different values in $_POST[intent] depending on what it wants from the server. I do realize that the code is far from being clean, but for the hackathon our focus was on building the MVP and not a finished product.
