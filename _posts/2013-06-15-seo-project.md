@@ -5,7 +5,6 @@ modified: 2013-06-15
 tags: [project]
 comments: true
 ---
-
 **Project completion date:** June 2013
 **Total work duration:** 3+ months
 **Language(s) used:** PHP (3400+ lines of code)
