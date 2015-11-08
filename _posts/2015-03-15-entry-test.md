@@ -24,8 +24,12 @@ Like India, college entry test preparation is a huge industry here in Pakistan. 
 
 Currently in Pakistan, there are specific institutions which prepare students for entry tests. Since almost all college entry tests are MCQs based here, these institutions follow a simple training procedure; they aggregate hundreds of MCQs from different subjects and then during a course of 3 months they go through them one by one explaining the reasoning for each correct option to the students. But these institutions are very expensive for the majority of students in Pakistan. So we had an opportunity to modernize this via a tech based much cheaper and effective solution.
 
-So the idea was to build an app which would contain hundreds of MCQs provided by us. Students can practice those questions but if anyone wants some explanation for an MCQ he can simply ask for it from other users of the app. Wait let me explain why it's not like Quora: (i) In Stackoverflow, Quora etc. people ask questions first to which the community answers. In our case the questions are already present in the app, a student just needs to click a button if he wants an explanation for any specific question. (ii) We provide an excellent motivation for students to participate in providing explanations to other students; someone proficient in Physics would gladly write short explanations for that category MCQs as he himself is also seeking for explanations from others in subjects he's not proficient at. Plus explaining a concept to others actually increases one's own understanding too.    
- 
+So the idea was to build an app which would contain hundreds of MCQs provided by us. Students can practice those questions but if anyone wants some explanation for an MCQ he can simply ask for it from other users of the app. Wait let me explain why it's not like Quora: 
+
+(i) In Stackoverflow, Quora etc. people ask questions first to which the community answers. In our case the questions are already present in the app, a student just needs to click a button if he wants an explanation for any specific question.
+
+(ii) We provide an excellent motivation for students to participate in providing explanations to other students; someone proficient in Physics would gladly write short explanations for that category MCQs as he himself is also seeking for explanations from others in subjects he's not proficient at. Plus explaining a concept to others actually increases one's own understanding too.
+
 ##The App:
 
 Here was the total functionality of the app from end-user's perspective:
