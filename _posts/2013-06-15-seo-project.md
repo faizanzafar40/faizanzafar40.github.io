@@ -5,6 +5,8 @@ modified: 2013-06-15
 comments: true
 tags: [project]
 ---
+
+
 **Project completion date:** June 2013
 
 **Total work duration:** 3+ months
@@ -12,6 +14,7 @@ tags: [project]
 **Language(s) used:** PHP (3400+ lines of code)
 
 **Other team members:** None
+
 
 Search Engine Optimization or SEO is the art of getting your website at the top of search results in Google, Yahoo etc. SEO is such a big deal that slight improvements in a website's ranking could affect its revenue by thousands of dollars. That's because search engines are the main source of visitors for the majority of websites. And more visitors = more money. Only now due to the advent of Social media, some focus has shifted from SEO but its importance remains nevertheless.
 
