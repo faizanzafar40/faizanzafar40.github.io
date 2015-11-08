@@ -6,8 +6,6 @@ tags: [project]
 comments: true
 ---
 
-## HTML Elements
-
 **Project completion date:** June 2013
 **Total work duration:** 3+ months
 **Language(s) used:** PHP (3400+ lines of code)
@@ -37,8 +35,6 @@ The tool had the capacity to crawl and check for SEO factors on up to 500 pages 
 The results of all these checks then got compiled into a nice PDF format with recommended actions to take for each check that resulted negatively.
  
 Here are the sample reports generated automatically for websites of two hosting companies from Pakistan:
-
-## Buttons
 
 <div markdown="0"><a href="/www.winshosting.com.pdf" class="btn">Download report for winshosting.com</a></div>
 <div markdown="0"><a href="/pakservers.com.pdf" class="btn">Download report for pakservers.com</a></div>
