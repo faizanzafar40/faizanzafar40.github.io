@@ -1,5 +1,5 @@
 ---
 layout: tag-page
-title: My Projects
+title: Projects
 tag: project
 ---
