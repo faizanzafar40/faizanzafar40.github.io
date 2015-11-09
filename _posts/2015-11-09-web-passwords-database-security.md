@@ -1,6 +1,6 @@
 ---
 layout: post
-title: New innovative technique for securely storing passwords in databases
+title: A New & Simple Technique for Securely Storing Passwords in Databases
 modified: 2015-11-09
 comments: true
 tags: [blog]
