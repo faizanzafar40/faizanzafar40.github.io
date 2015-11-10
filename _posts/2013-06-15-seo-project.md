@@ -15,6 +15,8 @@ tags: [project]
 
 **Other team members:** None
 
+**Source Code:** <a href="https://github.com/talhaparacha/webtimizeme">GitHub Repo</a>
+
 
 Search Engine Optimization or SEO is the art of getting your website at the top of search results in Google, Yahoo etc. SEO is such a big deal that slight improvements in a website's ranking could affect its revenue by thousands of dollars. That's because search engines are the main source of visitors for the majority of websites. And more visitors = more money. Only now due to the advent of Social media, some focus has shifted from SEO but its importance remains nevertheless.
 
@@ -38,12 +40,12 @@ The tool had the capacity to crawl and check for SEO factors on up to 500 pages 
 * Sitemap + Robots.TXT
 
 The results of all these checks then got compiled into a nice PDF format with recommended actions to take for each check that resulted negatively.
- 
+
 Here are the sample reports generated automatically for websites of two hosting companies from Pakistan:
 
 <div markdown="0"><a href="/www.winshosting.com.pdf" class="btn">Download report for winshosting.com</a></div><div markdown="0"><a href="/pakservers.com.pdf" class="btn">Download report for pakservers.com</a></div>
 
-Unfortunately I took down the actual demonstration website Webtimize.me last year due to hosting costs. I'll try to configure the project files on my XAMPP stack and record a video demonstration for this post. But in any case I'll upload the complete source code in .zip format here as soon as I get some free time. Explore the code as much as you want but if anyone wants to extend this, kindly let me know first. At that point I could create a repo from which one can fork.
+Unfortunately I took down the actual demonstration website Webtimize.me last year due to hosting costs. I'll try to configure the project files on my XAMPP stack and record a video demonstration for this post. Explore the code from Github repo linked above as much as you want but if anyone wants to extend this, kindly let me know first.
 {: .notice}
 
 The post date has been modified to refer to the project completion date and not the actual publishing date
