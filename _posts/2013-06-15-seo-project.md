@@ -45,7 +45,7 @@ Here are the sample reports generated automatically for websites of two hosting 
 
 <div markdown="0"><a href="/www.winshosting.com.pdf" class="btn">Download report for winshosting.com</a></div><div markdown="0"><a href="/pakservers.com.pdf" class="btn">Download report for pakservers.com</a></div>
 
-Unfortunately I took down the actual demonstration website Webtimize.me last year due to hosting costs. I'll try to configure the project files on my XAMPP stack and record a video demonstration for this post. Explore the code from Github repo linked above as much as you want but if anyone wants to extend this, kindly let me know first.
+Unfortunately I took down the actual demonstration website Webtimize.me last year due to hosting costs. I'll try to configure the project files on my XAMPP stack and record a video demonstration for this post. Feel free to fork from the repo if anyones wants to extend this.
 {: .notice}
 
 The post date has been modified to refer to the project completion date and not the actual publishing date
