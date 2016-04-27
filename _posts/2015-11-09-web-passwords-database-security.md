@@ -10,7 +10,7 @@ Storing website passwords *securely* in databases has turned out to be a major c
 
 Here I present a new innovative and simple technique for securely storing passwords in databases so even in cases of database breaches, the hackers won’t be able to actually access any accounts. I’ll start by giving a context of where we currently stand, the faults in the contemporary system and will then put forward my idea for improving it. Feel free to jump at the end if you only wanna know about the technique.
 
-##The Context:
+<h2>The Context:
 
 Following techniques are employed by web developers for achieving state-of-the-art passwords security in their apps:
 
@@ -24,7 +24,7 @@ Following techniques are employed by web developers for achieving state-of-the-a
 
 Now if these above conditions are met **and the user has chosen a unique, lengthy and alpha-numeric password for his account**, only then can a web developer say he's confident about his app’s security regarding passwords even if a database leak occurs.
 
-##The Faults:
+<h2>The Faults:
 
 Unfortunately the situation I described above only exists in some utopia. Practically either users or developers leave some vulnerability open for hackers to exploit. But I don’t think they are to be blamed for this. Well let me explain…
 
@@ -37,7 +37,7 @@ Asking users to choose a password having a length of around 14 characters + cont
 
 Secondly, most web developers are bounded with constraints which limit them in implementing best security practices in their systems. Maybe their organization is not willing to spend extra time and resources on improving security. Maybe the developers didn’t get any formal training in web security as is the case with most of them. In fact web is evolving so rapidly, that even those with formal knowledge from colleges etc. are taught techniques that don’t apply in today’s world. I know of this since our college has an optional course on Web Technologies, and the web technologies they teach have long been replaced with new emerging technologies like HTML5 & CSS3. Another example of this would be that many know from some course etc. about the MD5 hashing algorithm, but only few know that presently whenever we talk about password security, MD5 is among the weakest of all hashing algorithms.
 
-##The Idea:
+<h2>The Idea:
 
 Let’s talk about a new technique now; suppose someone needs to register with a website ALPHA hosted on some server. Bring another website TEMP hosted on some other server to this story. Make two assumptions:
 
