@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Summer of Code 2016: Accepted =D
+title: Google Summer of Code 2016: Accepted!
 modified: 2015-04-26
 comments: true
 tags: [blog]
