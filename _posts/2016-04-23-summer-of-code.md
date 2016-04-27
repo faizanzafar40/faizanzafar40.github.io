@@ -12,7 +12,7 @@ So the results for Google Summer of Code 2016 came, and I got accepted =D
   <img src="/GSoC-Acceptance-Email.jpg" alt="GSoC Acceptance Email">
 </figure>
 
-This is the first time I’ve applied to the GSoC program. And the result has made me absolutely cheerful since I consider this opportunity a stepping stone for my career as a Software Engineer.
+This is the first time I applied to the GSoC program. And the result has made me absolutely cheerful since I consider this opportunity a stepping stone for my career.
 
 For those who don’t know, Summer of Code is a program sponsored by Google with the goal of increasing awareness of open-source software development among students. Students are paired with open-source organizations to work on projects during summer. And all projects are funded by Google, as each student receives a very nice stipend of $5000 after completing the project. This year, a total of 1206 students and 178 organizations are participating in the program.
 
