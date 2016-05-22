@@ -12,12 +12,9 @@ My acceptance marked the start of “Community Bonding” period which in GSoC�
 
 I remained in touch with both my mentors Adam Bergstein and Colan Schwartz via weekly Skype video chats. In the first check-in meeting we agreed to:
 
-* Do all development in Github until an alpha version of the module is ready. Then we’ll shift the project to Drupal.org. So I’m required to fork the project, clone it to my machine, make any edits and push them to my fork. Then I’ll create pull requests which my mentors will review and merge accordingly.
-
-Here is the link to it if anyone is interested in the updates: <a href='https://github.com/d8-contrib-modules/pubkey_encrypt'>PubKey-Encrypt</a>. We’ve decided to make the first commit during the first check-in meeting in the Coding period, so to officially kick-off the project.
+* Do all development in Github until an alpha version of the module is ready. Then we’ll shift the project to Drupal.org. So I’m required to fork the project, clone it to my machine, make any edits and push them to my fork. Then I’ll create pull requests which my mentors will review and merge accordingly. Here is the link to it if anyone is interested in the updates: <a href='https://github.com/d8-contrib-modules/pubkey_encrypt'>PubKey-Encrypt</a>. We’ve decided to make the first commit during the first check-in meeting in the Coding period, so to officially kick-off the project.
 
 * Use Vagrant VM so to keep the running environment same across all team members.
-
 * Start with an architecture document of the module. Once the architecture is documented, fully understood & agreed-upon by all members, then begin coding.
 
 In later check-in meetings, we only discussed the things I’ve been up to for that week and any queries that I had. Because of my busy university schedule, I asked my mentors if we can afford to move the work on architecture document after the Community bonding period. They completely realized my situation and agreed to it.
