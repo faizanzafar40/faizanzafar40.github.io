@@ -9,7 +9,7 @@ tags: [blog, drupal]
 So the results for Google Summer of Code 2016 came, and I got accepted =D
 
 <figure>
-  <img src="/GSoC-Acceptance-Email.jpg" alt="GSoC Acceptance Email">
+  <img src="http://www.talhaparacha.com/GSoC-Acceptance-Email.jpg" alt="GSoC Acceptance Email">
 </figure>
 
 This is the first time I applied to the GSoC program. And the result has made me absolutely cheerful since I consider this opportunity a great stepping stone for my career.
