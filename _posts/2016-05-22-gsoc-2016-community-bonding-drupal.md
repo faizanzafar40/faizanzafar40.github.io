@@ -6,7 +6,7 @@ comments: true
 tags: [blog]
 ---
 
-The past few weeks have been quite amazing for me. Getting accepted for GSoC indeed felt like a dream come true, and the feeling has still not gone. But the best part was interacting with dozens of like-minded students from all around the world. Around 1000+ students got accepted for GSoC and it feels really great to be part of a community so talented and diverse.
+The past few weeks have been quite amazing for me. <a href='http://www.talhaparacha.com/summer-of-code/'>Getting accepted for GSoC</a> indeed felt like a dream come true, and the feeling has still not gone. But the best part was interacting with dozens of like-minded students from all around the world. Around 1000+ students got accepted for GSoC and it feels really great to be part of a community so talented and diverse.
 
 My acceptance marked the start of "Community Bonding period" which in GSoC’s terminology is a month for students to get acquainted with their mentors, explore the codebase of their organization and review the project’s timeline so they can kick off coding when the "Coding period" starts.
 
