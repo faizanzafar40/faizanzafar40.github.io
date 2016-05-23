@@ -18,7 +18,7 @@ I remained in touch with both my mentors Adam Bergstein (<a href ='https://www.d
 
 In later check-in meetings, we only discussed the things I’ve been up to for that week and any queries that I had. Because of my busy university schedule, I asked my mentors if we can afford to move the work on architecture document after the Community bonding period. They completely realized my situation and agreed to it.
 
-The timeline I wrote in my proposal was detailed enough that I did not feel the need to make any major modifications in it. It clearly enlists all the tasks I have to do to complete the project and the sequence in which I’d need to do them.
+The timeline I wrote in <a href='http://www.talhaparacha.com/GSoC2016-proposal.pdf'>my proposal</a> was detailed enough that I did not feel the need to make any major modifications in it. It clearly enlists all the tasks I have to do to complete the project and the sequence in which I’d need to do them.
 
 So the major part of my time was spent in getting familiar with module development in Drupal 8. Luckily, all accepted students for Drupal got access to the premium video tutorials on Drupalize.me. As I had planned earlier, I made a good use of the website and watched all these series:
 
