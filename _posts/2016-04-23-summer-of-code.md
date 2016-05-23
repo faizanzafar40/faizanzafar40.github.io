@@ -16,7 +16,7 @@ This is the first time I applied to the GSoC program. And the result has made me
 
 For those who don’t know, Summer of Code is a program sponsored by Google with the goal of increasing awareness of open-source software development among students. Students are paired with open-source organizations to work on projects during summer. And all projects are funded by Google, as each student receives a very nice stipend of $5000 after completing his/her project. This year, a total of 1206 students and 178 organizations are participating in the program.
 
-I will be working for Drupal on a project related to web security (more on the project details in a later post). You can view my project proposal <a href="/GSoC2016-proposal.pdf">here</a> which got me into the program. A huge shoutout to <a href="https://www.drupal.org/u/colan">Colan Schwartz</a> and <a href="https://www.drupal.org/u/nerdstein">Adam Bergstein</a> who immensely helped me fine-tune the proposal during the application period and are now my mentors for this project.
+I will be working for Drupal on a project related to web security (more on the project details in a later post). You can view my project proposal <a href="http://www.talhaparacha.com/GSoC2016-proposal.pdf">here</a> which got me into the program. A huge shoutout to <a href="https://www.drupal.org/u/colan">Colan Schwartz</a> and <a href="https://www.drupal.org/u/nerdstein">Adam Bergstein</a> who immensely helped me fine-tune the proposal during the application period and are now my mentors for this project.
 
 <div markdown="0"><a href="/GSoC2016-proposal.pdf" class="btn">My GSoC 2016 Project Proposal</a></div>
 
