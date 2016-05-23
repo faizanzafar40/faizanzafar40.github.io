@@ -3,7 +3,7 @@ layout: post
 title: GSoC'2016 -- Community Bonding Period
 modified: 2016-05-22
 comments: true
-tags: [blog]
+tags: [blog, drupal]
 ---
 
 The past few weeks have been quite amazing for me. <a href='http://www.talhaparacha.com/summer-of-code/'>Getting accepted for GSoC</a> indeed felt like a dream come true, and the feeling has still not gone. But the best part was interacting with dozens of like-minded students from all around the world. Around 1000+ students got accepted for GSoC and it feels really great to be part of a community so talented and diverse.
