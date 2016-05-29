@@ -12,7 +12,7 @@ Here’s the architectural document for Pubkey Encrypt if anyone wants to have a
 The summary of the weekly scrum I had with my mentors is as follow:
 
 * Colan (<a href='https://www.drupal.org/u/colan'>@colan</a>) thought for better visibility we should move the project to Drupal.org. But Adam didn’t want to lose the pull request reviews feature present in Github. So we decided to use Github for coding and the Drupal.org issue queue for discussions related to the module’s architecture.
-* We discussed a few design dilemmas that we didn’t had an immediate solution for. We think we need opinions of other community members on these issues before finalizing our approach. Since our current focus is on getting a working prototype of the module ready as soon as possible, we’ve decided to delegate these issues until an alpha version of the module is ready. I’ve documented those issues here: <a href="https://www.drupal.org/project/issues/2735805">drupal.org/project/issues/2735805</a>
+* We discussed a few design dilemmas that we didn’t had an immediate solution for. We think we need opinions of other community members on these issues before finalizing our approach. Since our current focus is on getting a working prototype of the module ready as soon as possible, we’ve decided to delegate these issues until an alpha version of the module is ready. Though I’ve documented them here: <a href="https://www.drupal.org/project/issues/2735805">drupal.org/project/issues/2735805</a>
 * We discussed the tasks I plan to do for the week.
 
 Then came the fun part; coding. Though initially I was a bit afraid as I’ve never done coding with deadlines in my mind. Thoughts like what if I am not able to do all the tasks in time etc. came to my mind. But as soon as I started coding, my fear got converted into the profound joy of working as a GSoC participant and doing professional software development. This, along with the constant motivation from my mentors, made me work with laser-sharp focus. Here’s what I’ve achieved so far:
@@ -28,4 +28,5 @@ Then came the fun part; coding. Though initially I was a bit afraid as I’ve ne
 * Implemented hook_requirements to take care of OpenSSL dependency.
 
 I’ve created a pull request for all the work I’ve done this week and it’s currently pending a review from my mentors.
+
 Interestingly, an important lesson I’ve learned this week is that I should be much more diligent when I’m writing code. Or I’d waste a lot of time covering for my silly mistakes. For example, I spent quite some time figuring out why my hooks were not being invoked, when I had mistakenly named the main module file as ".module.php". Similarly, while committing code in haste, I accidentally executed the last executed command in cmd which turned out to be "git reset –hard HEAD".
