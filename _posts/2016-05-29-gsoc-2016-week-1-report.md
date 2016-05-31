@@ -27,6 +27,6 @@ Then came the fun part; coding. Though initially I was a bit afraid; thoughts li
 * Implemented hook_install, hook_form_alter, hook_user_login, hook_user_insert and within them, called my keys manager service for doing appropriate tasks.
 * Implemented hook_requirements to take care of OpenSSL dependency.
 
-I’ve created a pull request for all the work I’ve done this week and it’s currently pending a review from my mentors.Here's the code if anyone would like to take a quick look: <a href='https://github.com/talhaparacha/pubkey_encrypt/tree/96c817806ee2c3f7d30009f38f534d7b8bfe0fd7'>Pubkey Encrypt Commits Till 5/29/2016</a>
+I’ve created a pull request for all the work I’ve done this week and it’s currently pending a review from my mentors. Here's the code if anyone would like to take a quick look: <a href='https://github.com/talhaparacha/pubkey_encrypt/tree/96c817806ee2c3f7d30009f38f534d7b8bfe0fd7'>Pubkey Encrypt Commits Till 5/29/2016</a>
 
 Interestingly, an important lesson I’ve learned this week is that I should be much more diligent when I’m writing code. Or I’d waste a lot of time covering for my silly mistakes. For example, I spent quite some time figuring out why my hooks were not being invoked, when I had mistakenly named the main module file as ".module.php". Similarly, while committing code in haste, I accidentally executed the last executed command in cmd which turned out to be "git reset –hard HEAD".
