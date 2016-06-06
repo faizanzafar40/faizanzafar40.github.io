@@ -28,8 +28,6 @@ Also, I created three test methods for covering the three events I mentioned ear
 
 Here are the tests if anyone wants to have a look: <a href='https://github.com/talhaparacha/pubkey_encrypt/commit/535f8fe4e16fe3a1951624197c5aa2f183cfb185'>Pubkey Encrypt - Commit#535f8</a>. My mentors have yet to review this code.
 
-<img>user-keys-management-tests.png
-
 <figure>
   <img src="http://www.talhaparacha.com/user-keys-management-tests.png">
   <figcaption>
