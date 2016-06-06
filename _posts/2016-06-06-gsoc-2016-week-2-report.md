@@ -33,6 +33,7 @@ Here are the tests if anyone wants to have a look: <a href='https://github.com/t
 <figure>
   <img src="http://www.talhaparacha.com/user-keys-management-tests.png">
   <figcaption>
+    When your code passes the tests :')
   </figcaption>
 </figure>
 
