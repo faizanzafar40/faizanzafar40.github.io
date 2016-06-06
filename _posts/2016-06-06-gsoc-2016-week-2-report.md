@@ -28,4 +28,12 @@ Also, I created three test methods for covering the three events I mentioned ear
 
 Here are the tests if anyone wants to have a look: <a href='https://github.com/talhaparacha/pubkey_encrypt/commit/535f8fe4e16fe3a1951624197c5aa2f183cfb185'>Pubkey Encrypt - Commit#535f8</a>. My mentors have yet to review this code.
 
+<img>user-keys-management-tests.png
+
+<figure>
+  <img src="http://www.talhaparacha.com/user-keys-management-tests.png">
+  <figcaption>
+  </figcaption>
+</figure>
+
 Interestingly, I’ve now gotten a bit more comfortable with exploring different modules. For writing tests, I explored some tests written for Password Policy and User modules since some assertions there, are pretty similar to what I was planning for my tests. I also consulted the Drupal API several times. Like I was looking for a way to flush entities cache and the API for EntityInterface had these two functions documented: resetCache() & loadUnchanged(); the former resets the static entity cache and the latter fetches an entity directly from the database bypassing any cache hits. I think this experience of figuring things out on my own would prove to be really valuable in my journey of being a good software engineer.
