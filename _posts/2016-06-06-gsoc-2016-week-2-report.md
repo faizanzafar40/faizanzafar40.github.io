@@ -3,7 +3,7 @@ layout: post
 title: GSoC’16 – Pubkey Encrypt – Week 2 Report
 modified: 2016-06-06
 comments: true
-tags: [blog]
+tags: [blog, drupal]
 ---
 
 I started the week iterating over last week’s work as per the reviews of my mentors Adam Bergstein (<a href ='https://www.drupal.org/u/nerdstein'>@nerdstein</a>) and Colan Schwartz (<a href='https://www.drupal.org/u/colan'>@colan</a>). They were happy with the progress I had made and only pointed out a few minor things that required modifications. Here are the relevant commits involving those minor changes: <a href='https://github.com/talhaparacha/pubkey_encrypt/commit/dbd946fc7c0adddd21ba5d6e9e52e915bd674b37'>Pubkey Encrypt - Commit#dbd94</a> & <a href='https://github.com/talhaparacha/pubkey_encrypt/commit/e3defd56f616b974810c0cca52149449344e1a8d'>Pubkey Encrypt - Commit#e3defd</a>.
