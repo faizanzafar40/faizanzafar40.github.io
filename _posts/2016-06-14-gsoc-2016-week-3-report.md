@@ -7,12 +7,11 @@ tags: [blog]
 ---
 
 The basic idea behind my project Pubkey Encrypt is to encrypt data using users’ login credentials. A tight integration with the <a href="https://www.drupal.org/project/key">Key module</a> is one of the most important parts in my project. So I started the week analyzing that module's architecture. It deals with administering keys which could be used for the purposes of encryption, authentication etc. Anyone can modify the key handling logic as per the business needs since the module allows for much extensibility via these three plugin systems:
-
 * A key type plugin which deals with the responsibility of defining the purpose of a key.
 * A key provider plugin which deals with the responsibility of storing and retrieving a key.
 * A key input plugin which deals with the responsibility of taking & processing a key input from the user and then forwarding it to the key provider.
 
-Initially, I thought I’d need to provide implementations for all these three plugins. Upon a closer analysis, I found out that it’s better for me to provide just an implementation for the key provider plugin as per my needs, and then use the default implementations for the other two plugins. This way saved me from doing much redundant work.
+Initially, I thought I’d need to provide implementations for all these three plugins. Upon a closer analysis, I found out that it’s better for me to provide just an implementation for the key provider plugin as per my needs, and then use the default implementations for the other two plugins. This way saved me from doing any redundant work.
 
 In my weekly meeting with mentors Adam Bergstein (<a href ='https://www.drupal.org/u/nerdstein'>@nerdstein</a>) and Colan Schwartz (<a href='https://www.drupal.org/u/colan'>@colan</a>), we discussed this approach I planned. Since Adam is one of the maintainers of Key module, he immediately understood the approach and gave it a thumbs up. Colan was happy too, so I moved forward and wrote an implementation for the key provider plugin.
 
@@ -45,7 +44,6 @@ After this, I implemented hook_user_role_insert/delete() and hook_user_update() 
 Have a look at the Pull Request which contains all work from this week along with my mentors’ comments on the work done: <a href="https://github.com/d8-contrib-modules/pubkey_encrypt/pull/4/files">https://github.com/d8-contrib-modules/pubkey_encrypt/pull/4/files</a>
 
 Though I did not get to use the FormBuilder class, I’m still happy that I explored the API and learned much. Interestingly, there is an example on that API page for programmatically registering a new user via the user registration form. I found the example to be not working. Upon a root-cause analysis, I got to realize that a parameter for FormBuilder::submitForm() is documented incorrectly. The example used the parameter in the way it is currently documented. But since the documentation is incorrect, the example doesn't work. I’ve created two issues on D.O to fix these bugs on the API page:
-
 * <a href="https://www.drupal.org/node/2747269">Incorrect parameter documentation for FormBuilder::submitForm</a>
 * <a href="https://www.drupal.org/node/2747273">Example given on FormBuilder::submitForm API Page is not working</a>
 
