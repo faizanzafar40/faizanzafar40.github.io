@@ -3,7 +3,7 @@ layout: post
 title: GSoC’16 – Pubkey Encrypt – Week 4 Report
 modified: 2016-06-22
 comments: true
-tags: [blog]
+tags: [blog, drupal]
 ---
 
 I started the week by providing test coverage for functionalities I added to the module in week 3. Since the main functionality I added was the automatic generation of keys, the tests I wrote assert for these capabilities:
