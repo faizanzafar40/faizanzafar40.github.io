@@ -21,7 +21,7 @@ By having this logic encapsulated into a pluggable system, users would be able t
 For developing the pluggable systems, I referred to this really great article on D8 plugins, <a href='https://drupalize.me/blog/201409/unravelling-drupal-8-plugin-system'>Unravelling the Drupal 8 Plugin System</a>, provided by Drupalize.me. This in-depth article not only describes the higher-level overview of Drupal 8 plugins but also contains a step-by-step tutorial on creating your own plugin types along with some sample code. So I created the plugin systems and then added the configuration layer as an “Initialization settings form”. Through this form, users would configure and initialize the module so it could start working. See it in action here:
 
 <figure>
-  <img src="Initialization-settings-default.png">
+  <img src="http://www.talhaparacha.com/Initialization-settings-default.png">
   <figcaption>
   Pubkey Encrypt initialization settings form.
   </figcaption>
