@@ -3,7 +3,7 @@ layout: post
 title: GSoC’16 – Pubkey Encrypt – Week 5 Report
 modified: 2016-06-29
 comments: true
-tags: [blog]
+tags: [blog, drupal]
 ---
 
 This week I worked on making the module a bit flexible via integrating pluggable systems into it. This is something we had planned initially while writing the <a href="http://www.talhaparacha.com/PubkeyEncryptArchitectureDoc.pdf">architecture document for the module</a>, but couldn't pursue it earlier because our focus was on developing a working prototype first. But since that’s done, we’ve reached the perfect time for this development. It should be noted that the pluggable systems are important because Pubkey Encrypt deals with security, and it is essential for the module’s success to be as flexible as possible. In this way, users would be able to configure the behavior of the module as per their organizational security standards and other demands not provided by the out of the box functionality.
