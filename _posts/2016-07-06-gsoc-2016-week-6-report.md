@@ -48,7 +48,7 @@ From the results, it is clear that the choice of key-size largely determines the
 * 2048-bit keys take moderate time for bulk generation and are considered secure too. But ownCloud Data Encryption Model, upon which this module is based, does not use these.
 * 4096-bit keys are considered very secure and are also used in ownCloud Data Encryption Model. But these take a lot of time for bulk generation, hence a bit unsuitable for our use case which involves websites with thousands of users.
 
-Have a look at this <h href="https://danielpocock.com/rsa-key-sizes-2048-or-4096-bits">article by Daniel Pock</a> for a detailed discussion on the choice of an asymmetric key size.
+Have a look at this <a href="https://danielpocock.com/rsa-key-sizes-2048-or-4096-bits">article by Daniel Pock</a> for a detailed discussion on the choice of an asymmetric key size.
 
 We definitely didn’t expect the task to take this much time while we were writing the architecture document. But the generation of a Public/Private key pair is considered to be an expensive operation. So by definition of this task, it is expected to take a lot of time depending on the number of users in a website. Hence we cannot expect to optimize this task much. Though it should be mentioned here that some libraries like Pure PHP Elliptic Curve library are quicker in generating asymmetric keys as compared to others like OpenSSL.
 
