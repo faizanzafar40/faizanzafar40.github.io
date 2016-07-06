@@ -17,7 +17,7 @@ First, I refactored the functional tests of the module by providing an abstract 
 Some refactoring was also done on the test class RoleKeysManagement as I figured that a few test assertions were missing there. I felt satisfied after completing this work phase. Now by running these tests I can easily verify whenever I want that any new feature I add to to the module wouldn’t end-up accidentally breaking any of the core functionality. This process is called Regression testing and is essential for any software project being built via an Agile methodology.
 
 <figure>
-  <img src="http://www.talhaparacha.com/tests.png">
+  <img src="http://www.talhaparacha.com/module-tests.png">
 </figure>
 
 I then refactored all the project files so to make them follow coding standards, via the help of <a href="https://www.drupal.org/project/drupalcs">Drupal Code Sniffer</a>. I also realized that I made a terrible decision, a few weeks ago, to lessen my focus on coding standards in a thought of fixing it later. Due to this decision I ended up:
