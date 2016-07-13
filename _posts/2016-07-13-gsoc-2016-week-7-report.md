@@ -3,7 +3,7 @@ layout: post
 title: GSoC'16 – Pubkey Encrypt – Week 7 Report
 modified: 2016-07-13
 comments: true
-tags: [blog]
+tags: [blog, drupal]
 ---
 
 This week’s work started by the integration of Travis CI into the <a href="https://github.com/d8-contrib-modules/pubkey_encrypt">Github repo of Pubkey Encrypt</a>. Initially, we thought that we’d move the project from Github to D.O after releasing a working prototype of the module. But now we have decided to keep both the repos as is the case for <a href="https://github.com/d8-contrib-modules/"> many D8 modules</a>. Now Travis CI is free for all open-source projects hosted on Github. For those who don’t know, Travis is a Continuous Integration software which, in simple words, makes a build of a software project upon each commit or PR in the repo and then runs the user-defined tests on it. A passing build means that the new changes pass all the tests, and a broken build denotes the other case. This is used to ensure that any new functionality added to the project doesn’t end up accidentally breaking something else in it. And such a setup is very important in any agile software development methodology, where the product is developed incrementally.
