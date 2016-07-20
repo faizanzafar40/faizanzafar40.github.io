@@ -11,7 +11,7 @@ A discussion with Mehul Gupta (<a href="https://www.drupal.org/u/therealssj">@th
 Accordingly, here are the two issues on which we’re working:
 
 * <a href="https://www.drupal.org/node/2727845#comment-11391629">D8 - Update module to use Defuse PHP Encryption 2.0</a>
-* <a href="https://www.drupal.org/node/2763787">Upgrade random_copmat to latest version</a>
+* <a href="https://www.drupal.org/node/2763787">Upgrade random_compat to latest version</a>
 
 My mentors Adam Bergstein (<a href ='https://www.drupal.org/u/nerdstein'>@nerdstein</a>) and Colan Schwartz (<a href='https://www.drupal.org/u/colan'>@colan</a>) are really happy about this collaboration since a number of other D8 modules in development, like <a href="https://github.com/d8-contrib-modules/file_encrypt">File Encrypt module</a>, also rely on Real AES. So getting the issue fixed is a win-win situation for all of us.
 
