@@ -13,7 +13,7 @@ Accordingly, here are the two issues on which we’re working:
 * <a href="https://www.drupal.org/node/2727845#comment-11391629">D8 - Update module to use Defuse PHP Encryption 2.0</a>
 * <a href="https://www.drupal.org/node/2763787">Upgrade random_copmat to latest version</a>
 
-My mentors Adam Bergstein (<a href ='https://www.drupal.org/u/nerdstein'>@nerdstein</a>) and Colan Schwartz (<a href='https://www.drupal.org/u/colan'>@colan</a>) are really happy about this collaboration since a number of other D8 modules in development, like File Encrypt module, also rely on Real AES. So getting the issue fixed is a win-win situation for all of us.
+My mentors Adam Bergstein (<a href ='https://www.drupal.org/u/nerdstein'>@nerdstein</a>) and Colan Schwartz (<a href='https://www.drupal.org/u/colan'>@colan</a>) are really happy about this collaboration since a number of other D8 modules in development, like <a href="https://github.com/d8-contrib-modules/file_encrypt">File Encrypt module</a>, also rely on Real AES. So getting the issue fixed is a win-win situation for all of us.
 
 Next, I worked to integrate Batch API in the module. Colan suggested me to do this since the <a href ='http://www.talhaparacha.com/gsoc-2016-week-6-report/'>performance benchmarks for Pubkey Encrypt</a> revealed that the module initialization process takes a lot of time. Now with Batch API, the possibility of getting a premature PHP timeout, during that initialization process, has gotten eliminated.  Though the Drupal documentation for Batch API looks pretty intimidating, the code provided at <a href="http://hardcoredev.com/blog/using-batch-api-in-drupal-7-tutorial-in-simple-code/">“Using Batch API for Drupal - In Simple Code”</a> makes it really easy for anyone to learn the API.
 
