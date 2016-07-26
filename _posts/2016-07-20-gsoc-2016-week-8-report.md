@@ -3,7 +3,7 @@ layout: post
 title: GSoC'16 – Pubkey Encrypt – Week 8 Report
 modified: 2016-07-20
 comments: true
-tags: [blog]
+tags: [blog, drupal]
 ---
 
 A discussion with Mehul Gupta (<a href="https://www.drupal.org/u/therealssj">@therealssj</a>), who is also a Google Summer of Code 2016 participant for Drupal, kicked off this week. So he is working on <a href="https://summerofcode.withgoogle.com/projects/#4630295898750976">porting Google Login Authenticator module to Drupal 8</a>. Like Pubkey Encrypt, his project has a dependency on Real AES module too. But Real AES for D8 is currently broken as it hasn’t been upgraded to work with the latest version of Defuse PHP Encryption library. Actually, Real AES relies on the master branch of that library, so it’s recent 2.x release broke the module. Currently, me and Mehul are using Test Encrypt module for our prototypes, while waiting for Real AES to get fixed. But since the end of GSoC is approaching and we really want to ship perfectly ready-to-use projects by the end, we’ve decided to collaborate on this issue and get the module fixed for us.

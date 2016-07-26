@@ -3,7 +3,7 @@ layout: post
 title: GSoC'16 – Pubkey Encrypt – Week 9 Report
 modified: 2016-07-26
 comments: true
-tags: [blog]
+tags: [blog, drupal]
 ---
 
 I started the week by testing <a href="https://www.drupal.org/project/field_encrypt">Field Encrypt module</a> with my project Pubkey Encrypt. So Pubkey Encrypt provides support for encrypting data with users login credentials by generating Encryption Profiles. And Field Encrypt provides support to encrypt field values using any specified Encryption Profile. In this way, both these modules are expected to work together in harmony. I tested much and both the modules seemed to be getting along perfectly fine with each other.
