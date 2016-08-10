@@ -3,7 +3,7 @@ layout: post
 title: GSoC’16 – Pubkey Encrypt – Week 1 Report
 modified: 2016-05-29
 comments: true
-tags: [blog, drupal]
+tags: [blog, drupal, gsoc]
 ---
 
 I started the week writing a concise architectural document for the module. Though I had already written a timeline-based roadmap for the module, Adam (<a href ='https://www.drupal.org/u/nerdstein'>@nerdstein</a>) thought it’s still a good idea to write a separate architectural document which should elaborate how the module will respond to different events, how the module will integrate with its dependencies etc. My mentors reviewed the initial draft I wrote and after a few iterations we had an agreed upon architecture for the module. And Adam was right indeed, since now we also have a clear idea of all the module’s requirements from a development point of view.

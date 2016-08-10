@@ -3,7 +3,7 @@ layout: post
 title: GSoC’16 – Pubkey Encrypt – Week 3 Report
 modified: 2016-06-14
 comments: true
-tags: [blog, drupal]
+tags: [blog, drupal, gsoc]
 ---
 
 The basic idea behind my project Pubkey Encrypt is to encrypt data using users’ login credentials. A tight integration with the <a href="https://www.drupal.org/project/key">Key module</a> is one of the most important parts in my project. So I started the week analyzing that module's architecture. It deals with administering keys which could be used for the purposes of encryption, authentication etc. Anyone can modify the key handling logic as per the business needs since the module allows for much extensibility via these three plugin systems:

@@ -3,7 +3,7 @@ layout: post
 title: GSoC’16 – Pubkey Encrypt – Week 6 Report
 modified: 2016-07-06
 comments: true
-tags: [blog, drupal]
+tags: [blog, drupal, gsoc]
 ---
 
 Half of the Google Summer of Code coding period has passed and my project now has all the core functionality in it. For those who don’t know, Pubkey Encrypt is a D8 module in development, which aims to encrypt and secure websites’ data-at-rest using login credentials. I started week 6 work by finalizing everything we had done till then, so to get the module in shape for an immediate alpha release. I think it's very important to release the project early, with a bit less functionality and tagged as an alpha version, instead of releasing it with full functionality at the end of GSoC. This is because of the fact that the module deals with security. And as is the case with any security-related project, there is a lot of chance for unexpected issues to come up during alpha testing in a real-world environment. Luckily, we are ahead of the project timeline we planned in February, by a few weeks. So I’m confident that we’ll be able to tackle any such issues that might come up unexpectedly, no matter how severe they are.
