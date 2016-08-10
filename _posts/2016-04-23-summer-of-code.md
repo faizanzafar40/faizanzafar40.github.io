@@ -3,7 +3,7 @@ layout: post
 title: Google Summer of Code 2016 -- Accepted
 modified: 2016-04-27
 comments: true
-tags: [blog, drupal]
+tags: [blog, drupal, gsoc]
 ---
 
 So the results for Google Summer of Code 2016 came, and I got accepted =D
