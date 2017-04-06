@@ -7,4 +7,4 @@ link: https://www.internetsociety.org/blog/tech-matters/2017/04/ndss-newcomers-p
 
 My experiences of attending Network and Distributed System Security symposium 2017 on a student travel grant.  
 
-[An NDSS Newcomer's Perspective](https://www.internetsociety.org/blog/tech-matters/2017/04/ndss-newcomers-perspective)
+<a href="https://www.internetsociety.org/blog/tech-matters/2017/04/ndss-newcomers-perspective">An NDSS Newcomer's Perspective</a>
