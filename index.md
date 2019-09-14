@@ -1,5 +1,5 @@
 ---
 layout: home
-excerpt: "Passionate programmer, Tech geek & Design enthusiast."
+excerpt: "Science and philosophy enthusiast."
 tags: []
 ---
