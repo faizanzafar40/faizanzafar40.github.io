@@ -2,7 +2,7 @@
 
 title:            Talha Paracha
 locale:           en_US
-url:              https://talhaparacha.com/
+url:              https://faizanzafar40.github.io/
 
 
 # Jekyll configuration
@@ -26,10 +26,10 @@ kramdown:
 
 # Site owner
 owner:
-  name: Muhammad Talha Paracha
+  name: Faizan Zafar
   avatar: my-image.jpg
-  bio: "Science and philosophy enthusiast."
-  email: paracha.m@husky.neu.edu
+  bio: "M.Sc. Data Science @ RWTH Aachen | Student Assistant @ Cybernetics Lab IMA & IfU"
+  email: faizan.zafar@rwth-aachen.de
   disqus-shortname: #
   twitter: #username
   facebook: #
@@ -40,9 +40,9 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: faizanzafar40
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
+  linkedin: faizanzafar40
   xing: #username
   instagram: #username
   lastfm: #username
