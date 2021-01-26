@@ -2,7 +2,7 @@
 
 title:            Faizan Zafar
 locale:           en_DE
-url:              https://faizanzafar40.github.io/
+url:              http://faizanzafar.de/
 
 
 # Jekyll configuration
@@ -28,7 +28,7 @@ kramdown:
 owner:
   name: Faizan Zafar
   avatar: my-image.png
-  bio: "M.Sc. Data Science @ RWTH Aachen | Student Assistant @ Cybernetics Lab IMA & IfU"
+  bio: "M.Sc. Data Science @ RWTH Aachen | Graduate Student Assistant @ Cybernetics Lab IMA & IfU"
   email: faizan.zafar@rwth-aachen.de
   disqus-shortname: #
   twitter: #username
