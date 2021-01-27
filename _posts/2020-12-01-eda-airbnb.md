@@ -5,4 +5,4 @@ tags: [project]
 link: https://github.com/faizanzafar40/Exploratory-Data-Analysis-Airbnb
 ---
 
-I performed Exploratory Data Analysis on New York City AirBnb Open dataset
+I performed Exploratory Data Analysis on New York City AirBnb Open dataset.
