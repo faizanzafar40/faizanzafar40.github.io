@@ -1,8 +1,8 @@
 # Site wide configuration
 
 title:            Faizan Zafar
-locale:           en_DE
-url:              https://faizanzafar.de/
+locale:           en_US
+url:              http://faizanzafar.de/
 
 
 # Jekyll configuration
