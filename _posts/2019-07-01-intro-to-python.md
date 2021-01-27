@@ -10,4 +10,4 @@ The reason why I chose Python is because it is an easy-to-learn general purpose 
 
 Initially, I had to experiment with a few platforms for communicating the contents of this tutorial. However, I found Github to be the most optimal resource. It's pretty simple to use and highly recommended for budding programmers and tech enthusiasts.<br>
 
-Visit this<a href="https://github.com/faizanzafar40/Intro-to-Programming-in-Python">link</a> and star the repository if you had fun learning Python!
+Visit this <a href="https://github.com/faizanzafar40/Intro-to-Programming-in-Python">link</a> and star the repository if you had fun learning Python!
