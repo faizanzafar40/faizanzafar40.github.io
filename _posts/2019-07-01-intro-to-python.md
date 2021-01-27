@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Removing Implicit Places Using Regions for Process Discovery
+title: Intro to Programming in Python
 tags: [blog]
 ---
 
