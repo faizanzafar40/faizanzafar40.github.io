@@ -1,5 +1,5 @@
 ---
 layout: home
-excerpt: "Science and philosophy enthusiast."
+excerpt: "M.Sc. Data Science @ RWTH Aachen"
 tags: []
 ---
