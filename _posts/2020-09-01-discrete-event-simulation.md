@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automatic Discrete Event Simulation of Processes Using Event Logs
+title: A Python Extension to Simulate Petri nets in Process Mining
 tags: [project]
 ---
 
