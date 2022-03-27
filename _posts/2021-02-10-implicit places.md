@@ -4,7 +4,7 @@ title: Removing Implicit Places Using Regions for Process Discovery
 tags: [project]
 ---
 
-I prepared a Term Paper and Tool Demonstration on 'Removing Implicit Places Using Regions for Process Discovery' as part of the graduate-level seminar: Selected Topics in Process Mining.
+I prepared a term paper and presented a tool demonstration on 'Removing Implicit Places Using Regions for Process Discovery' as part of the graduate-level seminar: Selected Topics in Process Mining.
 
 <a href="/seminar_report.pdf"> Technical Report</a> |
 <a href="/seminar_presentation.pdf"> Seminar Presentation</a> |

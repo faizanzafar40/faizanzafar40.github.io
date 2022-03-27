@@ -4,7 +4,7 @@ title: A Python Extension to Simulate Petri nets in Process Mining
 tags: [project]
 ---
 
-This project provides an open-source tool that allows the user to generate an event log by simulating the discovered process model from an original event log recorded from a process aware information system. This tool is completely written in [Python](https://www.python.org/), using the [pm4py](http://pm4py.org/) library for process model generation and the [SimPy](https://pypi.org/project/simpy/) library for discrete event simulation. The tool mainly comprises three modules:
+This project provides an open-source tool that allows the user to generate an event log by simulating the discovered process model from an original event log recorded from a process aware information system. This tool is completely written in [Python](https://www.python.org/), using the [pm4py](https://pm4py.fit.fraunhofer.de/) library for process model generation and the [SimPy](https://pypi.org/project/simpy/) library for discrete event simulation. The tool mainly comprises three modules:
 * Process Mining
   - In this module, the process model is discovered in the form of a Petri net by applying process mining techniques on the original event log. This Petri net presents the possible flow of activities for the cases. Furthermore, feature extraction is performed in the subsequent performance analyses step, resulting in the calculation of _arrival rate of cases_ and _activity duration_. These extracted features are subsequently used in the discrete event simulation module.
 * Discrete Event Simulation
