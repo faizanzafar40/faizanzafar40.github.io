@@ -12,5 +12,5 @@ This project provides an open-source tool that allows the user to generate an ev
  * Generating the Simulated Event Logs
    - In this module, the simulated events for the generated cases are transformed into an event log. This event log is saved in the form of a ```.csv``` file. Moreover, the discrete event simulation clock is converted into a real timestamp and records each activity for the cases accordingly.
 
-<a href="https://arxiv.org/abs/2102.08774">Published Paper</a> |
-<a href="https://github.com/faizanzafar40/Automated-Process-Simulation">Code</a>
+<a href="https://arxiv.org/abs/2102.08774" target="_blank">Published Paper</a> |
+<a href="https://github.com/faizanzafar40/Automated-Process-Simulation" target="_blank">Code</a>
