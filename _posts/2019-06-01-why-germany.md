@@ -13,6 +13,7 @@ Since I’ve taken up graduate studies, I often get these questions from friends
 <center><strong>Why not</strong> USA, Australia or any other country?</center>
 
 
+
 Here I try to cover, as I intricately as I can, my reasons and knowledge of facts which led me to choose Germany over other options:
 
 
