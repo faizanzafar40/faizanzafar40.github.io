@@ -11,3 +11,5 @@ For this post, I have composed a slide-by-slide <a href="https://drive.google.co
 For the purposes of this beginner's guide, I made use of traditional Powerpoint slides. Since I had to communicate very precise information, a slideshow seemed the most appropriate way.
 
 Please find the presentation <a href="https://drive.google.com/file/d/1GR7knOrNDzlFbxDifI0eLxKfkEdpNn29/view?usp=sharing" target="_blank">here</a>.
+
+<center><strong>Fin.</strong></center>
