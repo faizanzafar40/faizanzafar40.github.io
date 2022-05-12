@@ -4,4 +4,6 @@ title: Investigating Quality Attributes and Best Practices of Microservices Arch
 tags: [project]
 ---
 
-<a href="" target="_blank"> Paper</a> |
+Sample Text
+
+<a href="" target="_blank"> Paper</a>
