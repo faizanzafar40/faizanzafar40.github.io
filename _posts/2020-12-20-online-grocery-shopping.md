@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Multi-method Study of Consumer Behavior - Towards a Better Understanding of the Consumer’s Perspective On Online Grocery Shopping
+title: A Multi-method Study of Consumer Behavior - Towards a Better Understanding of the Consumer’s Perspective on Online Grocery Shopping
 tags: [project]
 ---
 
