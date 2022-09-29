@@ -4,13 +4,7 @@ title: A Python Extension to Simulate Petri nets in Process Mining
 tags: [project]
 ---
 
-This project provides an open-source tool that allows the user to generate an event log by simulating the discovered process model from an original event log recorded from a process aware information system. This tool is completely written in [Python](https://www.python.org/), using the [pm4py](https://pm4py.fit.fraunhofer.de/) library for process model generation and the [SimPy](https://pypi.org/project/simpy/) library for discrete event simulation. The tool mainly comprises three modules:
-* Process Mining
-  - In this module, the process model is discovered in the form of a Petri net by applying process mining techniques on the original event log. This Petri net presents the possible flow of activities for the cases. Furthermore, feature extraction is performed in the subsequent performance analyses step, resulting in the calculation of _arrival rate of cases_ and _activity duration_. These extracted features are subsequently used in the discrete event simulation module.
-* Discrete Event Simulation
-  - In this module, new cases are generated based on the features extracted from the process mining module. Users are also provided with the option to interact with the tool by providing as input, the number of cases to be generated. This input also acts as an endpoint for the simulation process. Additionally, users can modify the arrival rate of cases as well as the activity duration for particular activities.
- * Generating the Simulated Event Logs
-   - In this module, the simulated events for the generated cases are transformed into an event log. This event log is saved in the form of a ```.csv``` file. Moreover, the discrete event simulation clock is converted into a real timestamp and records each activity for the cases accordingly.
+The capability of process mining techniques in providing extensive knowledge and insights into business processes has been widely acknowledged. Process mining techniques support discovering process models as well as analyzing process performance and bottlenecks in the past executions of processes. However, process mining tends to be "backward-looking" rather than "forward-looking" techniques like simulation. For example, process improvement also requires "what-if" analyses. In this paper, we present a Python library that uses an event log to directly generate a simulated event log, with additional options for end-users to specify the duration of activities and the arrival rate. Since the generated simulation model is supported by historical data (event data)and it is based on the Discrete Event Simulation (DES) technique, the generated event data is similar to the behavior of the real process.
 
 <a href="https://arxiv.org/abs/2102.08774" target="_blank">Published Paper</a> |
 <a href="https://github.com/faizanzafar40/Automated-Process-Simulation" target="_blank">Code</a>
