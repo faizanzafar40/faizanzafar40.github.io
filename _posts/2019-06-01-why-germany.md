@@ -4,17 +4,7 @@ title: Why Germany?
 tags: [blog]
 ---
 
-Since I’ve taken up graduate studies, I often get these questions from friends, family and colleagues repetitively,
-
-
-<center><strong>Why</strong> Germany?</center>
-
-
-<center><strong>Why not</strong> USA, Australia or any other country?</center>
-
-
-
-Here I try to cover, as I intricately as I can, my reasons and knowledge of facts which led me to choose Germany over other options:
+Here I try to cover, as I intricately as I can, my reasons and knowledge of facts which led me to choose Germany for graduate studies:
 
 
 * Free Tuition in majority of the technical fields (mainly Engineering and CS related)
