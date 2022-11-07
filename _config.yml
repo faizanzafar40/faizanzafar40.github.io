@@ -2,7 +2,7 @@
 
 title:            Faizan Zafar
 locale:           en_DE
-url:              https://faizanzafar.de/
+url:              https://faizanzafar.de
 
 
 # Jekyll configuration
@@ -28,7 +28,7 @@ kramdown:
 owner:
   name: Faizan Zafar
   avatar: my-image.png
-  bio: "Program @ NavVis"
+  bio: "Product @ NavVis"
   email: faizan.zafar@rwth-aachen.de
   disqus-shortname: #
   twitter: #username
