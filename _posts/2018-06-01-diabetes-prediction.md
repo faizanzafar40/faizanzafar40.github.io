@@ -9,4 +9,8 @@ Diabetes mellitus type 2 is a chronic disease which poses a serious challenge to
 
 <a href="https://dl.acm.org/doi/10.1145/3326172.3326213" target="_blank">Published Paper</a> |
 <a href="/Bachelor_Thesis.pdf" target="_blank">Thesis Report</a> |
-<a href="https://github.com/faizanzafar40/Predictive-Analytics-in-Healthcare-for-Diabetes-Prediction" target="_blank">Code</a>
+<a href="https://github.com/faizanzafar40/Predictive-Analytics-in-Healthcare-for-Diabetes-Prediction" target="_blank">Code</a> |
+<a href="https://speech.seecs.nust.edu.pk/thesis.html" target="_blank">Web Link</a>
+
+
+
