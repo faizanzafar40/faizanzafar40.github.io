@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Product Discovery Micro-Certification
+title: Artificial Intelligence Micro-Certification
 tags: [certification]
 link: /artificial-intelligence-micro-certification-aic.pdf
 ---
