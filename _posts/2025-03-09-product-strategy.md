@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Product Launch Micro-Certification
+title: Product Strategy Micro-Certification
 tags: [certification]
 link: /certificate-of-completion-for-product-strategy-microcertification.pdf
 ---
