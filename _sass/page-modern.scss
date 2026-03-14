@@ -383,7 +383,6 @@ $button-size: 1.5rem;
 		margin-bottom: 1.5em;
 		border-left: 4px solid $accent-blue;
 		transition: all 0.3s ease;
-		box-shadow: 0 1px 3px rgba($black, 0.06);
 
 		&:hover {
 			box-shadow: 0 4px 12px rgba($black, 0.08);
@@ -474,7 +473,6 @@ $button-size: 1.5rem;
 	padding: 1.5em;
 	border-radius: 8px;
 	margin-bottom: 2em;
-	box-shadow: 0 2px 8px rgba($black, 0.06);
 
 	.bio-photo {
 		max-width: 120px;
@@ -545,35 +543,33 @@ $button-size: 1.5rem;
 }
 
 .author-social {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background: $bg-secondary;
+	display: block;
+	margin-bottom: 8px;
+	@include font-rem(13);
 	color: $accent-blue;
 	text-decoration: none;
 	transition: all 0.3s ease;
-	font-size: 1.2em;
+	text-align: center;
+
+	@media #{$small} {
+		text-align: left;
+	}
 
 	&:visited {
 		color: $accent-blue;
 	}
 
 	&:hover {
-		background: $accent-blue;
-		color: $white;
-		transform: translateY(-3px);
-		box-shadow: 0 4px 12px rgba($accent-blue, 0.3);
+		color: $accent-purple;
+		transform: translateX(2px);
 	}
 
 	&:active {
-		transform: translateY(-1px);
+		transform: translateY(2px);
 	}
 
 	.fa {
-		margin: 0;
+		margin-right: 5px;
 	}
 }
 
@@ -602,7 +598,6 @@ $button-size: 1.5rem;
 		margin-top: 0;
 		margin-bottom: 0.3em;
 		font-size: $doc-font-size * 1.1;
-		color: $primary-dark;
 	}
 
 	p {
@@ -1035,59 +1030,5 @@ $button-size: 1.5rem;
 		@media #{$large} {
 			width: 16.666666666%;
 		}
-	}
-}
-
-/* Google search form */
-#goog-fixurl {
-	ul {
-		list-style: none;
-		margin-left: 0;
-		padding-left: 0;
-		li {
-			list-style-type: none;
-		}
-	}
-}
-
-#goog-wm-qt {
-	width: auto;
-	margin-right: 10px;
-	margin-bottom: 20px;
-	padding: 8px 20px;
-	display: inline-block;
-	@include font-rem(14);
-	background-color: $white;
-	color: $black;
-	border-width: 2px !important;
-	border-style: solid !important;
-	border-color: lighten($black, 50);
-	@include rounded(3px);
-}
-
-#goog-wm-sb {
-	@extend .btn;
-}
-
-.related-articles hr {
-	display: none;
-}
-
-.recent-grid {
-	@include clearfix;
-	list-style: none;
-	margin: 1em 0;
-	li {
-		display: inline;
-		a {
-			border-bottom: 0 solid transparent;
-			&:hover {
-				border-bottom: 0 solid transparent;
-			}
-		}
-	}
-	img {
-		width: 19%;
-		margin-bottom: 1%;
 	}
 }
