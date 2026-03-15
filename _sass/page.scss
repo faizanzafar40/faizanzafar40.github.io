@@ -546,6 +546,14 @@ $button-size: 1.5rem;
 	}
 }
 
+.author-social-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	margin-top: 1em;
+}
+
 .author-social {
 	display: inline-flex;
 	align-items: center;
@@ -557,7 +565,8 @@ $button-size: 1.5rem;
 	color: $accent-blue;
 	text-decoration: none;
 	transition: all 0.3s ease;
-	font-size: 1.2em;
+	border: 1px solid $border-color;
+	padding: 0;
 
 	&:visited {
 		color: $accent-blue;
@@ -576,6 +585,7 @@ $button-size: 1.5rem;
 
 	.fa {
 		margin: 0;
+		font-size: 18px;
 	}
 }
 
