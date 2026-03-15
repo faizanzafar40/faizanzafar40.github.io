@@ -8,6 +8,8 @@ body {
 	color: $text-color;
 	line-height: $doc-line-height / $doc-font-size;
 	transition: background-color 0.3s ease;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /*
@@ -45,7 +47,7 @@ body {
 	margin-bottom: 0;
 	float: none;
 	display: block;
-	@include font-rem(22);
+	@include font-rem(18);
 	font-weight: 700;
 	letter-spacing: -0.5px;
 
@@ -323,7 +325,7 @@ $button-size: 1.5rem;
 		margin-bottom: 3em;
 		background: $white;
 		border-radius: 12px;
-		padding: 2em;
+		padding: 1.5em;
 		box-shadow: 0 2px 8px rgba($black, 0.06);
 		transition: all 0.3s ease;
 
@@ -550,16 +552,21 @@ $button-size: 1.5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 1em;
+	gap: 0.75em;
 	margin-top: 1em;
+	flex-wrap: wrap;
+
+	@media #{$small} {
+		gap: 1em;
+	}
 }
 
 .author-social {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 40px;
-	height: 40px;
+	width: 44px;
+	height: 44px;
 	padding: 0;
 	background: $bg-secondary;
 	border-radius: 50%;
@@ -581,6 +588,11 @@ $button-size: 1.5rem;
 
 	&:active {
 		transform: translateY(-1px);
+	}
+
+	&:focus {
+		outline: 2px solid $accent-blue;
+		outline-offset: 2px;
 	}
 
 	.fa {
@@ -653,6 +665,41 @@ $button-size: 1.5rem;
 		margin-top: 1.5em;
 		margin-bottom: 0.5em;
 		font-weight: 700;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+	}
+
+	h1 {
+		@include font-rem(28);
+
+		@media #{$small} {
+			@include font-rem(32);
+		}
+	}
+
+	h2 {
+		@include font-rem(22);
+
+		@media #{$small} {
+			@include font-rem(26);
+		}
+	}
+
+	h3 {
+		@include font-rem(18);
+
+		@media #{$small} {
+			@include font-rem(22);
+		}
+	}
+
+	p {
+		@include font-rem(14);
+		line-height: 1.8;
+
+		@media #{$small} {
+			@include font-rem(16);
+		}
 	}
 
 	ul, ol {
