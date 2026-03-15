@@ -1,229 +1,152 @@
 /* ==========================================================================
-   Modern Page Layout - Contemporary Design System
+   Page layout
    ========================================================================== */
 
 body {
-	background: linear-gradient(135deg, $bodycolor 0%, $bg-secondary 100%);
+	background-color: $bodycolor;
 	font-family: $base-font;
 	color: $text-color;
-	line-height: $doc-line-height / $doc-font-size;
-	transition: background-color 0.3s ease;
 }
 
 /*
-   Header & Navigation - Modern Styling
+   Header
    ========================================================================== */
 
 .navigation-wrapper {
 	@include container;
-	padding: 1.5em 1em;
+	padding: 2em 0 1em;
 	font-family: $heading-font;
-	font-weight: 600;
-	text-transform: none;
-	@include clearfix;
-	background: $white;
-	box-shadow: 0 1px 3px rgba($black, 0.08);
-	position: sticky;
-	top: 0;
-	z-index: 100;
-	transition: all 0.3s ease;
-
-	@media #{$small} {
-		padding: 1.5em 2em;
-	}
-
-	@media #{$x-large} {
-		padding: 1.5em 0;
-	}
-}
-
-/* Site name - Modern Logo Style */
-.site-name {
-	@include grid(12, 10);
-	@include prefix(12, 1);
-	@include suffix(12, 1);
-	margin-bottom: 0;
-	float: none;
-	display: block;
-	@include font-rem(22);
 	font-weight: 700;
-	letter-spacing: -0.5px;
+	text-transform: uppercase;
+	@include clearfix;
+}
 
+/* Site name */
+.site-name {
+	@include grid(12,10);
+	@include prefix(12,1);
+	@include suffix(12,1);
+	margin-bottom: 1em;
+	float: none;
+	display: block;
+	@include font-rem(24);
 	@media #{$small} {
-		@include grid(12, 2);
-		@include prefix(12, 0.5);
-		@include suffix(12, 0.5);
-		@include font-rem(20);
-		margin-bottom: 0;
+		@include grid(12,2);
+		@include prefix(12,0.5);
+		@include suffix(12,0.5);
+		@include font-rem(16);
 	}
-
 	@media #{$x-large} {
-		@include grid(12, 2);
-		@include prefix(12, 1);
-		margin-bottom: 0;
-	}
-
-	a {
-		color: $primary-dark;
-		text-decoration: none;
-		background: linear-gradient(135deg, $accent-blue, $accent-purple);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		font-weight: 700;
-		transition: opacity 0.3s ease;
-
-		&:hover {
-			opacity: 0.8;
-		}
+		@include grid(12,1.5);
+		@include prefix(12,2);
 	}
 }
 
-/* Top navigation - Modern Menu */
+/* Top navigation links */
 .top-navigation {
-	@include grid(12, 10);
-	@include prefix(12, 1);
-	@include suffix(12, 1);
-	margin-bottom: 0;
+	@include grid(12,10);
+	@include prefix(12,1);
+	@include suffix(12,1);
+	margin-bottom: 1em;
 	float: none;
 	display: block;
-
 	@media #{$small} {
-		@include grid(12, 9);
-		@include prefix(12, 0);
-		@include suffix(12, 0);
-		margin-bottom: 0;
+		@include grid(12,9);
+		@include prefix(12,0);
+		@include suffix(12,0);
 	}
-
 	@media #{$x-large} {
-		@include grid(12, 8);
-		margin-bottom: 0;
+		@include grid(12,8);
 	}
-
 	ul {
 		margin: 0;
 		padding: 0;
 		clear: both;
 		list-style-type: none;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0;
-
-		@media #{$small} {
-			justify-content: flex-end;
-			gap: 0;
-		}
 	}
-
 	li {
-		display: none;
+		display: block;
 		list-style-type: none;
-		border-bottom: none;
-		@include font-rem(15);
-		font-weight: 500;
-
+		border-bottom: 1px solid lighten($black,80);
+		border-bottom: 1px solid fade($black,10);
+		@include font-rem(16);
+		&:last-child {
+			border-bottom: 0 solid transparent;
+		}
 		@media #{$small} {
-			display: inline-block;
-			margin: 0;
+			display: inline;
+			margin-right: 25px;
 			white-space: nowrap;
 			border-bottom: 0 solid transparent;
 		}
-
 		a {
-			display: inline-block;
-			padding: 0.5em 1.2em;
-			text-decoration: none;
-			color: $text-color;
-			border-bottom: 2px solid transparent;
-			transition: all 0.3s ease;
-			position: relative;
-
+			display: block;
+			padding: 10px 0;
+			decoration: none;
+			border-bottom: 0 solid transparent;
+			@include transition(all .2s);
 			@media #{$small} {
-				padding: 0.5em 1.2em;
-			}
-
-			&::after {
-				content: '';
-				position: absolute;
-				bottom: -2px;
-				left: 0;
-				width: 0;
-				height: 2px;
-				background: linear-gradient(90deg, $accent-blue, $accent-purple);
-				transition: width 0.3s ease;
-			}
-
-			&:hover,
-			&:focus {
-				color: $accent-blue;
-
-				&::after {
-					width: 100%;
-				}
+				display: inline;
+				padding: 0;
 			}
 		}
 	}
 }
 
-/* Mobile nav button */
+/* Animated lines for mobile nav button */
 $button-size: 1.5rem;
-
 @mixin navicon-line() {
 	display: inline-block;
 	width: $button-size;
-	height: $button-size / 7;
-	background: $primary-dark;
-	border-radius: $button-size / 14;
-	transition: 0.3s;
+	height: $button-size/7;
+	// line color
+	background: $white;
+	border-radius: $button-size/14;
+	transition: .3s;
 }
-
 .navicon-lines-button {
-	padding: $button-size / 4 $button-size / 2;
-	transition: 0.3s;
+	padding: $button-size/4 $button-size/2;
+	transition: .3s;
 	cursor: pointer;
 	user-select: none;
-	border-radius: $button-size / 7;
-	border: none;
-	background: none;
-	display: none;
-
-	@media #{$small} {
-		display: none;
-	}
+	border-radius: $button-size/7;
 }
-
 .navicon-lines-button:hover {
-	background: rgba($primary-dark, 0.05);
+	opacity: 1;
 }
-
+.navicon-lines-button:active {
+	transition: 0;
+}
 .navicon-lines {
 	margin-right: 10px;
-	margin-bottom: $button-size / 5;
+	margin-bottom: $button-size/5;
+	// create middle line
 	@include navicon-line;
 	position: relative;
-
+	// create the upper and lower lines as pseudo-elements of the middle line
 	&:before,
 	&:after {
 		@include navicon-line;
 		position: absolute;
 		left: 0;
 		content: '';
-		-webkit-transform-origin: $button-size / 14 center;
-		transform-origin: $button-size / 14 center;
+		-webkit-transform-origin: $button-size/14 center;
+		transform-origin: $button-size/14 center;
 	}
-
-	&:before {
-		top: $button-size / 4;
-	}
-
-	&:after {
-		top: -$button-size / 4;
+	&:before { top: $button-size/4; }
+	&:after { top: -$button-size/4; }
+}
+.navicon-lines-button:hover {
+	opacity: 1;
+	.navicon-lines {
+		&:before { top: $button-size/3.5; }
+		&:after { top: -$button-size/3.5; }
 	}
 }
-
 .navicon-lines-button.x.active .navicon-lines {
+	// hide the middle line
 	background: transparent;
-
+	// overlap the lines by setting both their top values to 0
 	&:before,
 	&:after {
 		-webkit-transform-origin: 50% 50%;
@@ -231,304 +154,250 @@ $button-size: 1.5rem;
 		top: 0;
 		width: $button-size;
 	}
-
+	// rotate the lines to form the x shape
 	&:before {
-		-webkit-transform: rotate3d(0, 0, 1, 45deg);
-		transform: rotate3d(0, 0, 1, 45deg);
+		-webkit-transform: rotate3d(0,0,1,45deg);
+		transform: rotate3d(0,0,1,45deg);
 	}
-
 	&:after {
-		-webkit-transform: rotate3d(0, 0, 1, -45deg);
-		transform: rotate3d(0, 0, 1, -45deg);
+		-webkit-transform: rotate3d(0,0,1,-45deg);
+		transform: rotate3d(0,0,1,-45deg);
 	}
 }
-
+// Style the toggle menu link and hide it
 .nav .navtoggle {
 	@include font-rem(18);
 	font-weight: normal;
-	background: none;
-	color: $primary-dark;
+	background-color: $black;
+	color: $white;
 	border: none;
 	cursor: pointer;
-	display: block;
-
 	@media #{$small} {
 		display: none;
 	}
 }
-
 .nav button {
 	border: none;
 	background: none;
 }
-
+.navtoggle i {
+	z-index:-1;
+}
+.icon-menu {
+	position: relative;
+	top: 3px;
+	line-height: 0;
+}
+// When JavaScript is disabled, we hide the toggle button
 .no-js .nav .navtoggle {
 	display: none;
 }
-
+// When JavaScript is disabled, we show the menu
 .no-js .nav ul {
 	max-height: 30em;
 	overflow: hidden;
 }
-
+// When JavaScript is enabled, we hide the menu
 .js .nav ul {
 	max-height: 0;
 	overflow: hidden;
-
 	@media #{$small} {
 		max-height: 30em;
 	}
 }
-
+// Displaying the menu when the user has clicked on the button
 .js .nav .active + ul {
 	max-height: 30em;
 	overflow: hidden;
-	-webkit-transition: max-height 0.4s;
-	-moz-transition: max-height 0.4s;
-	-o-transition: max-height 0.4s;
-	-ms-transition: max-height 0.4s;
-	transition: max-height 0.4s;
+	-webkit-transition: max-height .4s;
+	-moz-transition: max-height .4s;
+	-o-transition: max-height .4s;
+	-ms-transition: max-height .4s;
+	transition: max-height .4s;
 }
 
-/*
-   Main Content Area - Modern Card Layout
-   ========================================================================== */
-
+/* Main content */
 #main {
 	counter-reset: captions;
 	@include container;
 	@include clearfix;
 	clear: both;
-	margin: 2.5em 0;
-	padding: 0 1em;
-
-	@media #{$small} {
-		padding: 0 2em;
-	}
-
-	@media #{$x-large} {
-		padding: 0;
-	}
-
+	margin-top: 2em;
 	h1 {
 		margin-top: 0;
 	}
-
 	.post,
 	.page {
 		@include container;
-		@include grid(12, 10);
-		@include prefix(12, 1);
-		@include suffix(12, 1);
-		margin-bottom: 3em;
-		background: $white;
-		border-radius: 12px;
-		padding: 2em;
-		box-shadow: 0 2px 8px rgba($black, 0.06);
-		transition: all 0.3s ease;
-
-		&:hover {
-			box-shadow: 0 8px 16px rgba($black, 0.1);
-		}
-
+		@include grid(12,10);
+		@include prefix(12,1);
+		@include suffix(12,1);
+		margin-bottom: 2em;
 		@media #{$small} {
-			@include grid(12, 8);
-			@include prefix(12, 2);
-			@include suffix(12, 2);
-			padding: 2.5em;
+			@include grid(12,6);
+			@include prefix(12,0);
+			@include suffix(12,0);
 		}
-
 		@media #{$x-large} {
-			@include grid(12, 6);
-			@include prefix(12, 3);
-			@include suffix(12, 3);
-			padding: 3em;
+			@include grid(12,4.5);
 		}
 	}
 }
 
-/* Index listing */
+/* Index listing specific styling */
 #index {
 	@include container;
-	@include grid(12, 10);
-	@include prefix(12, 1);
-	@include suffix(12, 1);
+	@include grid(12,10);
+	@include prefix(12,1);
+	@include suffix(12,1);
 	margin-bottom: 2em;
-
 	@media #{$small} {
-		@include grid(12, 8);
-		@include prefix(12, 2);
-		@include suffix(12, 2);
+		@include grid(12,6);
+		@include prefix(12,0);
+		@include suffix(12,0);
 	}
-
 	@media #{$x-large} {
-		@include grid(12, 6);
-		@include prefix(12, 3);
-		@include suffix(12, 3);
+		@include grid(12,4.5);
 	}
-
 	h3 {
-		margin: 0 0 1.5em;
-		padding-bottom: 0;
-		@include font-rem(32);
-		font-weight: 700;
-		color: $primary-dark;
-		border-bottom: none;
+		margin: 0;
+		padding-bottom: .5em;
+		@include font-rem(28);
+		border-bottom: 1px solid lighten($black,70);
 	}
-
 	article {
-		background: $white;
-		border-radius: 8px;
-		padding: 1.5em;
-		margin-bottom: 1.5em;
-		border-left: 4px solid $accent-blue;
-		transition: all 0.3s ease;
-		box-shadow: 0 1px 3px rgba($black, 0.06);
-
-		&:hover {
-			box-shadow: 0 4px 12px rgba($black, 0.08);
-			transform: translateY(-2px);
-		}
-
 		h2 {
-			margin: 0 0 0.5em;
-			@include font-rem(22);
-			font-weight: 700;
-			color: $primary-dark;
-
+			margin-bottom: 4px;
+			@include font-rem(20);
 			&.link-post {
-				margin-bottom: 0.5em;
-			}
-
-			a {
-				color: $accent-blue;
-				text-decoration: none;
-				transition: color 0.3s ease;
-
-				&:hover {
-					color: $accent-purple;
-				}
+				margin-bottom: 0px + $doc-line-height;
+				margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
 			}
 		}
-
 		p {
-			@include font-rem(15);
-			color: $text-light;
-			margin-bottom: 1em;
+			@include font-rem(14);
 		}
-
-		p + p {
+		p+p {
 			text-indent: 0;
 		}
 	}
 }
 
-/*
-   Feature Image Section
-   ========================================================================== */
-
+/* Large feature header image */
 .image-wrap {
 	position: relative;
 	margin-bottom: 2em;
 	@include clearfix;
-	border-radius: 12px;
-	overflow: hidden;
-	box-shadow: 0 4px 12px rgba($black, 0.1);
-
 	&:after {
 		content: " ";
-		display: none;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 8%;
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-bottom-color: $bodycolor;
+		@media #{$small} {
+			left: 25%;
+		}
+		@media #{$large} {
+			border-width: 20px;
+		}
+		@media #{$x-large} {
+			left: 33.333333333%;
+		}
 	}
-
 	img {
 		width: 100%;
 		height: auto;
 		-ms-interpolation-mode: bicubic;
-		display: block;
 	}
-
 	.headline-wrap {
 		position: absolute;
 		bottom: 25px;
-		left: 25px;
-		right: 25px;
-		z-index: 1;
-
-		h1,
-		h2 {
+		@include prefix(12,1);
+		@media #{$small} {
+			left: 25%;
+			margin-left: 0;
+		}
+		@media #{$x-large} {
+			@include prefix(12,1);
+		}
+		h1, h2 {
 			color: $white;
-			text-shadow: 0 2px 8px rgba($black, 0.3);
-			margin: 0;
-			line-height: 1.2;
+			@include text-shadow(0 1px 2px rgba(0,0,0,.25));
 		}
 	}
 }
 
-/*
-   Author Section - Modern Card
-   ========================================================================== */
+/* Post byline */
+.byline {
+	clear: both;
+	font-size: 80%;
+}
+.article-author-side,
+.article-author-bottom {
+	h3 {
+		margin-bottom: 0;
+	}
+	p {
+		font-size: 80%;
+	}
+	a, a:hover {
+		border-bottom: 0 solid transparent;
+	}
+}
 
+/* Default social media links in author sidebar */
+.author-social {
+  display: block;
+  margin-bottom: 5px;
+  @include font-rem(14);
+  color: $black;
+  &:visited {
+    color: $black;
+  }
+  &:hover {
+    @include scale(1.1);
+  }
+  &:active {
+    @include translate(0, 2px);
+  }
+  .fa {
+		margin-right: 5px;
+	}
+}
+
+/* Author sidebar */
 .article-author-side {
 	display: none;
-	background: linear-gradient(135deg, $bg-secondary, $white);
-	padding: 1.5em;
-	border-radius: 8px;
-	margin-bottom: 2em;
-	box-shadow: 0 2px 8px rgba($black, 0.06);
-
 	.bio-photo {
-		max-width: 120px;
-		border-radius: 50%;
-		border: 4px solid $accent-blue;
-		display: block;
-		margin: 0 auto 1em;
-		transition: transform 0.3s ease;
-
-		&:hover {
-			transform: scale(1.05);
-		}
+		max-width: 110px;
+		@include rounded(150px);
 	}
-
-	h3 {
-		margin-top: 0;
-		margin-bottom: 0.5em;
-		font-size: $doc-font-size * 1.1;
-		color: $primary-dark;
-		text-align: center;
-	}
-
-	p {
-		text-align: center;
-		color: $text-light;
-		margin-bottom: 1em;
-		font-size: $doc-font-size * 0.9;
-	}
-
 	@media #{$small} {
 		display: block;
-		@include grid(12, 3);
-		@include prefix(12, 0);
-		@include suffix(12, 0);
-		margin-bottom: 2em;
-		padding: 1.5em;
-
+		@include grid(12,2);
+		@include prefix(12,0.5);
+		@include suffix(12,0.5);
 		h3,
 		p,
 		.author-social {
 			display: block;
-			max-width: 100%;
-			text-align: left;
+			max-width: 125px;
 		}
-
 		h3 {
-			text-align: left;
+			margin-top: 10px;
+			margin-bottom: 10px;
 		}
-
 		p {
-			text-align: left;
+			margin-bottom: 20px;
+		}
+		.author-social {
+			margin-bottom: 5px;
 		}
 	}
-
 	@media #{$large} {
 		h3,
 		.bio-photo,
@@ -537,542 +406,143 @@ $button-size: 1.5rem;
 			max-width: 150px;
 		}
 	}
-
 	@media #{$x-large} {
-		@include grid(12, 2);
-		@include prefix(12, 1);
+		@include grid(12,1.5);
+		@include prefix(12,2);
 	}
 }
 
-.author-social {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background: $bg-secondary;
-	color: $accent-blue;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	font-size: 1.2em;
-
-	&:visited {
-		color: $accent-blue;
-	}
-
-	&:hover {
-		background: $accent-blue;
-		color: $white;
-		transform: translateY(-3px);
-		box-shadow: 0 4px 12px rgba($accent-blue, 0.3);
-	}
-
-	&:active {
-		transform: translateY(-1px);
-	}
-
-	.fa {
-		margin: 0;
-	}
-}
-
-/* Author module - mobile */
+/* Author module - mobile only */
 .article-author-bottom {
-	margin-bottom: 2em;
-	padding: 1.5em;
-	background: $bg-secondary;
-	border-radius: 8px;
-	@include clearfix;
-
+	margin-bottom: 1em;
 	@media #{$small} {
 		display: none;
 	}
-
 	.bio-photo {
 		float: left;
-		margin-right: 15px;
-		margin-bottom: 0;
-		max-width: 80px;
-		border-radius: 50%;
-		border: 3px solid $accent-blue;
+		margin-right: 25px;
+		max-width: 100px;
+		@include rounded(150px);
 	}
-
-	h3 {
-		margin-top: 0;
-		margin-bottom: 0.3em;
-		font-size: $doc-font-size * 1.1;
-		color: $primary-dark;
-	}
-
-	p {
-		margin-bottom: 1em;
-		font-size: $doc-font-size * 0.9;
-	}
-
 	.author-social {
 		display: inline-block;
-		margin-right: 8px;
-		text-align: center;
+		margin-right: 10px;
+	}
+	@media #{$large} {
+		h3,
+		.bio-photo,
+		p,
+		.author-social {
+			max-width: 150px;
+		}
 	}
 }
 
-/*
-   Article Styling - Modern Typography
-   ========================================================================== */
-
+/* Post content wrapper */
 .article-wrap {
+	// Dotted line underlines for links
 	p > a,
 	p > em > a,
 	p > strong > a,
 	li > a {
-		color: $accent-blue;
-		text-decoration: none;
-		border-bottom: 1px solid $accent-blue;
-		transition: all 0.3s ease;
-
-		&:hover {
-			color: $accent-purple;
-			border-bottom-color: $accent-purple;
-		}
+		text-decoration: underline;
 	}
-
-	h1, h2, h3 {
-		color: $primary-dark;
-		margin-top: 1.5em;
-		margin-bottom: 0.5em;
-		font-weight: 700;
-	}
-
-	ul, ol {
-		margin-bottom: 1.5em;
-		padding-left: 1.5em;
-
-		li {
-			margin-bottom: 0.5em;
-			line-height: 1.6;
-		}
-	}
-
-	blockquote {
-		border-left: 4px solid $accent-blue;
-		padding: 1em 1.5em;
-		margin: 1.5em 0;
-		background: $bg-secondary;
-		border-radius: 4px;
-		color: $text-light;
-		font-style: italic;
-	}
-
-	code {
-		background: $bg-tertiary;
-		padding: 2px 6px;
-		border-radius: 3px;
-		font-family: $code-font;
-		font-size: 0.9em;
-		color: $danger;
-	}
-
-	pre {
-		background: $primary-dark;
-		color: $white;
-		padding: 1.5em;
-		border-radius: 8px;
-		overflow-x: auto;
-		margin: 1.5em 0;
-
-		code {
-			background: none;
-			color: inherit;
-			padding: 0;
-		}
-	}
-}
-
-/* Post byline */
-.byline {
-	clear: both;
-	font-size: 90%;
-	color: $text-light;
-	margin-top: 2em;
-	padding-top: 1.5em;
-	border-top: 1px solid $border-color;
 }
 
 /* Table of contents */
 .toc {
 	font-size: 95%;
-	background: $bg-secondary;
-	border-radius: 8px;
-	padding: 1.5em;
-	margin-bottom: 2em;
-
 	@media #{$large} {
 		display: block;
-		@include grid(12, 3);
-		@include prefix(12, 0.5);
-		@include suffix(12, 0.5);
+		@include grid(12,2);
+		@include prefix(12,0.5);
+		@include suffix(12,0.5);
 		position: absolute;
 		top: 5.5em;
 		right: 0;
+		background-color: $white;
 	}
-
 	header {
-		background: $accent-blue;
-		border-radius: 4px;
+		background: lighten($black, 10);
 	}
-
 	h3 {
 		margin: 0;
-		padding: 8px 12px;
+		padding: 5px 10px;
 		color: $white;
-		@include font-rem(15);
+		@include font-rem(16);
 		text-transform: uppercase;
-		font-weight: 700;
-
 		&:hover {
 			cursor: pointer;
 		}
 	}
-
 	ul {
-		margin: 0;
+		margin: 2px 0 0;
 		padding: 0;
-		line-height: 1.6;
-		list-style: none;
+		line-height: 1;
 	}
-
 	li {
 		display: block;
-		margin: 0;
+		margin: 0 0 1px 0;
 		padding: 0;
-		font-family: $base-font;
+		font-family: $heading-font;
 		list-style-type: none;
-
 		&:last-child {
 			border-bottom-width: 0;
 		}
-
 		a {
-			padding: 8px 12px;
+			padding: 10px;
 			display: block;
-			color: $text-color;
+			color: $white;
 			text-decoration: none;
-			background: $white;
-			border-left: 3px solid transparent;
-			transition: all 0.3s ease;
-
+			background: lighten($black, 30);
+			@include opacity(0.7);
+			@include transition(opacity 0.2s ease-in-out);
 			&:hover {
-				border-left-color: $accent-blue;
-				background: $bg-secondary;
+				@include opacity(1);
 			}
 		}
-
 		ul {
-			margin: 0;
-			padding: 0;
-
+			margin: 1px 0 0;
 			li a {
-				padding-left: 24px;
+				padding-left: 20px;
 			}
 		}
 	}
 }
 
+/* TOC trigger for collapsing */
 #drawer {
 	max-height: 100%;
 	overflow: hidden;
-
 	&.js-hidden {
 		max-height: 0;
 	}
 }
 
-/*
-   Social Sharing - Modern Style
-   ========================================================================== */
-
-.social-share {
-	margin: 2em 0;
-	padding: 1.5em 0;
-	border-top: 1px solid $border-color;
-	border-bottom: 1px solid $border-color;
-
-	ul,
-	li {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	li {
-		display: inline-block;
-		margin-right: 0.5em;
-		margin-bottom: 0.5em;
-	}
-
-	a {
-		display: inline-flex;
-		align-items: center;
-		gap: 6px;
-		padding: 8px 16px;
-		text-decoration: none;
-		text-transform: uppercase;
-		@include font-rem(12);
-		font-weight: 600;
-		color: $white;
-		border-radius: 6px;
-		transition: all 0.3s ease;
-
-		.fa {
-			font-size: 1.1em;
-		}
-
-		&:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 4px 12px rgba($black, 0.15);
-		}
-	}
-
-	$social: (facebook, $facebook-color), (github, $github-color), (google-plus, $google-plus-color), (instagram, $instagram-color), (linkedin, $linkedin-color), (twitter, $twitter-color), (youtube, $youtube-color);
-
-	@each $socialnetwork, $color in $social {
-		.#{$socialnetwork} {
-			background: $color;
-		}
-	}
-
-	span {
-		display: none;
-
-		@media #{$medium} {
-			display: inline;
-		}
-	}
-
-	h4 {
-		@include font-rem(13);
-		margin-bottom: 1em;
-		text-transform: uppercase;
-		font-weight: 700;
-		color: $primary-dark;
-	}
-}
-
-/*
-   Related Articles - Modern Cards
-   ========================================================================== */
-
-.related-articles {
-	@include grid(12, 10);
-	@include prefix(12, 1);
-	@include suffix(12, 1);
-	margin: 3em 0 2em;
-
-	@media #{$small} {
-		@include grid(12, 8);
-		@include prefix(12, 2);
-		@include suffix(12, 2);
-	}
-
-	@media #{$x-large} {
-		@include grid(12, 6);
-		@include prefix(12, 3);
-		@include suffix(12, 3);
-	}
-
-	h4 {
-		text-transform: uppercase;
-		margin: 0 0 1.5em;
-		font-size: 16px;
-		font-weight: 700;
-		color: $primary-dark;
-	}
-
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	li {
-		margin-bottom: 1em;
-		padding: 1em;
-		background: $bg-secondary;
-		border-radius: 6px;
-		border-left: 3px solid $accent-blue;
-		transition: all 0.3s ease;
-
-		&:hover {
-			box-shadow: 0 2px 8px rgba($black, 0.08);
-			transform: translateX(4px);
-		}
-
-		a {
-			color: $accent-blue;
-			text-decoration: none;
-			font-weight: 600;
-			transition: color 0.3s ease;
-
-			&:hover {
-				color: $accent-purple;
-			}
-		}
-	}
-}
-
-/*
-   Footer - Modern Design
-   ========================================================================== */
-
-.footer-wrap {
-	@include container;
-	@include clearfix;
-	clear: both;
-	padding: 3em 1em;
-	background: $primary-dark;
-	margin-top: 3em;
-
-	@media #{$small} {
-		padding: 3em 2em;
-	}
-
-	@media #{$x-large} {
-		padding: 3em 0;
-	}
-
-	a,
-	a:active,
-	a:visited,
-	p,
-	h4,
-	h5,
-	h6,
-	span {
-		@include font-rem(14);
-		color: $white;
-	}
-
-	a {
-		color: $accent-cyan;
-		text-decoration: none;
-		transition: color 0.3s ease;
-
-		&:hover {
-			color: $white;
-		}
-	}
-
-	footer {
-		@include grid(12, 10);
-		@include prefix(12, 1);
-		@include suffix(12, 1);
-		text-align: center;
-
-		@media #{$small} {
-			@include grid(12, 8);
-			@include prefix(12, 2);
-			@include suffix(12, 2);
-		}
-
-		@media #{$x-large} {
-			@include grid(12, 6);
-			@include prefix(12, 3);
-			@include suffix(12, 3);
-		}
-	}
-}
-
-/*
-   Browser Upgrade Alert
-   ========================================================================== */
-
-.browser-upgrade {
-	background: linear-gradient(135deg, $danger, #ff5a7e);
-	text-align: center;
-	margin: 0;
-	padding: 15px;
-	color: $white;
-	font-weight: 600;
-
-	a {
-		color: $white;
-		border-bottom: 1px dotted $white;
-		text-decoration: none;
-
-		&:hover {
-			border-bottom: 1px solid $white;
-		}
-	}
-}
-
-/*
-   Responsive Grid Utilities
-   ========================================================================== */
-
+/* Image grid - not used */
 .image-grid {
 	@include clearfix;
 	list-style: none;
 	margin: 0 0 1em;
 	padding: 0;
-	gap: 1em;
-
 	li {
-		@include grid(12, 6);
-
+		@include grid(12,6);
 		@media #{$micro} {
 			width: 33.333333%;
 		}
-
 		@media #{$small} {
 			width: 25%;
 		}
-
 		@media #{$medium} {
 			width: 20%;
 		}
-
 		@media #{$large} {
 			width: 16.666666666%;
 		}
 	}
 }
 
-/* Google search form */
-#goog-fixurl {
-	ul {
-		list-style: none;
-		margin-left: 0;
-		padding-left: 0;
-		li {
-			list-style-type: none;
-		}
-	}
-}
-
-#goog-wm-qt {
-	width: auto;
-	margin-right: 10px;
-	margin-bottom: 20px;
-	padding: 8px 20px;
-	display: inline-block;
-	@include font-rem(14);
-	background-color: $white;
-	color: $black;
-	border-width: 2px !important;
-	border-style: solid !important;
-	border-color: lighten($black, 50);
-	@include rounded(3px);
-}
-
-#goog-wm-sb {
-	@extend .btn;
-}
-
-.related-articles hr {
-	display: none;
-}
-
+/* Recent grid - not used */
 .recent-grid {
 	@include clearfix;
 	list-style: none;
@@ -1090,4 +560,174 @@ $button-size: 1.5rem;
 		width: 19%;
 		margin-bottom: 1%;
 	}
+}
+
+/* Social sharing links */
+/* Social media brand buttons */
+.social-share {
+  margin-bottom: 0px + $doc-line-height;
+  margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
+  ul, li {
+  	margin: 0;
+  	padding: 0;
+  	list-style: none;
+  }
+  li {
+  	display: inline-block;
+  }
+  $social:
+  (facebook, $facebook-color),
+  (flickr, $flickr-color),
+  (foursquare, $foursquare-color),
+  (google-plus, $google-plus-color),
+  (instagram, $instagram-color),
+  (linkedin, $linkedin-color),
+  (pinterest, $pinterest-color),
+  (rss, $rss-color),
+  (tumblr, $tumblr-color),
+  (twitter, $twitter-color),
+  (vimeo, $vimeo-color),
+  (youtube, $youtube-color);
+  @each $socialnetwork, $color in $social {
+    .#{$socialnetwork} {
+      background: $color;
+    }
+  }
+  a {
+	  display: block;
+	  padding: 8px 20px;
+	  text-decoration: none !important;
+	  text-transform: uppercase;
+	  @include font-rem(14);
+	  font-family: $heading-font;
+	  font-weight: 700;
+	  color: $white;
+	  opacity: 0.8;
+	  &:hover {
+	    opacity: 1;
+	  }
+	}
+	span {
+		display: none;
+		@media #{$medium} {
+			display: inline;
+			padding-left: 5px;
+		}
+	}
+	h4 {
+		@include font-rem(14);
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+}
+
+
+/* Footer wrapper */
+.footer-wrap {
+	@include container;
+	@include clearfix;
+	clear: both;
+	padding-bottom: 3em;
+	a,
+	a:active,
+	a:visited,
+	p,
+	h4,
+	h5,
+	h6,
+	span {
+		@include font-rem(14);
+	}
+	footer {
+		@include grid(12,10);
+		@include prefix(12,1);
+		@include suffix(12,1);
+		@media #{$small} {
+			@include grid(12,6);
+			@include prefix(12,3);
+			@include suffix(12,3);
+		}
+		@media #{$x-large} {
+			@include grid(12,4.5);
+			@include prefix(12,4);
+			@include suffix(12,3.5);
+		}
+	}
+}
+
+/* Related articles list */
+.related-articles {
+	@include grid(12,10);
+	@include prefix(12,1);
+	@include suffix(12,1);
+	margin-bottom: 2em;
+	@media #{$small} {
+		@include grid(12,6);
+		@include prefix(12,3);
+		@include suffix(12,3);
+	}
+	@media #{$x-large} {
+		@include grid(12,4.5);
+		@include prefix(12,4);
+		@include suffix(12,3.5);
+	}
+	h4 {
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+	li {
+		margin-bottom: 0;
+	}
+}
+
+/*
+   Browser upgrade alert
+   ========================================================================== */
+
+.browser-upgrade {
+	background: #000;
+	text-align: center;
+	margin: 0 0 2em 0;
+	padding: 10px;
+	text-align: center;
+	color: $white;
+	a {
+		color: $white;
+		border-bottom: 1px dotted $white;
+		text-decoration: none;
+		&:hover {
+			border-bottom: 1px solid $white;
+		}
+	}
+}
+/*
+   Google search form
+   ========================================================================== */
+
+#goog-fixurl {
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+		li {
+			list-style-type: none;
+		}
+	}
+}
+#goog-wm-qt {
+	width: auto;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	padding: 8px 20px;
+	display: inline-block;
+	@include font-rem(14);
+	background-color: $white;
+	color: $black;
+	border-width: 2px !important;
+	border-style: solid !important;
+	border-color: lighten($black,50);
+	@include rounded(3px);
+}
+#goog-wm-sb {
+	@extend .btn;
 }
