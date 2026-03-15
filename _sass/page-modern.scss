@@ -473,7 +473,6 @@ $button-size: 1.5rem;
 	padding: 1.5em;
 	border-radius: 8px;
 	margin-bottom: 2em;
-	box-shadow: 0 2px 8px rgba($black, 0.06);
 
 	.bio-photo {
 		max-width: 120px;
@@ -505,10 +504,9 @@ $button-size: 1.5rem;
 
 	@media #{$small} {
 		display: block;
-		@include container;
-		@include grid(12, 10);
-		@include prefix(12, 1);
-		@include suffix(12, 1);
+		@include grid(12, 3);
+		@include prefix(12, 0);
+		@include suffix(12, 0);
 		margin-bottom: 2em;
 		padding: 1.5em;
 
@@ -517,29 +515,30 @@ $button-size: 1.5rem;
 		.author-social {
 			display: block;
 			max-width: 100%;
-			text-align: center;
+			text-align: left;
 		}
 
 		h3 {
-			text-align: center;
+			text-align: left;
 		}
 
 		p {
-			text-align: center;
+			text-align: left;
 		}
 	}
 
-	@media #{$small} {
-		@include grid(12, 8);
-		@include prefix(12, 2);
-		@include suffix(12, 2);
+	@media #{$large} {
+		h3,
+		.bio-photo,
+		p,
+		.author-social {
+			max-width: 150px;
+		}
 	}
 
 	@media #{$x-large} {
-		@include grid(12, 6);
-		@include prefix(12, 3);
-		@include suffix(12, 3);
-		padding: 2em;
+		@include grid(12, 2);
+		@include prefix(12, 1);
 	}
 }
 
