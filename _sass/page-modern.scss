@@ -505,6 +505,7 @@ $button-size: 1.5rem;
 
 	@media #{$small} {
 		display: block;
+		@include container;
 		@include grid(12, 10);
 		@include prefix(12, 1);
 		@include suffix(12, 1);
@@ -529,6 +530,7 @@ $button-size: 1.5rem;
 	}
 
 	@media #{$large} {
+		@include container;
 		@include grid(12, 8);
 		@include prefix(12, 2);
 		@include suffix(12, 2);
@@ -536,6 +538,7 @@ $button-size: 1.5rem;
 	}
 
 	@media #{$x-large} {
+		@include container;
 		@include grid(12, 6);
 		@include prefix(12, 3);
 		@include suffix(12, 3);
