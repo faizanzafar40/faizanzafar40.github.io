@@ -99,10 +99,9 @@ svg:not(:root) {
 .btn {
 	display: inline-flex;
 	align-items: center;
-	justify-content: center;
 	gap: 8px;
 	margin-bottom: 20px;
-	padding: 12px 24px;
+	padding: 10px 24px;
 	@include font-rem(14);
 	font-family: $heading-font;
 	font-weight: 600;
@@ -118,11 +117,6 @@ svg:not(:root) {
 	box-shadow: 0 2px 8px rgba($primary, 0.2);
 	position: relative;
 	overflow: hidden;
-	min-height: 44px;
-
-	@media #{$small} {
-		padding: 12px 32px;
-	}
 
 	&:visited {
 		color: $white;

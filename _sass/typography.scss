@@ -15,53 +15,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	@include font-size(32);
+	@include font-size(42);
 	margin: 0.67em 0 0.33em;
 
 	@media #{$small} {
 		@include font-size(36);
 	}
-
-	@media #{$large} {
-		@include font-size(42);
-	}
 }
 
 h2 {
-	@include font-size(26);
+	@include font-size(32);
 	margin: 0.83em 0 0.42em;
 
 	@media #{$small} {
 		@include font-size(28);
 	}
-
-	@media #{$large} {
-		@include font-size(32);
-	}
 }
 
 h3 {
-	@include font-size(22);
+	@include font-size(26);
 	margin: 1em 0 0.5em;
 	font-weight: 700;
 
 	@media #{$small} {
 		@include font-size(24);
 	}
-
-	@media #{$large} {
-		@include font-size(26);
-	}
 }
 
 h4 {
-	@include font-size(18);
+	@include font-size(20);
 	margin: 1.17em 0 0.58em;
 	font-weight: 600;
-
-	@media #{$small} {
-		@include font-size(20);
-	}
 }
 
 h5 {
