@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faizan Zafar — Product Manager</title>
+  <meta name="description" content="Faizan Zafar is a customer-centric Product Manager based in Munich with 4+ years in SaaS, building impactful, value-driven products at ATOSS, NavVis and Celonis." />
+  <meta name="author" content="Faizan Zafar" />
+  <meta name="theme-color" content="#6366f1" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Faizan Zafar — Product Manager" />
+  <meta property="og:description" content="Customer-centric Product Manager in Munich. 4+ years in SaaS across ATOSS, NavVis and Celonis." />
+  <meta property="og:image" content="assets/me.png" />
+  <meta property="og:url" content="https://faizanzafar.de" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/me.png" />
+  <link rel="canonical" href="https://faizanzafar.de" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Prevent theme flash: set theme before paint -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <style>
+    /* ============================================================
+       Design tokens
+       ============================================================ */
+    :root {
+      --accent: #6366f1;
+      --accent-2: #8b5cf6;
+      --accent-strong: #4f46e5;
+      --accent-grad: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      --accent-soft: rgba(99, 102, 241, 0.10);
+      --accent-ring: rgba(99, 102, 241, 0.30);
+
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --surface: #ffffff;
+      --surface-2: #f1f5f9;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
+      --border: #e7eaf0;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06), 0 12px 28px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 18px 50px rgba(79, 70, 229, 0.16);
+      --nav-bg: rgba(255, 255, 255, 0.72);
+      --hero-glow-1: rgba(99, 102, 241, 0.22);
+      --hero-glow-2: rgba(139, 92, 246, 0.18);
+      --grid-line: rgba(15, 23, 42, 0.04);
+
+      --max: 1120px;
+      --radius: 18px;
+      --radius-sm: 12px;
+      --radius-lg: 26px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-display: 'Plus Jakarta Sans', var(--font);
+    }
+
+    [data-theme="dark"] {
+      --accent: #818cf8;
+      --accent-2: #a78bfa;
+      --accent-strong: #6366f1;
+      --accent-grad: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+      --accent-soft: rgba(129, 140, 248, 0.12);
+      --accent-ring: rgba(129, 140, 248, 0.32);
+
+      --bg: #0a0f1f;
+      --bg-alt: #0d1426;
+      --surface: #111a30;
+      --surface-2: #16203a;
+      --text: #eef2f9;
+      --text-muted: #aab4c8;
+      --text-subtle: #8090a8;
+      --border: #223052;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 8px 26px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 20px 56px rgba(0, 0, 0, 0.5);
+      --nav-bg: rgba(10, 15, 31, 0.72);
+      --hero-glow-1: rgba(99, 102, 241, 0.30);
+      --hero-glow-2: rgba(139, 92, 246, 0.24);
+      --grid-line: rgba(255, 255, 255, 0.035);
+    }
+
+    /* ============================================================
+       Base
+       ============================================================ */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    ::selection { background: var(--accent); color: #fff; }
+
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    section { padding: 96px 0; position: relative; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent-soft); padding: 6px 14px; border-radius: 999px;
+    }
+
+    .section-head { max-width: 640px; margin-bottom: 48px; }
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+      font-weight: 800; letter-spacing: -0.02em; line-height: 1.15;
+      margin: 18px 0 14px;
+    }
+    .section-head p { color: var(--text-muted); font-size: 1.05rem; }
+
+    .accent-text {
+      background: var(--accent-grad);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+
+    /* ============================================================
+       Buttons
+       ============================================================ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-weight: 600; font-size: 0.95rem;
+      padding: 13px 22px; border-radius: 12px;
+      cursor: pointer; border: 1px solid transparent;
+      transition: transform 0.18s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      white-space: nowrap;
+    }
+    .btn svg { width: 18px; height: 18px; }
+    .btn-primary {
+      background: var(--accent-grad); color: #fff;
+      box-shadow: 0 8px 22px rgba(99, 102, 241, 0.32);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(99, 102, 241, 0.42); }
+    .btn-ghost {
+      background: var(--surface); color: var(--text);
+      border-color: var(--border); box-shadow: var(--shadow-sm);
+    }
+    .btn-ghost:hover { transform: translateY(-2px); border-color: var(--accent-ring); color: var(--accent); }
+
+    /* ============================================================
+       Navbar
+       ============================================================ */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+    header.scrolled { border-bottom-color: var(--border); box-shadow: var(--shadow-sm); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; font-size: 1.02rem; letter-spacing: -0.01em; }
+    .brand .logo {
+      width: 38px; height: 38px; border-radius: 11px;
+      background: var(--accent-grad); color: #fff;
+      display: grid; place-items: center;
+      font-family: var(--font-display); font-weight: 800; font-size: 0.95rem;
+      box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      font-size: 0.92rem; font-weight: 500; color: var(--text-muted);
+      padding: 8px 14px; border-radius: 9px; position: relative;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--surface-2); }
+    .nav-links a.active { color: var(--accent); }
+
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+
+    .icon-btn {
+      width: 42px; height: 42px; border-radius: 11px;
+      display: grid; place-items: center; cursor: pointer;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text-muted); transition: all 0.2s ease;
+    }
+    .icon-btn:hover { color: var(--accent); border-color: var(--accent-ring); transform: translateY(-1px); }
+    .icon-btn svg { width: 20px; height: 20px; }
+    .theme-toggle .moon { display: none; }
+    [data-theme="dark"] .theme-toggle .sun { display: none; }
+    [data-theme="dark"] .theme-toggle .moon { display: block; }
+
+    .hamburger { display: none; }
+
+    /* ============================================================
+       Hero
+       ============================================================ */
+    .hero { padding: 150px 0 90px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -2;
+      background:
+        radial-gradient(620px circle at 15% 8%, var(--hero-glow-1), transparent 55%),
+        radial-gradient(560px circle at 88% 22%, var(--hero-glow-2), transparent 52%);
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; z-index: -2;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+    }
+
+    .hero-grid {
+      display: grid; grid-template-columns: 1.25fr 0.85fr;
+      gap: 56px; align-items: center;
+    }
+    .hero-copy .eyebrow { margin-bottom: 22px; }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 6vw, 4.1rem);
+      font-weight: 800; line-height: 1.04; letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+    .hero .role {
+      font-size: clamp(1.15rem, 2.4vw, 1.45rem); font-weight: 600;
+      color: var(--text); margin-bottom: 22px;
+    }
+    .hero .lead {
+      font-size: 1.08rem; color: var(--text-muted);
+      max-width: 560px; margin-bottom: 30px;
+    }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 38px; }
+    .hero-socials { display: flex; gap: 10px; }
+    .social-btn {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: grid; place-items: center;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text-muted); box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+    .social-btn:hover { color: #fff; background: var(--accent-grad); border-color: transparent; transform: translateY(-3px); }
+    .social-btn svg { width: 21px; height: 21px; }
+
+    /* Photo */
+    .hero-photo { display: flex; justify-content: center; position: relative; }
+    .photo-frame { position: relative; width: min(340px, 78vw); aspect-ratio: 1; }
+    .photo-frame .orb {
+      position: absolute; inset: -14%; border-radius: 50%; z-index: -1;
+      background: var(--accent-grad); filter: blur(46px); opacity: 0.45;
+      animation: float 7s ease-in-out infinite;
+    }
+    .photo-frame img {
+      width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
+      border: 5px solid var(--surface);
+      box-shadow: var(--shadow-lg), 0 0 0 1px var(--border);
+    }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+    /* Stats */
+    .stats {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+      margin-top: 64px; padding-top: 42px; border-top: 1px solid var(--border);
+    }
+    .stat .num {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800; letter-spacing: -0.02em; line-height: 1;
+      background: var(--accent-grad);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .stat .label { font-size: 0.9rem; color: var(--text-muted); margin-top: 8px; }
+
+    /* ============================================================
+       About
+       ============================================================ */
+    #about { background: var(--bg-alt); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .about-lead { font-size: 1.22rem; line-height: 1.7; font-weight: 500; }
+    .about-lead .hl { background: linear-gradient(180deg, transparent 62%, var(--accent-soft) 62%); }
+    .about-sub { color: var(--text-muted); margin-top: 20px; font-size: 1.02rem; }
+    .focus-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .focus-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .focus-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent-ring); }
+    .focus-card .ico {
+      width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
+      background: var(--accent-soft); color: var(--accent); margin-bottom: 16px;
+    }
+    .focus-card .ico svg { width: 23px; height: 23px; }
+    .focus-card h4 { font-size: 1.02rem; font-weight: 700; margin-bottom: 6px; }
+    .focus-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* ============================================================
+       Timeline / Experience
+       ============================================================ */
+    .timeline { position: relative; margin-top: 10px; }
+    .timeline::before {
+      content: ""; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 2px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2), transparent);
+    }
+    .t-item { position: relative; padding: 0 0 40px 64px; }
+    .t-item:last-child { padding-bottom: 0; }
+    .t-item .node {
+      position: absolute; left: 8px; top: 4px; width: 24px; height: 24px; border-radius: 50%;
+      background: var(--surface); border: 3px solid var(--accent);
+      display: grid; place-items: center; box-shadow: 0 0 0 5px var(--accent-soft);
+    }
+    .t-item .node::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+    .t-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px 26px; box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .t-card:hover { transform: translateX(4px); box-shadow: var(--shadow-md); border-color: var(--accent-ring); }
+    .t-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+    .t-role { font-size: 1.18rem; font-weight: 700; letter-spacing: -0.01em; }
+    .t-date {
+      font-size: 0.8rem; font-weight: 600; color: var(--accent);
+      background: var(--accent-soft); padding: 4px 11px; border-radius: 999px; white-space: nowrap;
+    }
+    .t-company { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .t-company a { border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+    .t-company a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .t-meta { font-size: 0.86rem; color: var(--text-subtle); margin-bottom: 14px; display: inline-flex; align-items: center; gap: 6px; }
+    .t-meta svg { width: 14px; height: 14px; }
+    .t-list li { position: relative; padding-left: 22px; margin-bottom: 9px; color: var(--text-muted); font-size: 0.97rem; }
+    .t-list li:last-child { margin-bottom: 0; }
+    .t-list li::before {
+      content: ""; position: absolute; left: 2px; top: 9px; width: 7px; height: 7px;
+      border-radius: 2px; background: var(--accent-grad); transform: rotate(45deg);
+    }
+    .t-list li b { color: var(--text); font-weight: 700; }
+    .t-list li i, .t-list em { color: var(--text); font-style: normal; font-weight: 600; }
+
+    /* ============================================================
+       Skills
+       ============================================================ */
+    #skills { background: var(--bg-alt); }
+    .skill-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .skill-block {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm);
+    }
+    .skill-block .ico {
+      width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center;
+      background: var(--accent-grad); color: #fff; margin-bottom: 18px; box-shadow: 0 8px 20px rgba(99,102,241,0.3);
+    }
+    .skill-block .ico svg { width: 25px; height: 25px; }
+    .skill-block h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 18px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      font-size: 0.9rem; font-weight: 500; padding: 9px 16px; border-radius: 11px;
+      background: var(--surface-2); border: 1px solid var(--border); color: var(--text-muted);
+      transition: all 0.18s ease;
+    }
+    .chip:hover { color: var(--accent); border-color: var(--accent-ring); background: var(--accent-soft); transform: translateY(-2px); }
+
+    /* ============================================================
+       Projects
+       ============================================================ */
+    .project-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-sm);
+      position: relative; overflow: hidden;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .project-card:hover { box-shadow: var(--shadow-md); border-color: var(--accent-ring); }
+    .project-card::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-grad);
+    }
+    .project-tag {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-soft); padding: 5px 12px; border-radius: 999px;
+    }
+    .project-card h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 700; letter-spacing: -0.01em; margin: 16px 0 6px; line-height: 1.25; }
+    .project-date { font-size: 0.86rem; color: var(--text-subtle); margin-bottom: 16px; }
+    .project-card p { color: var(--text-muted); margin-bottom: 14px; max-width: 760px; }
+    .metric-row { display: flex; flex-wrap: wrap; gap: 14px; margin: 22px 0 26px; }
+    .metric {
+      background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 16px 20px; min-width: 130px;
+    }
+    .metric .m-num { font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .metric .m-lab { font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .plink {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.9rem; font-weight: 600; color: var(--text);
+      padding: 9px 16px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface);
+      transition: all 0.2s ease;
+    }
+    .plink svg { width: 16px; height: 16px; }
+    .plink:hover { color: var(--accent); border-color: var(--accent-ring); transform: translateY(-2px); }
+
+    /* ============================================================
+       Certifications
+       ============================================================ */
+    #certs { background: var(--bg-alt); }
+    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .cert-card {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+    .cert-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent-ring); }
+    .cert-card .badge {
+      flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+      background: var(--accent-soft); color: var(--accent);
+    }
+    .cert-card .badge svg { width: 22px; height: 22px; }
+    .cert-card .c-body { min-width: 0; }
+    .cert-card h4 { font-size: 0.97rem; font-weight: 600; line-height: 1.35; color: var(--text); }
+    .cert-card .c-view {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.82rem; font-weight: 600; color: var(--accent); margin-top: 8px;
+    }
+    .cert-card .c-view svg { width: 13px; height: 13px; transition: transform 0.2s ease; }
+    .cert-card:hover .c-view svg { transform: translate(2px, -2px); }
+    .cert-more { text-align: center; margin-top: 32px; }
+
+    /* ============================================================
+       Education + Languages
+       ============================================================ */
+    .edu-lang { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }
+    .sub-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-subtle); margin-bottom: 18px; }
+    .edu-card {
+      display: flex; gap: 18px; align-items: flex-start;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); margin-bottom: 16px;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+    .edu-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--accent-ring); }
+    .edu-card .cap { flex-shrink: 0; width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; background: var(--accent-grad); color: #fff; box-shadow: 0 8px 18px rgba(99,102,241,0.3); }
+    .edu-card .cap svg { width: 25px; height: 25px; }
+    .edu-card .deg { font-size: 1.08rem; font-weight: 700; }
+    .edu-card .uni { color: var(--text); font-weight: 600; font-size: 0.95rem; margin-top: 2px; }
+    .edu-card .e-meta { font-size: 0.85rem; color: var(--text-subtle); margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+
+    .lang-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-sm); }
+    .lang-item { margin-bottom: 20px; }
+    .lang-item:last-child { margin-bottom: 0; }
+    .lang-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px; }
+    .lang-top .lname { font-weight: 600; }
+    .lang-top .llevel { font-size: 0.82rem; color: var(--text-muted); }
+    .lang-bar { height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+    .lang-bar span { display: block; height: 100%; border-radius: 999px; background: var(--accent-grad); width: 0; transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1); }
+
+    /* ============================================================
+       Contact
+       ============================================================ */
+    #contact { background: var(--bg-alt); }
+    .contact-card {
+      position: relative; overflow: hidden;
+      background: var(--accent-grad); border-radius: var(--radius-lg);
+      padding: 64px 48px; text-align: center; color: #fff;
+      box-shadow: var(--shadow-lg);
+    }
+    .contact-card::before {
+      content: ""; position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(420px circle at 20% 10%, rgba(255,255,255,0.22), transparent 50%),
+        radial-gradient(420px circle at 85% 90%, rgba(255,255,255,0.16), transparent 50%);
+    }
+    .contact-card > * { position: relative; z-index: 1; }
+    .contact-card h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 14px; }
+    .contact-card p { font-size: 1.08rem; opacity: 0.92; max-width: 520px; margin: 0 auto 34px; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; }
+    .btn-white { background: #fff; color: var(--accent-strong); box-shadow: 0 10px 26px rgba(0,0,0,0.18); }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0,0,0,0.24); }
+    .btn-outline-white { background: rgba(255,255,255,0.10); color: #fff; border: 1.5px solid rgba(255,255,255,0.55); }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+    .contact-meta { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: center; margin-top: 34px; font-size: 0.92rem; opacity: 0.92; }
+    .contact-meta span { display: inline-flex; align-items: center; gap: 8px; }
+    .contact-meta svg { width: 17px; height: 17px; }
+
+    /* ============================================================
+       Footer
+       ============================================================ */
+    footer { padding: 48px 0 40px; border-top: 1px solid var(--border); }
+    .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+    .foot .brand { font-size: 1rem; }
+    .foot-links { display: flex; gap: 8px; }
+    .foot-links a {
+      width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center;
+      background: var(--surface); border: 1px solid var(--border); color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+    .foot-links a:hover { color: #fff; background: var(--accent-grad); border-color: transparent; transform: translateY(-2px); }
+    .foot-links svg { width: 19px; height: 19px; }
+    .foot-note { width: 100%; text-align: center; color: var(--text-subtle); font-size: 0.85rem; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
+
+    /* ============================================================
+       Reveal animation
+       ============================================================ */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: 0.08s; }
+    .reveal.d2 { transition-delay: 0.16s; }
+    .reveal.d3 { transition-delay: 0.24s; }
+    .reveal.d4 { transition-delay: 0.32s; }
+    .reveal.d5 { transition-delay: 0.40s; }
+
+    /* ============================================================
+       Mobile nav drawer
+       ============================================================ */
+    .nav-backdrop { display: none; }
+
+    /* ============================================================
+       Responsive
+       ============================================================ */
+    @media (max-width: 940px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 44px; text-align: center; }
+      .hero-copy .eyebrow { margin-left: auto; margin-right: auto; }
+      .hero .lead { margin-left: auto; margin-right: auto; }
+      .hero-cta, .hero-socials { justify-content: center; }
+      .hero-photo { order: -1; }
+      .about-grid { grid-template-columns: 1fr; gap: 36px; }
+      .skill-cols { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      .edu-lang { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 720px) {
+      section { padding: 76px 0; }
+      .nav-links {
+        position: fixed; top: 70px; right: 0; left: 0;
+        flex-direction: column; align-items: stretch; gap: 4px;
+        background: var(--bg); border-bottom: 1px solid var(--border);
+        padding: 16px 24px 24px; box-shadow: var(--shadow-md);
+        transform: translateY(-120%); transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+        max-height: calc(100vh - 70px); overflow-y: auto;
+      }
+      .nav-links.open { transform: translateY(0); }
+      .nav-links a { padding: 13px 16px; font-size: 1rem; border-radius: 11px; }
+      .hamburger { display: grid; }
+      .stats { grid-template-columns: repeat(2, 1fr); gap: 28px 18px; }
+      .focus-cards { grid-template-columns: 1fr; }
+      .metric-row { gap: 10px; }
+      .metric { min-width: calc(50% - 5px); }
+      .contact-card { padding: 48px 26px; }
+      .project-card { padding: 28px 24px; }
+      .skill-block { padding: 26px; }
+    }
+
+    @media (max-width: 460px) {
+      .cert-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .brand .label { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header id="header">
+    <div class="wrap nav">
+      <a href="#home" class="brand" aria-label="Faizan Zafar — home">
+        <span class="logo">FZ</span>
+        <span class="label">Faizan Zafar</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <svg id="hamIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow reveal">Product Manager · Munich, Germany</span>
+          <h1 class="reveal d1">Hi, I'm <span class="accent-text">Faizan&nbsp;Zafar</span></h1>
+          <p class="role reveal d2">I build products that put the customer first.</p>
+          <p class="lead reveal d3">
+            A customer-centric product professional with a strong bias for action, dedicated to
+            identifying and fulfilling customer needs. 4+ years in the SaaS industry, with a proven
+            track record of collaborating across product and business functions to deliver impactful,
+            value-driven solutions.
+          </p>
+          <div class="hero-cta reveal d4">
+            <a href="#contact" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              Get in touch
+            </a>
+            <a href="assets/Resume_Zafar.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Download Résumé
+            </a>
+          </div>
+          <div class="hero-socials reveal d5">
+            <a class="social-btn" href="https://www.linkedin.com/in/faizanzafar40/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a class="social-btn" href="https://github.com/faizanzafar40" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            </a>
+            <a class="social-btn" href="mailto:faizanzafar40@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo reveal d2">
+          <div class="photo-frame">
+            <div class="orb"></div>
+            <img src="assets/me.png" alt="Portrait of Faizan Zafar" width="340" height="340" />
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="stats reveal">
+          <div class="stat"><div class="num" data-count="4" data-suffix="+">0</div><div class="label">Years in SaaS</div></div>
+          <div class="stat"><div class="num" data-count="3">0</div><div class="label">Product roles</div></div>
+          <div class="stat"><div class="num" data-count="12" data-suffix="+">0</div><div class="label">Certifications</div></div>
+          <div class="stat"><div class="num" data-count="2">0</div><div class="label">Degrees earned</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="reveal">
+          <span class="eyebrow">About</span>
+          <p class="about-lead" style="margin-top:18px;">
+            I turn customer needs into <span class="hl">impactful, value-driven products</span> — working
+            shoulder-to-shoulder across product and business functions.
+          </p>
+          <p class="about-sub">
+            Over 4+ years in SaaS, I've managed products across workforce management, reality capture and
+            process mining — leading beta programs, shaping roadmaps, and driving cloud adoption. My
+            background in Data Science keeps me close to the metrics that prove a product is working.
+          </p>
+        </div>
+        <div class="focus-cards reveal d2">
+          <div class="focus-card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+            <h4>Discovery & Research</h4>
+            <p>Market research and customer discovery to find the problems worth solving.</p>
+          </div>
+          <div class="focus-card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+            <h4>Roadmapping</h4>
+            <p>Prioritization and roadmapping that align teams around real customer value.</p>
+          </div>
+          <div class="focus-card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.5"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
+            <h4>Agile Delivery</h4>
+            <p>Backlog management and sprint execution that ship the right thing, fast.</p>
+          </div>
+          <div class="focus-card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><path d="M19 8v6M22 11h-6"/></svg></div>
+            <h4>Customer-Centricity</h4>
+            <p>A bias for action, anchored in identifying and fulfilling customer needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Career</span>
+          <h2>Experience</h2>
+          <p>Building SaaS products across workforce management, reality capture, process mining and applied research.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="t-item reveal">
+            <span class="node"></span>
+            <div class="t-card">
+              <div class="t-top">
+                <h3 class="t-role">Product Manager</h3>
+                <span class="t-date">Apr 2023 — Present</span>
+              </div>
+              <div class="t-company">
+                <a href="https://www.atoss.com/en" target="_blank" rel="noopener">ATOSS Software</a>
+              </div>
+              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Munich, Germany</div>
+              <ul class="t-list">
+                <li>Product Manager for the <i>ATOSS Staff Efficiency Suite (ASES)</i>.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="t-item reveal">
+            <span class="node"></span>
+            <div class="t-card">
+              <div class="t-top">
+                <h3 class="t-role">Product Manager</h3>
+                <span class="t-date">May 2022 — Mar 2023</span>
+              </div>
+              <div class="t-company">
+                <a href="https://www.navvis.com/" target="_blank" rel="noopener">NavVis</a>
+              </div>
+              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Munich, Germany</div>
+              <ul class="t-list">
+                <li>Led a beta program for <i>NavVis Enterprise Cloud Processing</i> and <i>Person Blurring</i> features with <b>5 enterprise customers</b>.</li>
+                <li>Visualised and monitored <b>8 vital metrics</b> to measure the product engagement of <i>NavVis Reality Capture</i> products.</li>
+                <li>Revamped the CRM Product Catalog containing <b>1000+ listings</b> to boost sales efficiency.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="t-item reveal">
+            <span class="node"></span>
+            <div class="t-card">
+              <div class="t-top">
+                <h3 class="t-role">Product Manager</h3>
+                <span class="t-date">Mar 2021 — Apr 2022</span>
+              </div>
+              <div class="t-company">
+                <a href="https://www.celonis.com/" target="_blank" rel="noopener">Celonis</a>
+              </div>
+              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Munich, Germany</div>
+              <ul class="t-list">
+                <li>Conceptualized feature specifications, gathered requirements, wrote user stories and managed sprints for developing <i>Celonis EMS</i>.</li>
+                <li>Resolved customers' issues with <i>Celonis EMS</i>, decreasing issue resolution time by <b>21%</b> and improving overall customer satisfaction.</li>
+                <li>Drove customers' migration from on-prem to cloud platform, increasing daily active users by <b>18%</b>.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="t-item reveal">
+            <span class="node"></span>
+            <div class="t-card">
+              <div class="t-top">
+                <h3 class="t-role">Graduate Student Researcher</h3>
+                <span class="t-date">Oct 2019 — Mar 2021</span>
+              </div>
+              <div class="t-company">
+                <a href="https://cybernetics-lab.de/en/" target="_blank" rel="noopener">Cybernetics Lab @ RWTH</a>
+              </div>
+              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Aachen, Germany</div>
+              <ul class="t-list">
+                <li>Proposed and statistically analysed <b>2 novel technology acceptance frameworks</b> in the contexts of e-commerce and care work.</li>
+                <li>Designed fine-grained classification and clustering models on e-commerce and healthcare data.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Toolbox</span>
+          <h2>Key Skills</h2>
+          <p>The methods I work by and the tools I work with, day to day.</p>
+        </div>
+
+        <div class="skill-cols">
+          <div class="skill-block reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></div>
+            <h3>Product Expertise</h3>
+            <div class="chips">
+              <span class="chip">Agile</span>
+              <span class="chip">Market Research</span>
+              <span class="chip">Backlog Management</span>
+              <span class="chip">Discovery</span>
+              <span class="chip">Prioritization</span>
+              <span class="chip">Roadmapping</span>
+            </div>
+          </div>
+
+          <div class="skill-block reveal d2">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.6-5.6l-2.5 2.5-2.1-2.1z"/></svg></div>
+            <h3>Product Stack</h3>
+            <div class="chips">
+              <span class="chip">Jira</span>
+              <span class="chip">Jira Product Discovery</span>
+              <span class="chip">Confluence</span>
+              <span class="chip">Claude Code</span>
+              <span class="chip">Figma</span>
+              <span class="chip">Salesforce</span>
+              <span class="chip">Dynamics 365</span>
+              <span class="chip">Asana</span>
+              <span class="chip">Miro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Selected Work</span>
+          <h2>Projects</h2>
+          <p>Research that shaped how I think about quality, structure and systems.</p>
+        </div>
+
+        <article class="project-card reveal">
+          <span class="project-tag">M.Sc. Thesis</span>
+          <h3>Investigating Quality Attributes &amp; Best Practices of Microservices Architectures</h3>
+          <p class="project-date">May 2022 — Nov 2022 · RWTH Aachen University</p>
+          <p>
+            Created a structured catalog of design guidelines and proposed a quality model to support the
+            construction of Microservices Architectures — giving architects and developers a reference guide
+            for building distributed systems and a vocabulary for targeted quality assurance.
+          </p>
+          <div class="metric-row">
+            <div class="metric"><div class="m-num">239</div><div class="m-lab">Design guidelines cataloged</div></div>
+            <div class="metric"><div class="m-num">70</div><div class="m-lab">Quality characteristics modeled</div></div>
+          </div>
+          <div class="project-links">
+            <a class="plink" href="https://faizanzafar.de/msa/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14L21 3"/></svg>
+              Overview
+            </a>
+            <a class="plink" href="https://faizanzafar.de/Master_Thesis.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>
+              Thesis Report
+            </a>
+            <a class="plink" href="https://faizanzafar.de/Final_Talk.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              Thesis Talk
+            </a>
+            <a class="plink" href="https://swc.rwth-aachen.de/theses/investigating-quality-attributes-and-best-practices-of-microservices-architectures/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
+              University Link
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section id="certs">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Credentials</span>
+          <h2>Certifications</h2>
+          <p>Continuous learning across product management, strategy, growth and AI.</p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Each card built from website credential links -->
+          <a class="cert-card reveal" href="https://www.credly.com/badges/32469ad6-cd7a-4af1-80e6-e3a7f364c4f6/linked_in_profile" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></span>
+            <span class="c-body">
+              <h4>Professional Scrum Product Owner™ I (PSPO I)</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://faizanzafar.de/product-discovery-micro-certification-pdc.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+            <span class="c-body">
+              <h4>Product Discovery Micro-Certification</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-strategy-microcertification.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5" fill="currentColor"/></svg></span>
+            <span class="c-body">
+              <h4>Product Strategy Micro-Certification</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-roadmapping-micro-certification.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span>
+            <span class="c-body">
+              <h4>Product Roadmapping Micro-Certification</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://faizanzafar.de/product-launches-micro-certification-prlc.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5 3 21l4.5-1.5M9 15l6-6M14 3l7 7-9 9-4-1-1-4 7-7z"/><path d="M9 11l4 4"/></svg></span>
+            <span class="c-body">
+              <h4>Product Launch Micro-Certification</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://faizanzafar.de/product-experimentation-micro-certification-pec.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6L4 18a2 2 0 0 0 1.8 3h12.4A2 2 0 0 0 20 18L15 8V2"/><path d="M8 2h8M7 14h10"/></svg></span>
+            <span class="c-body">
+              <h4>Product Experimentation Micro-Certification</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-led-growth-micro-certificate-plg.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span>
+            <span class="c-body">
+              <h4>Product-Led Growth Micro-Certification (PLGM)™</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-analytics.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="13" y="7" width="3" height="10"/></svg></span>
+            <span class="c-body">
+              <h4>Product Analytics Micro-Certification (PAC)™</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://faizanzafar.de/artificial-intelligence-micro-certification-aic.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="11" rx="2"/><path d="M12 8V4M9 4h6M9 13h.01M15 13h.01M2 12h2M20 12h2"/></svg></span>
+            <span class="c-body">
+              <h4>Artificial Intelligence Micro-Certification</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://www.credly.com/badges/c01c41df-a509-42ca-843d-29809ab34480/public_url" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="11" rx="2"/><path d="M12 8V4M9 4h6M9 13h.01M15 13h.01M2 12h2M20 12h2"/></svg></span>
+            <span class="c-body">
+              <h4>AI for Product Management</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://www.credly.com/badges/13508af4-add3-46f2-a347-2716af674df0/public_url" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg></span>
+            <span class="c-body">
+              <h4>Radical Product Thinking — Vision Setting</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://www.credly.com/badges/a727fb9c-0b12-4993-b740-44a809d0e4da/public_url" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10h-10z"/><path d="M12 2v10l7-7"/></svg></span>
+            <span class="c-body">
+              <h4>Digital Adoption Certification</h4>
+              <span class="c-view">View credential <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+            </span>
+          </a>
+        </div>
+
+        <div class="cert-more reveal">
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/faizanzafar40/details/certifications/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            See all certifications on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION + LANGUAGES ===================== -->
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Background</span>
+          <h2>Education &amp; Languages</h2>
+        </div>
+
+        <div class="edu-lang">
+          <div class="reveal">
+            <p class="sub-title">Education</p>
+            <div class="edu-card">
+              <span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
+              <div>
+                <div class="deg">M.Sc. Data Science</div>
+                <div class="uni">RWTH Aachen University</div>
+                <div class="e-meta">
+                  <span>📍 Aachen, Germany</span><span>🗓 2019 — 2022</span>
+                </div>
+              </div>
+            </div>
+            <div class="edu-card">
+              <span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
+              <div>
+                <div class="deg">B.Eng. Software Engineering</div>
+                <div class="uni">National University of Sciences &amp; Technology (NUST)</div>
+                <div class="e-meta">
+                  <span>📍 Islamabad, Pakistan</span><span>🗓 2014 — 2018</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal d2">
+            <p class="sub-title">Languages</p>
+            <div class="lang-card">
+              <div class="lang-item">
+                <div class="lang-top"><span class="lname">English</span><span class="llevel">Business Fluent</span></div>
+                <div class="lang-bar"><span data-level="92"></span></div>
+              </div>
+              <div class="lang-item">
+                <div class="lang-top"><span class="lname">German</span><span class="llevel">Intermediate Proficiency</span></div>
+                <div class="lang-bar"><span data-level="55"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-card reveal">
+          <h2>Let's build something customers love</h2>
+          <p>I'm always happy to talk product, collaboration or new opportunities. Drop me a line.</p>
+          <div class="contact-actions">
+            <a class="btn btn-white" href="mailto:faizanzafar40@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+              Email me
+            </a>
+            <a class="btn btn-outline-white" href="https://www.linkedin.com/in/faizanzafar40/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              Connect on LinkedIn
+            </a>
+          </div>
+          <div class="contact-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> faizanzafar40@gmail.com</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Munich, Germany</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a href="#home" class="brand"><span class="logo">FZ</span><span>Faizan Zafar</span></a>
+        <div class="foot-links">
+          <a href="https://www.linkedin.com/in/faizanzafar40/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+          <a href="https://github.com/faizanzafar40" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a>
+          <a href="mailto:faizanzafar40@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+        </div>
+      </div>
+      <p class="foot-note">© <span id="year"></span> Faizan Zafar · Product Manager, Munich · Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    (function () {
+      'use strict';
+      var root = document.documentElement;
+
+      /* ---- Theme toggle ---- */
+      var toggle = document.getElementById('themeToggle');
+      toggle.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+
+      /* ---- Mobile menu ---- */
+      var hamburger = document.getElementById('hamburger');
+      var navLinks = document.getElementById('navLinks');
+      var hamIcon = document.getElementById('hamIcon');
+      var openPath = 'M18 6 6 18M6 6l12 12';
+      var closedPath = 'M3 6h18M3 12h18M3 18h18';
+      function setMenu(open) {
+        navLinks.classList.toggle('open', open);
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        hamIcon.innerHTML = '<path d="' + (open ? openPath : closedPath) + '"/>';
+      }
+      hamburger.addEventListener('click', function () {
+        setMenu(!navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setMenu(false); });
+      });
+
+      /* ---- Sticky header shadow ---- */
+      var header = document.getElementById('header');
+      function onScroll() { header.classList.toggle('scrolled', window.scrollY > 12); }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ---- Footer year ---- */
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---- Scroll reveal ---- */
+      var reveals = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        reveals.forEach(function (el) { el.classList.add('visible'); });
+      } else {
+        var ro = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function (el) { ro.observe(el); });
+      }
+
+      /* ---- Animated counters ---- */
+      var counters = document.querySelectorAll('[data-count]');
+      function animateCount(el) {
+        var target = +el.getAttribute('data-count');
+        var suffix = el.getAttribute('data-suffix') || '';
+        if (reduceMotion) { el.textContent = target + suffix; return; }
+        var dur = 1400, start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(eased * target) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      if ('IntersectionObserver' in window) {
+        var co = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { animateCount(entry.target); obs.unobserve(entry.target); }
+          });
+        }, { threshold: 0.6 });
+        counters.forEach(function (el) { co.observe(el); });
+      } else {
+        counters.forEach(function (el) { el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || ''); });
+      }
+
+      /* ---- Language bars ---- */
+      var bars = document.querySelectorAll('.lang-bar span');
+      if ('IntersectionObserver' in window) {
+        var bo = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { entry.target.style.width = entry.target.getAttribute('data-level') + '%'; obs.unobserve(entry.target); }
+          });
+        }, { threshold: 0.5 });
+        bars.forEach(function (el) { bo.observe(el); });
+      } else {
+        bars.forEach(function (el) { el.style.width = el.getAttribute('data-level') + '%'; });
+      }
+
+      /* ---- Active nav link on scroll (scroll spy) ---- */
+      var sections = document.querySelectorAll('main section[id]');
+      var linkMap = {};
+      document.querySelectorAll('.nav-links a').forEach(function (a) {
+        linkMap[a.getAttribute('href').slice(1)] = a;
+      });
+      if ('IntersectionObserver' in window) {
+        var so = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              Object.keys(linkMap).forEach(function (id) { linkMap[id].classList.remove('active'); });
+              var active = linkMap[entry.target.id];
+              if (active) active.classList.add('active');
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        sections.forEach(function (s) { so.observe(s); });
+      }
+    })();
+  </script>
+</body>
+</html>
