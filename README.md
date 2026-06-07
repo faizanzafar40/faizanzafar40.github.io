@@ -1,7 +1,11 @@
 # Faizan Zafar — Portfolio
 
-A modern, responsive personal portfolio for **Faizan Zafar**, Product Manager (Munich, Germany).
-Built as a single, self-contained `index.html` (HTML + CSS + vanilla JS) — no build step, no framework.
+This is my personal portfolio. I'm Faizan Zafar, a Product Manager based in Munich, Germany,
+and this site is where I share my experience, projects, and certifications.
+It lives at **<https://faizanzafar.de>**.
+
+I built it as a single, self-contained `index.html` (HTML + CSS + vanilla JS) — no build step,
+no framework, no dependencies beyond one external Google Font.
 
 ## Features
 
@@ -11,28 +15,27 @@ Built as a single, self-contained `index.html` (HTML + CSS + vanilla JS) — no 
 - ♿ Accessible — semantic HTML, ARIA labels, honors `prefers-reduced-motion`
 - ⚡ Fast & dependency-free — only an external Google Font; everything else is inline
 
-## Content sources
-
-All content is drawn solely from the provided materials: `main.tex` / `Resume_Zafar.pdf`,
-the photo `me.png`, and the existing site at <https://faizanzafar.de>.
-
 ## Project structure
 
 ```
-portfolio/
-├── index.html            ← the entire site
+faizanzafar40.github.io/
+├── index.html            ← the entire site (HTML + CSS + JS)
 ├── assets/
-│   ├── me.png            ← profile photo
-│   ├── Resume_Zafar.pdf  ← downloadable résumé
+│   ├── me.png            ← my profile photo
+│   ├── Resume_Zafar.pdf  ← my downloadable résumé
 │   └── favicon.svg       ← "FZ" monogram favicon
+├── CNAME                 ← custom domain (faizanzafar.de)
 ├── netlify.toml          ← Netlify config (static, with headers)
 ├── robots.txt
 └── .nojekyll             ← tells GitHub Pages to serve files as-is
 ```
 
+The page is organized into sections: **about**, **experience**, **skills**, **projects**,
+**certifications**, **education**, and **contact**.
+
 ## Run locally
 
-Just open `index.html` in a browser. Or serve it (recommended, so relative paths behave like production):
+I can just open `index.html` in a browser. Or serve it (so relative paths behave like production):
 
 ```bash
 # Python
@@ -42,19 +45,17 @@ python -m http.server 8080
 
 ## Deploy
 
-### Netlify
-1. Drag-and-drop this `portfolio` folder onto <https://app.netlify.com/drop>, **or**
-2. Connect the repo and set **publish directory** to this folder. No build command needed.
+The site is served via **GitHub Pages** from this repository, with `faizanzafar.de` set as the
+custom domain through the `CNAME` file. The included `.nojekyll` ensures the static files are
+served untouched.
 
-### GitHub Pages
-1. Push these files to a repository (e.g. the contents at the repo root, or a `/docs` folder).
-2. In **Settings → Pages**, choose the branch and folder. The included `.nojekyll` ensures the
-   static files are served untouched.
-3. To use a custom domain (e.g. `faizanzafar.de`), add a `CNAME` file containing your domain.
+It can also be hosted on **Netlify** — either drag-and-drop this folder onto
+<https://app.netlify.com/drop>, or connect the repo with no build command and the publish
+directory set to the repo root.
 
-## Customizing
+## Editing
 
-- **Accent color / theme:** edit the CSS variables under `:root` and `[data-theme="dark"]`
+- **Content:** all of my copy lives directly in the HTML body — I search for the section I want
+  (`about`, `experience`, `certs`, etc.) and edit in place.
+- **Accent color / theme:** I edit the CSS variables under `:root` and `[data-theme="dark"]`
   at the top of `index.html` (`--accent`, `--accent-2`, `--accent-grad`, …).
-- **Content:** all copy lives directly in the HTML body — search for the section you want
-  (`EXPERIENCE`, `CERTIFICATIONS`, etc.) and edit in place.
