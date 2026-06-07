@@ -428,6 +428,12 @@
        ============================================================ */
     #certs { background: var(--bg-alt); }
     .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .cert-cat {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.95rem; font-weight: 700; color: var(--text); margin: 0 0 18px;
+    }
+    .cert-cat::after { content: ""; flex: 1 1 auto; height: 1px; background: var(--border); }
+    .cert-grid + .cert-cat { margin-top: 40px; }
     .cert-card {
       position: relative;
       display: flex; align-items: flex-start; gap: 14px;
@@ -895,15 +901,23 @@
         <div class="section-head reveal">
           <span class="eyebrow">Credentials</span>
           <h2>Certifications</h2>
-          <p>Continuous learning across product management, strategy, growth and AI.</p>
+          <p>Continuous learning across strategy &amp; discovery, growth &amp; analytics, delivery, and AI.</p>
         </div>
 
+        <!-- Each card built from website credential links, grouped by domain -->
+        <h3 class="cert-cat reveal">Strategy &amp; Discovery</h3>
         <div class="cert-grid">
-          <!-- Each card built from website credential links -->
-          <a class="cert-card reveal" href="https://www.credly.com/badges/32469ad6-cd7a-4af1-80e6-e3a7f364c4f6/linked_in_profile" target="_blank" rel="noopener">
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></span>
+          <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-strategy-microcertification.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5" fill="currentColor"/></svg></span>
             <span class="c-body">
-              <h4>Professional Scrum Product Owner™ I (PSPO I)</h4>
+              <h4>Product Strategy Micro-Certification</h4>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://www.credly.com/badges/13508af4-add3-46f2-a347-2716af674df0/public_url" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg></span>
+            <span class="c-body">
+              <h4>Radical Product Thinking — Vision Setting</h4>
             </span>
           </a>
 
@@ -914,24 +928,20 @@
             </span>
           </a>
 
-          <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-strategy-microcertification.pdf" target="_blank" rel="noopener">
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5" fill="currentColor"/></svg></span>
-            <span class="c-body">
-              <h4>Product Strategy Micro-Certification</h4>
-            </span>
-          </a>
-
           <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-roadmapping-micro-certification.pdf" target="_blank" rel="noopener">
             <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span>
             <span class="c-body">
               <h4>Product Roadmapping Micro-Certification</h4>
             </span>
           </a>
+        </div>
 
-          <a class="cert-card reveal" href="https://faizanzafar.de/product-launches-micro-certification-prlc.pdf" target="_blank" rel="noopener">
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5 3 21l4.5-1.5M9 15l6-6M14 3l7 7-9 9-4-1-1-4 7-7z"/><path d="M9 11l4 4"/></svg></span>
+        <h3 class="cert-cat reveal">Growth &amp; Analytics</h3>
+        <div class="cert-grid">
+          <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-led-growth-micro-certificate-plg.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span>
             <span class="c-body">
-              <h4>Product Launch Micro-Certification</h4>
+              <h4>Product-Led Growth Micro-Certification (PLGM)™</h4>
             </span>
           </a>
 
@@ -942,13 +952,6 @@
             </span>
           </a>
 
-          <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-led-growth-micro-certificate-plg.pdf" target="_blank" rel="noopener">
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span>
-            <span class="c-body">
-              <h4>Product-Led Growth Micro-Certification (PLGM)™</h4>
-            </span>
-          </a>
-
           <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-analytics.pdf" target="_blank" rel="noopener">
             <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="13" y="7" width="3" height="10"/></svg></span>
             <span class="c-body">
@@ -956,6 +959,33 @@
             </span>
           </a>
 
+          <a class="cert-card reveal" href="https://www.credly.com/badges/a727fb9c-0b12-4993-b740-44a809d0e4da/public_url" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10h-10z"/><path d="M12 2v10l7-7"/></svg></span>
+            <span class="c-body">
+              <h4>Digital Adoption Certification</h4>
+            </span>
+          </a>
+        </div>
+
+        <h3 class="cert-cat reveal">Delivery &amp; Launch</h3>
+        <div class="cert-grid">
+          <a class="cert-card reveal" href="https://www.credly.com/badges/32469ad6-cd7a-4af1-80e6-e3a7f364c4f6/linked_in_profile" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></span>
+            <span class="c-body">
+              <h4>Professional Scrum Product Owner™ I (PSPO I)</h4>
+            </span>
+          </a>
+
+          <a class="cert-card reveal" href="https://faizanzafar.de/product-launches-micro-certification-prlc.pdf" target="_blank" rel="noopener">
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5 3 21l4.5-1.5M9 15l6-6M14 3l7 7-9 9-4-1-1-4 7-7z"/><path d="M9 11l4 4"/></svg></span>
+            <span class="c-body">
+              <h4>Product Launch Micro-Certification</h4>
+            </span>
+          </a>
+        </div>
+
+        <h3 class="cert-cat reveal">Artificial Intelligence</h3>
+        <div class="cert-grid">
           <a class="cert-card reveal" href="https://faizanzafar.de/artificial-intelligence-micro-certification-aic.pdf" target="_blank" rel="noopener">
             <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="11" rx="2"/><path d="M12 8V4M9 4h6M9 13h.01M15 13h.01M2 12h2M20 12h2"/></svg></span>
             <span class="c-body">
@@ -967,20 +997,6 @@
             <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="11" rx="2"/><path d="M12 8V4M9 4h6M9 13h.01M15 13h.01M2 12h2M20 12h2"/></svg></span>
             <span class="c-body">
               <h4>AI for Product Management</h4>
-            </span>
-          </a>
-
-          <a class="cert-card reveal" href="https://www.credly.com/badges/13508af4-add3-46f2-a347-2716af674df0/public_url" target="_blank" rel="noopener">
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg></span>
-            <span class="c-body">
-              <h4>Radical Product Thinking — Vision Setting</h4>
-            </span>
-          </a>
-
-          <a class="cert-card reveal" href="https://www.credly.com/badges/a727fb9c-0b12-4993-b740-44a809d0e4da/public_url" target="_blank" rel="noopener">
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10h-10z"/><path d="M12 2v10l7-7"/></svg></span>
-            <span class="c-body">
-              <h4>Digital Adoption Certification</h4>
             </span>
           </a>
         </div>
