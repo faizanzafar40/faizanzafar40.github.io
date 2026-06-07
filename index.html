@@ -229,6 +229,17 @@
     [data-theme="dark"] .theme-toggle .sun { display: none; }
     [data-theme="dark"] .theme-toggle .moon { display: block; }
 
+    /* Language toggle */
+    .lang-toggle {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: auto; gap: 6px; padding: 0 13px;
+      font-family: var(--font); font-weight: 700; font-size: 0.82rem;
+      letter-spacing: 0.04em; color: var(--text-muted);
+    }
+    .lang-toggle:hover { color: var(--accent); }
+    .lang-toggle svg { width: 17px; height: 17px; }
+    .lang-toggle .lang-code { line-height: 1; }
+
     .hamburger { display: none; }
 
     /* ============================================================
@@ -619,16 +630,20 @@
       </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certs">Certifications</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#certs" data-i18n="nav.certs">Certifications</a>
+        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
       <div class="nav-actions">
+        <button class="icon-btn lang-toggle" id="langToggle" aria-label="Auf Deutsch umschalten" title="Sprache / Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-code" id="langCode">DE</span>
+        </button>
         <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
           <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -645,10 +660,10 @@
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow reveal">Product Manager · Munich, Germany</span>
-          <h1 class="reveal d1">Hi, I'm <span class="accent-text">Faizan&nbsp;Zafar</span></h1>
-          <p class="role reveal d2">I build products that put the customer first.</p>
-          <p class="lead reveal d3">
+          <span class="eyebrow reveal" data-i18n="hero.eyebrow">Product Manager · Munich, Germany</span>
+          <h1 class="reveal d1" data-i18n-html="hero.h1">Hi, I'm <span class="accent-text">Faizan&nbsp;Zafar</span></h1>
+          <p class="role reveal d2" data-i18n="hero.role">I build products that put the customer first.</p>
+          <p class="lead reveal d3" data-i18n="hero.lead">
             A customer-centric product professional with a strong bias for action, dedicated to
             identifying and fulfilling customer needs. 4+ years in the SaaS industry, with a proven
             track record of collaborating across product and business functions to deliver impactful,
@@ -657,11 +672,11 @@
           <div class="hero-cta reveal d4">
             <a href="#contact" class="btn btn-primary">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-              Get in touch
+              <span data-i18n="hero.cta1">Get in touch</span>
             </a>
             <a href="assets/Resume_Zafar.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              Download Résumé
+              <span data-i18n="hero.cta2">Download Résumé</span>
             </a>
           </div>
           <div class="hero-socials reveal d5">
@@ -687,10 +702,10 @@
 
       <div class="wrap">
         <div class="stats reveal">
-          <div class="stat"><div class="num" data-count="4" data-suffix="+">0</div><div class="label">Years in SaaS</div></div>
-          <div class="stat"><div class="num" data-count="3">0</div><div class="label">Product roles</div></div>
-          <div class="stat"><div class="num" data-count="12" data-suffix="+">0</div><div class="label">Certifications</div></div>
-          <div class="stat"><div class="num" data-count="2">0</div><div class="label">Degrees earned</div></div>
+          <div class="stat"><div class="num" data-count="4" data-suffix="+">0</div><div class="label" data-i18n="stats.years">Years in SaaS</div></div>
+          <div class="stat"><div class="num" data-count="3">0</div><div class="label" data-i18n="stats.roles">Product roles</div></div>
+          <div class="stat"><div class="num" data-count="12" data-suffix="+">0</div><div class="label" data-i18n="stats.certs">Certifications</div></div>
+          <div class="stat"><div class="num" data-count="2">0</div><div class="label" data-i18n="stats.degrees">Degrees earned</div></div>
         </div>
       </div>
     </section>
@@ -699,12 +714,12 @@
     <section id="about">
       <div class="wrap about-grid">
         <div class="reveal">
-          <span class="eyebrow">About</span>
-          <p class="about-lead" style="margin-top:18px;">
+          <span class="eyebrow" data-i18n="about.eyebrow">About</span>
+          <p class="about-lead" style="margin-top:18px;" data-i18n-html="about.lead">
             I turn customer needs into <span class="hl">impactful, value-driven products</span> — working
             shoulder-to-shoulder across product and business functions.
           </p>
-          <p class="about-sub">
+          <p class="about-sub" data-i18n="about.sub">
             Over 4+ years in SaaS, I've managed products across workforce management, reality capture and
             process mining — leading beta programs, shaping roadmaps, and driving cloud adoption. My
             background in Data Science keeps me close to the metrics that prove a product is working.
@@ -713,23 +728,23 @@
         <div class="focus-cards reveal d2">
           <div class="focus-card">
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-            <h4>Discovery & Research</h4>
-            <p>Market research and customer discovery to find the problems worth solving.</p>
+            <h4 data-i18n="focus.discovery.t">Discovery & Research</h4>
+            <p data-i18n="focus.discovery.p">Market research and customer discovery to find the problems worth solving.</p>
           </div>
           <div class="focus-card">
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-            <h4>Roadmapping</h4>
-            <p>Prioritization and roadmapping that align teams around real customer value.</p>
+            <h4 data-i18n="focus.roadmap.t">Roadmapping</h4>
+            <p data-i18n="focus.roadmap.p">Prioritization and roadmapping that align teams around real customer value.</p>
           </div>
           <div class="focus-card">
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.5"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
-            <h4>Agile Delivery</h4>
-            <p>Backlog management and sprint execution that ship the right thing, fast.</p>
+            <h4 data-i18n="focus.agile.t">Agile Delivery</h4>
+            <p data-i18n="focus.agile.p">Backlog management and sprint execution that ship the right thing, fast.</p>
           </div>
           <div class="focus-card">
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><path d="M19 8v6M22 11h-6"/></svg></div>
-            <h4>Customer-Centricity</h4>
-            <p>A bias for action, anchored in identifying and fulfilling customer needs.</p>
+            <h4 data-i18n="focus.customer.t">Customer-Centricity</h4>
+            <p data-i18n="focus.customer.p">A bias for action, anchored in identifying and fulfilling customer needs.</p>
           </div>
         </div>
       </div>
@@ -739,9 +754,9 @@
     <section id="experience">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Career</span>
-          <h2>Experience</h2>
-          <p>Building SaaS products across workforce management, reality capture, process mining and applied research.</p>
+          <span class="eyebrow" data-i18n="exp.eyebrow">Career</span>
+          <h2 data-i18n="exp.h2">Experience</h2>
+          <p data-i18n="exp.sub">Building SaaS products across workforce management, reality capture, process mining and applied research.</p>
         </div>
 
         <div class="timeline">
@@ -749,15 +764,15 @@
             <span class="node"></span>
             <div class="t-card">
               <div class="t-top">
-                <h3 class="t-role">Product Manager</h3>
-                <span class="t-date">Apr 2023 — Present</span>
+                <h3 class="t-role" data-i18n="exp.atoss.role">Product Manager</h3>
+                <span class="t-date" data-i18n="exp.atoss.date">Apr 2023 — Present</span>
               </div>
               <div class="t-company">
                 <a href="https://www.atoss.com/en" target="_blank" rel="noopener">ATOSS Software</a>
               </div>
-              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Munich, Germany</div>
+              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <span data-i18n="exp.atoss.loc">Munich, Germany</span></div>
               <ul class="t-list">
-                <li>Product Manager for the <i>ATOSS Staff Efficiency Suite (ASES)</i>.</li>
+                <li data-i18n-html="exp.atoss.li1">Product Manager for the <i>ATOSS Staff Efficiency Suite (ASES)</i>.</li>
               </ul>
             </div>
           </article>
@@ -766,17 +781,17 @@
             <span class="node"></span>
             <div class="t-card">
               <div class="t-top">
-                <h3 class="t-role">Product Manager</h3>
-                <span class="t-date">May 2022 — Mar 2023</span>
+                <h3 class="t-role" data-i18n="exp.navvis.role">Product Manager</h3>
+                <span class="t-date" data-i18n="exp.navvis.date">May 2022 — Mar 2023</span>
               </div>
               <div class="t-company">
                 <a href="https://www.navvis.com/" target="_blank" rel="noopener">NavVis</a>
               </div>
-              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Munich, Germany</div>
+              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <span data-i18n="exp.navvis.loc">Munich, Germany</span></div>
               <ul class="t-list">
-                <li>Led a beta program for <i>NavVis Enterprise Cloud Processing</i> and <i>Person Blurring</i> features with <b>5 enterprise customers</b>.</li>
-                <li>Visualised and monitored <b>8 vital metrics</b> to measure the product engagement of <i>NavVis Reality Capture</i> products.</li>
-                <li>Revamped the CRM Product Catalog containing <b>1000+ listings</b> to boost sales efficiency.</li>
+                <li data-i18n-html="exp.navvis.li1">Led a beta program for <i>NavVis Enterprise Cloud Processing</i> and <i>Person Blurring</i> features with <b>5 enterprise customers</b>.</li>
+                <li data-i18n-html="exp.navvis.li2">Visualised and monitored <b>8 vital metrics</b> to measure the product engagement of <i>NavVis Reality Capture</i> products.</li>
+                <li data-i18n-html="exp.navvis.li3">Revamped the CRM Product Catalog containing <b>1000+ listings</b> to boost sales efficiency.</li>
               </ul>
             </div>
           </article>
@@ -785,17 +800,17 @@
             <span class="node"></span>
             <div class="t-card">
               <div class="t-top">
-                <h3 class="t-role">Product Manager</h3>
-                <span class="t-date">Mar 2021 — Apr 2022</span>
+                <h3 class="t-role" data-i18n="exp.celonis.role">Product Manager</h3>
+                <span class="t-date" data-i18n="exp.celonis.date">Mar 2021 — Apr 2022</span>
               </div>
               <div class="t-company">
                 <a href="https://www.celonis.com/" target="_blank" rel="noopener">Celonis</a>
               </div>
-              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Munich, Germany</div>
+              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <span data-i18n="exp.celonis.loc">Munich, Germany</span></div>
               <ul class="t-list">
-                <li>Conceptualized feature specifications, gathered requirements, wrote user stories and managed sprints for developing <i>Celonis EMS</i>.</li>
-                <li>Resolved customers' issues with <i>Celonis EMS</i>, decreasing issue resolution time by <b>21%</b> and improving overall customer satisfaction.</li>
-                <li>Drove customers' migration from on-prem to cloud platform, increasing daily active users by <b>18%</b>.</li>
+                <li data-i18n-html="exp.celonis.li1">Conceptualized feature specifications, gathered requirements, wrote user stories and managed sprints for developing <i>Celonis EMS</i>.</li>
+                <li data-i18n-html="exp.celonis.li2">Resolved customers' issues with <i>Celonis EMS</i>, decreasing issue resolution time by <b>21%</b> and improving overall customer satisfaction.</li>
+                <li data-i18n-html="exp.celonis.li3">Drove customers' migration from on-prem to cloud platform, increasing daily active users by <b>18%</b>.</li>
               </ul>
             </div>
           </article>
@@ -804,16 +819,16 @@
             <span class="node"></span>
             <div class="t-card">
               <div class="t-top">
-                <h3 class="t-role">Graduate Student Researcher</h3>
-                <span class="t-date">Oct 2019 — Mar 2021</span>
+                <h3 class="t-role" data-i18n="exp.research.role">Graduate Student Researcher</h3>
+                <span class="t-date" data-i18n="exp.research.date">Oct 2019 — Mar 2021</span>
               </div>
               <div class="t-company">
                 <a href="https://www.maschinenbau.rwth-aachen.de/cms/maschinenbau/forschung/forschungsprofile/institute-und-lehrstuehle-der-fakultaet/~baabjw/ima-cybernetics-lab/?lidx=1" target="_blank" rel="noopener">Cybernetics Lab @ RWTH</a>
               </div>
-              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Aachen, Germany</div>
+              <div class="t-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <span data-i18n="exp.research.loc">Aachen, Germany</span></div>
               <ul class="t-list">
-                <li>Proposed and statistically analysed <b>2 novel technology acceptance frameworks</b> in the contexts of e-commerce and care work.</li>
-                <li>Designed fine-grained classification and clustering models on e-commerce and healthcare data.</li>
+                <li data-i18n-html="exp.research.li1">Proposed and statistically analysed <b>2 novel technology acceptance frameworks</b> in the contexts of e-commerce and care work.</li>
+                <li data-i18n-html="exp.research.li2">Designed fine-grained classification and clustering models on e-commerce and healthcare data.</li>
               </ul>
             </div>
           </article>
@@ -825,28 +840,28 @@
     <section id="skills">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Toolbox</span>
-          <h2>Key Skills</h2>
-          <p>The methods I work by and the tools I work with, day to day.</p>
+          <span class="eyebrow" data-i18n="skills.eyebrow">Toolbox</span>
+          <h2 data-i18n="skills.h2">Key Skills</h2>
+          <p data-i18n="skills.sub">The methods I work by and the tools I work with, day to day.</p>
         </div>
 
         <div class="skill-cols">
           <div class="skill-block reveal">
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></div>
-            <h3>Product Expertise</h3>
+            <h3 data-i18n="skills.expertise">Product Expertise</h3>
             <div class="chips">
-              <span class="chip">Agile</span>
-              <span class="chip">Market Research</span>
-              <span class="chip">Backlog Management</span>
-              <span class="chip">Discovery</span>
-              <span class="chip">Prioritization</span>
-              <span class="chip">Roadmapping</span>
+              <span class="chip" data-i18n="skills.agile">Agile</span>
+              <span class="chip" data-i18n="skills.market">Market Research</span>
+              <span class="chip" data-i18n="skills.backlog">Backlog Management</span>
+              <span class="chip" data-i18n="skills.discovery">Discovery</span>
+              <span class="chip" data-i18n="skills.prioritization">Prioritization</span>
+              <span class="chip" data-i18n="skills.roadmapping">Roadmapping</span>
             </div>
           </div>
 
           <div class="skill-block reveal d2">
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.6-5.6l-2.5 2.5-2.1-2.1z"/></svg></div>
-            <h3>Product Stack</h3>
+            <h3 data-i18n="skills.stack">Product Stack</h3>
             <div class="chips">
               <span class="chip">Jira</span>
               <span class="chip">Jira Product Discovery</span>
@@ -867,40 +882,40 @@
     <section id="projects">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Selected Work</span>
-          <h2>Projects</h2>
-          <p>Research that shaped how I think about quality, structure and systems.</p>
+          <span class="eyebrow" data-i18n="projects.eyebrow">Selected Work</span>
+          <h2 data-i18n="projects.h2">Projects</h2>
+          <p data-i18n="projects.sub">Research that shaped how I think about quality, structure and systems.</p>
         </div>
 
         <article class="project-card reveal">
-          <span class="project-tag">M.Sc. Thesis</span>
-          <h3>Investigating Quality Attributes &amp; Best Practices of Microservices Architectures</h3>
-          <p class="project-date">May 2022 — Nov 2022 · RWTH Aachen University</p>
-          <p>
+          <span class="project-tag" data-i18n="projects.tag">M.Sc. Thesis</span>
+          <h3 data-i18n="projects.title">Investigating Quality Attributes &amp; Best Practices of Microservices Architectures</h3>
+          <p class="project-date" data-i18n="projects.date">May 2022 — Nov 2022 · RWTH Aachen University</p>
+          <p data-i18n="projects.desc">
             Created a structured catalog of design guidelines and proposed a quality model to support the
             construction of Microservices Architectures — giving architects and developers a reference guide
             for building distributed systems and a vocabulary for targeted quality assurance.
           </p>
           <div class="metric-row">
-            <div class="metric"><div class="m-num">239</div><div class="m-lab">Design guidelines cataloged</div></div>
-            <div class="metric"><div class="m-num">70</div><div class="m-lab">Quality characteristics modeled</div></div>
+            <div class="metric"><div class="m-num">239</div><div class="m-lab" data-i18n="projects.m1">Design guidelines cataloged</div></div>
+            <div class="metric"><div class="m-num">70</div><div class="m-lab" data-i18n="projects.m2">Quality characteristics modeled</div></div>
           </div>
           <div class="project-links">
             <a class="plink" href="https://faizanzafar.de/msa/" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14L21 3"/></svg>
-              Overview
+              <span data-i18n="projects.link.overview">Overview</span>
             </a>
             <a class="plink" href="https://faizanzafar.de/Master_Thesis.pdf" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>
-              Thesis Report
+              <span data-i18n="projects.link.report">Thesis Report</span>
             </a>
             <a class="plink" href="https://faizanzafar.de/Final_Talk.pdf" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              Thesis Talk
+              <span data-i18n="projects.link.talk">Thesis Talk</span>
             </a>
             <a class="plink" href="https://swc.rwth-aachen.de/theses/investigating-quality-attributes-and-best-practices-of-microservices-architectures/" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
-              University Link
+              <span data-i18n="projects.link.university">University Link</span>
             </a>
           </div>
         </article>
@@ -911,13 +926,13 @@
     <section id="certs">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Credentials</span>
-          <h2>Certifications</h2>
-          <p>Continuous learning across strategy &amp; discovery, growth &amp; analytics, delivery, and AI.</p>
+          <span class="eyebrow" data-i18n="certs.eyebrow">Credentials</span>
+          <h2 data-i18n="certs.h2">Certifications</h2>
+          <p data-i18n="certs.sub">Continuous learning across strategy &amp; discovery, growth &amp; analytics, delivery, and AI.</p>
         </div>
 
         <!-- Each card built from website credential links, grouped by domain -->
-        <h3 class="cert-cat reveal">Strategy &amp; Discovery</h3>
+        <h3 class="cert-cat reveal" data-i18n="certs.cat1">Strategy &amp; Discovery</h3>
         <div class="cert-grid">
           <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-strategy-microcertification.pdf" target="_blank" rel="noopener">
             <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5" fill="currentColor"/></svg></span>
@@ -948,7 +963,7 @@
           </a>
         </div>
 
-        <h3 class="cert-cat reveal">Growth &amp; Analytics</h3>
+        <h3 class="cert-cat reveal" data-i18n="certs.cat2">Growth &amp; Analytics</h3>
         <div class="cert-grid">
           <a class="cert-card reveal" href="https://faizanzafar.de/certificate-of-completion-for-product-led-growth-micro-certificate-plg.pdf" target="_blank" rel="noopener">
             <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span>
@@ -979,7 +994,7 @@
           </a>
         </div>
 
-        <h3 class="cert-cat reveal">Delivery &amp; Launch</h3>
+        <h3 class="cert-cat reveal" data-i18n="certs.cat3">Delivery &amp; Launch</h3>
         <div class="cert-grid">
           <a class="cert-card reveal" href="https://www.credly.com/badges/32469ad6-cd7a-4af1-80e6-e3a7f364c4f6/linked_in_profile" target="_blank" rel="noopener">
             <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></span>
@@ -996,7 +1011,7 @@
           </a>
         </div>
 
-        <h3 class="cert-cat reveal">Artificial Intelligence</h3>
+        <h3 class="cert-cat reveal" data-i18n="certs.cat4">Artificial Intelligence</h3>
         <div class="cert-grid">
           <a class="cert-card reveal" href="https://faizanzafar.de/artificial-intelligence-micro-certification-aic.pdf" target="_blank" rel="noopener">
             <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="11" rx="2"/><path d="M12 8V4M9 4h6M9 13h.01M15 13h.01M2 12h2M20 12h2"/></svg></span>
@@ -1019,20 +1034,20 @@
     <section id="education">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Background</span>
-          <h2>Education &amp; Languages</h2>
+          <span class="eyebrow" data-i18n="edu.eyebrow">Background</span>
+          <h2 data-i18n="edu.h2">Education &amp; Languages</h2>
         </div>
 
         <div class="edu-lang">
           <div class="reveal">
-            <p class="sub-title">Education</p>
+            <p class="sub-title" data-i18n="edu.subEdu">Education</p>
             <div class="edu-card">
               <span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
               <div>
                 <div class="deg">M.Sc. Data Science</div>
                 <div class="uni">RWTH Aachen University</div>
                 <div class="e-meta">
-                  <span>📍 Aachen, Germany</span><span>🗓 2019 — 2022</span>
+                  <span data-i18n="edu.msc.loc">📍 Aachen, Germany</span><span>🗓 2019 — 2022</span>
                 </div>
               </div>
             </div>
@@ -1049,14 +1064,14 @@
           </div>
 
           <div class="reveal d2">
-            <p class="sub-title">Languages</p>
+            <p class="sub-title" data-i18n="edu.subLang">Languages</p>
             <div class="lang-card">
               <div class="lang-item">
-                <div class="lang-top"><span class="lname">English</span><span class="llevel">Business Fluent</span></div>
+                <div class="lang-top"><span class="lname" data-i18n="lang.en">English</span><span class="llevel" data-i18n="lang.en.level">Business Fluent</span></div>
                 <div class="lang-bar"><span data-level="92"></span></div>
               </div>
               <div class="lang-item">
-                <div class="lang-top"><span class="lname">German</span><span class="llevel">Intermediate Proficiency</span></div>
+                <div class="lang-top"><span class="lname" data-i18n="lang.de">German</span><span class="llevel" data-i18n="lang.de.level">Intermediate Proficiency</span></div>
                 <div class="lang-bar"><span data-level="55"></span></div>
               </div>
             </div>
@@ -1069,21 +1084,21 @@
     <section id="contact">
       <div class="wrap">
         <div class="contact-card reveal">
-          <h2>Let's build something customers love</h2>
-          <p>I'm always happy to talk product, collaboration or new opportunities. Drop me a line.</p>
+          <h2 data-i18n="contact.h2">Let's build something customers love</h2>
+          <p data-i18n="contact.p">I'm always happy to talk product, collaboration or new opportunities. Drop me a line.</p>
           <div class="contact-actions">
             <a class="btn btn-white" href="mailto:faizanzafar40@gmail.com">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
-              Email me
+              <span data-i18n="contact.email">Email me</span>
             </a>
             <a class="btn btn-outline-white" href="https://www.linkedin.com/in/faizanzafar40/" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-              Connect on LinkedIn
+              <span data-i18n="contact.linkedin">Connect on LinkedIn</span>
             </a>
           </div>
           <div class="contact-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> faizanzafar40@gmail.com</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Munich, Germany</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <span data-i18n="contact.loc">Munich, Germany</span></span>
           </div>
         </div>
       </div>
@@ -1101,7 +1116,7 @@
           <a href="mailto:faizanzafar40@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
         </div>
       </div>
-      <p class="foot-note">© <span id="year"></span> Faizan Zafar · Product Manager, Munich · Built with HTML, CSS &amp; JavaScript.</p>
+      <p class="foot-note">© <span id="year"></span> <span data-i18n="footer.note">Faizan Zafar · Product Manager, Munich · Built with HTML, CSS &amp; JavaScript.</span></p>
     </div>
   </footer>
 
@@ -1118,6 +1133,161 @@
         root.setAttribute('data-theme', next);
         try { localStorage.setItem('theme', next); } catch (e) {}
       });
+
+      /* ---- Language toggle (EN / DE) ----
+         English lives in the markup; the German strings below are swapped in
+         on demand. Choice is remembered in localStorage and reflected on
+         <html lang>. data-i18n swaps textContent, data-i18n-html swaps innerHTML. */
+      var I18N_DE = {
+        'nav.about': 'Über mich',
+        'nav.experience': 'Erfahrung',
+        'nav.skills': 'Kompetenzen',
+        'nav.projects': 'Projekte',
+        'nav.certs': 'Zertifizierungen',
+        'nav.education': 'Ausbildung',
+        'nav.contact': 'Kontakt',
+
+        'hero.eyebrow': 'Product Manager · München, Deutschland',
+        'hero.h1': 'Hallo, ich bin <span class="accent-text">Faizan&nbsp;Zafar</span>',
+        'hero.role': 'Ich entwickle Produkte, die den Kunden in den Mittelpunkt stellen.',
+        'hero.lead': 'Ein kundenorientierter Produktexperte mit ausgeprägter Umsetzungsstärke, der sich darauf konzentriert, Kundenbedürfnisse zu erkennen und zu erfüllen. Über 4 Jahre in der SaaS-Branche mit nachweislicher Erfahrung in der bereichsübergreifenden Zusammenarbeit zwischen Produkt und Business, um wirkungsvolle, wertorientierte Lösungen zu liefern.',
+        'hero.cta1': 'Kontakt aufnehmen',
+        'hero.cta2': 'Lebenslauf herunterladen',
+
+        'stats.years': 'Jahre in SaaS',
+        'stats.roles': 'Produktrollen',
+        'stats.certs': 'Zertifizierungen',
+        'stats.degrees': 'Abschlüsse',
+
+        'about.eyebrow': 'Über mich',
+        'about.lead': 'Ich verwandle Kundenbedürfnisse in <span class="hl">wirkungsvolle, wertorientierte Produkte</span> — in enger, bereichsübergreifender Zusammenarbeit zwischen Produkt und Business.',
+        'about.sub': 'In über 4 Jahren im SaaS-Umfeld habe ich Produkte in den Bereichen Workforce Management, Reality Capture und Process Mining betreut — Beta-Programme geleitet, Roadmaps gestaltet und die Cloud-Einführung vorangetrieben. Mein Hintergrund in Data Science hält mich nah an den Kennzahlen, die belegen, dass ein Produkt funktioniert.',
+
+        'focus.discovery.t': 'Discovery & Research',
+        'focus.discovery.p': 'Marktforschung und Customer Discovery, um die Probleme zu finden, die es wert sind, gelöst zu werden.',
+        'focus.roadmap.t': 'Roadmapping',
+        'focus.roadmap.p': 'Priorisierung und Roadmapping, die Teams auf echten Kundennutzen ausrichten.',
+        'focus.agile.t': 'Agile Umsetzung',
+        'focus.agile.p': 'Backlog-Management und Sprint-Umsetzung, die das Richtige schnell ausliefern.',
+        'focus.customer.t': 'Kundenorientierung',
+        'focus.customer.p': 'Umsetzungsstärke, verankert im Erkennen und Erfüllen von Kundenbedürfnissen.',
+
+        'exp.eyebrow': 'Werdegang',
+        'exp.h2': 'Erfahrung',
+        'exp.sub': 'Entwicklung von SaaS-Produkten in den Bereichen Workforce Management, Reality Capture, Process Mining und angewandter Forschung.',
+
+        'exp.atoss.role': 'Product Manager',
+        'exp.atoss.date': 'Apr 2023 — Heute',
+        'exp.atoss.loc': 'München, Deutschland',
+        'exp.atoss.li1': 'Product Manager für die <i>ATOSS Staff Efficiency Suite (ASES)</i>.',
+
+        'exp.navvis.role': 'Product Manager',
+        'exp.navvis.date': 'Mai 2022 — Mär 2023',
+        'exp.navvis.loc': 'München, Deutschland',
+        'exp.navvis.li1': 'Leitung eines Beta-Programms für die Funktionen <i>NavVis Enterprise Cloud Processing</i> und <i>Person Blurring</i> mit <b>5 Enterprise-Kunden</b>.',
+        'exp.navvis.li2': 'Visualisierung und Monitoring von <b>8 zentralen Kennzahlen</b> zur Messung der Produktnutzung der <i>NavVis Reality Capture</i>-Produkte.',
+        'exp.navvis.li3': 'Überarbeitung des CRM-Produktkatalogs mit <b>über 1.000 Einträgen</b> zur Steigerung der Vertriebseffizienz.',
+
+        'exp.celonis.role': 'Product Manager',
+        'exp.celonis.date': 'Mär 2021 — Apr 2022',
+        'exp.celonis.loc': 'München, Deutschland',
+        'exp.celonis.li1': 'Konzeption von Feature-Spezifikationen, Aufnahme von Anforderungen, Verfassen von User Stories und Sprint-Management für die Entwicklung von <i>Celonis EMS</i>.',
+        'exp.celonis.li2': 'Lösung von Kundenproblemen mit <i>Celonis EMS</i>, wodurch die Bearbeitungszeit um <b>21 %</b> sank und die Kundenzufriedenheit insgesamt stieg.',
+        'exp.celonis.li3': 'Vorantreiben der Migration von Kunden von On-Premise in die Cloud-Plattform, wodurch die täglich aktiven Nutzer um <b>18 %</b> stiegen.',
+
+        'exp.research.role': 'Wissenschaftliche Hilfskraft (Forschung)',
+        'exp.research.date': 'Okt 2019 — Mär 2021',
+        'exp.research.loc': 'Aachen, Deutschland',
+        'exp.research.li1': 'Entwicklung und statistische Analyse von <b>2 neuartigen Modellen zur Technologieakzeptanz</b> in den Kontexten E-Commerce und Pflegearbeit.',
+        'exp.research.li2': 'Konzeption fein granularer Klassifikations- und Clustering-Modelle auf E-Commerce- und Gesundheitsdaten.',
+
+        'skills.eyebrow': 'Werkzeugkasten',
+        'skills.h2': 'Kernkompetenzen',
+        'skills.sub': 'Die Methoden, nach denen ich arbeite, und die Tools, mit denen ich täglich arbeite.',
+        'skills.expertise': 'Produktexpertise',
+        'skills.stack': 'Produkt-Stack',
+        'skills.agile': 'Agile',
+        'skills.market': 'Marktforschung',
+        'skills.backlog': 'Backlog-Management',
+        'skills.discovery': 'Discovery',
+        'skills.prioritization': 'Priorisierung',
+        'skills.roadmapping': 'Roadmapping',
+
+        'projects.eyebrow': 'Ausgewählte Arbeiten',
+        'projects.h2': 'Projekte',
+        'projects.sub': 'Forschung, die geprägt hat, wie ich über Qualität, Struktur und Systeme denke.',
+        'projects.tag': 'M.Sc.-Masterarbeit',
+        'projects.title': 'Untersuchung von Qualitätsmerkmalen & Best Practices von Microservices-Architekturen',
+        'projects.date': 'Mai 2022 — Nov 2022 · RWTH Aachen University',
+        'projects.desc': 'Erstellung eines strukturierten Katalogs von Designrichtlinien und Vorschlag eines Qualitätsmodells zur Unterstützung beim Aufbau von Microservices-Architekturen — als Referenzleitfaden für Architekten und Entwickler beim Bau verteilter Systeme und als Vokabular für gezielte Qualitätssicherung.',
+        'projects.m1': 'katalogisierte Designrichtlinien',
+        'projects.m2': 'modellierte Qualitätsmerkmale',
+        'projects.link.overview': 'Übersicht',
+        'projects.link.report': 'Masterarbeit',
+        'projects.link.talk': 'Abschlussvortrag',
+        'projects.link.university': 'Universitätslink',
+
+        'certs.eyebrow': 'Qualifikationen',
+        'certs.h2': 'Zertifizierungen',
+        'certs.sub': 'Kontinuierliches Lernen in den Bereichen Strategie & Discovery, Wachstum & Analytics, Umsetzung und KI.',
+        'certs.cat1': 'Strategie & Discovery',
+        'certs.cat2': 'Wachstum & Analytics',
+        'certs.cat3': 'Umsetzung & Launch',
+        'certs.cat4': 'Künstliche Intelligenz',
+
+        'edu.eyebrow': 'Hintergrund',
+        'edu.h2': 'Ausbildung & Sprachen',
+        'edu.subEdu': 'Ausbildung',
+        'edu.subLang': 'Sprachen',
+        'edu.msc.loc': '📍 Aachen, Deutschland',
+        'lang.en': 'Englisch',
+        'lang.en.level': 'Verhandlungssicher',
+        'lang.de': 'Deutsch',
+        'lang.de.level': 'Gute Kenntnisse',
+
+        'contact.h2': 'Lassen Sie uns etwas schaffen, das Kunden begeistert',
+        'contact.p': 'Ich spreche jederzeit gerne über Produkte, Zusammenarbeit oder neue Möglichkeiten. Schreiben Sie mir.',
+        'contact.email': 'E-Mail schreiben',
+        'contact.linkedin': 'Auf LinkedIn vernetzen',
+        'contact.loc': 'München, Deutschland',
+
+        'footer.note': 'Faizan Zafar · Product Manager, München · Erstellt mit HTML, CSS & JavaScript.'
+      };
+
+      var langToggle = document.getElementById('langToggle');
+      var langCode = document.getElementById('langCode');
+      var i18nEls = document.querySelectorAll('[data-i18n], [data-i18n-html]');
+
+      // Capture the original English content once, so we can restore it.
+      i18nEls.forEach(function (el) {
+        el._en = el.hasAttribute('data-i18n-html') ? el.innerHTML : el.textContent;
+      });
+
+      function applyLang(lang) {
+        root.setAttribute('lang', lang);
+        i18nEls.forEach(function (el) {
+          var isHtml = el.hasAttribute('data-i18n-html');
+          var key = el.getAttribute(isHtml ? 'data-i18n-html' : 'data-i18n');
+          var val = lang === 'de' ? I18N_DE[key] : el._en;
+          if (val == null) return;
+          if (isHtml) el.innerHTML = val; else el.textContent = val;
+        });
+        if (langCode) langCode.textContent = lang === 'de' ? 'EN' : 'DE';
+        if (langToggle) langToggle.setAttribute('aria-label', lang === 'de' ? 'Switch to English' : 'Auf Deutsch umschalten');
+      }
+
+      var storedLang;
+      try { storedLang = localStorage.getItem('lang'); } catch (e) {}
+      var initialLang = storedLang || ((navigator.language || '').toLowerCase().indexOf('de') === 0 ? 'de' : 'en');
+      applyLang(initialLang);
+
+      if (langToggle) {
+        langToggle.addEventListener('click', function () {
+          var next = root.getAttribute('lang') === 'de' ? 'en' : 'de';
+          applyLang(next);
+          try { localStorage.setItem('lang', next); } catch (e) {}
+        });
+      }
 
       /* ---- Mobile menu ---- */
       var hamburger = document.getElementById('hamburger');
