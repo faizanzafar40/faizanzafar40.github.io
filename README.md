@@ -25,7 +25,6 @@ faizanzafar40.github.io/
 │   ├── Resume_Zafar.pdf  ← my downloadable résumé
 │   └── favicon.svg       ← "FZ" monogram favicon
 ├── CNAME                 ← custom domain (faizanzafar.de)
-├── netlify.toml          ← Netlify config (static, with headers)
 ├── robots.txt
 └── .nojekyll             ← tells GitHub Pages to serve files as-is
 ```
@@ -48,10 +47,6 @@ python -m http.server 8080
 The site is served via **GitHub Pages** from this repository, with `faizanzafar.de` set as the
 custom domain through the `CNAME` file. The included `.nojekyll` ensures the static files are
 served untouched.
-
-It can also be hosted on **Netlify** — either drag-and-drop this folder onto
-<https://app.netlify.com/drop>, or connect the repo with no build command and the publish
-directory set to the repo root.
 
 ## Editing
 
