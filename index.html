@@ -134,6 +134,18 @@
 
     ::selection { background: var(--accent); color: #fff; }
 
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .skip-link {
+      position: fixed; top: -80px; left: 16px; z-index: 200;
+      background: var(--accent-strong); color: #fff;
+      font-weight: 600; font-size: 0.9rem;
+      padding: 10px 18px; border-radius: 10px;
+      box-shadow: var(--shadow-md);
+      transition: top 0.25s ease;
+    }
+    .skip-link:focus { top: 12px; }
+
     .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
     section { padding: 96px 0; position: relative; }
@@ -195,6 +207,10 @@
       transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     }
     header.scrolled { border-bottom-color: var(--border); box-shadow: var(--shadow-sm); }
+    .scroll-progress {
+      position: absolute; left: 0; bottom: -1px; height: 2px; width: 0;
+      background: var(--accent-grad); border-radius: 999px;
+    }
     .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; }
 
     .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; font-size: 1.02rem; letter-spacing: -0.01em; }
@@ -537,6 +553,25 @@
     .contact-meta { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: center; margin-top: 34px; font-size: 0.92rem; opacity: 0.92; }
     .contact-meta span { display: inline-flex; align-items: center; gap: 8px; }
     .contact-meta svg { width: 17px; height: 17px; }
+    .copy-btn {
+      position: relative;
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 26px; height: 26px; margin-left: 2px; border-radius: 7px;
+      border: 1px solid rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.12);
+      color: #fff; cursor: pointer; transition: background 0.2s ease;
+    }
+    .copy-btn:hover { background: rgba(255, 255, 255, 0.28); }
+    .copy-btn svg { width: 13px; height: 13px; }
+    .copy-btn::after {
+      content: attr(data-tip);
+      position: absolute; bottom: calc(100% + 8px); left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.92); color: #fff;
+      font-size: 0.75rem; font-weight: 600;
+      padding: 4px 10px; border-radius: 6px; white-space: nowrap;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+    }
+    .copy-btn:hover::after, .copy-btn.copied::after { opacity: 1; }
 
     /* ============================================================
        Footer
@@ -568,11 +603,49 @@
     /* ============================================================
        Mobile nav drawer
        ============================================================ */
-    .nav-backdrop { display: none; }
+    .nav-backdrop {
+      position: fixed; inset: 0; z-index: 98;
+      background: rgba(8, 12, 26, 0.45);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .nav-backdrop.show { opacity: 1; pointer-events: auto; }
+
+    /* ============================================================
+       Back to top
+       ============================================================ */
+    .to-top {
+      position: fixed; right: 22px; bottom: 22px; z-index: 90;
+      width: 46px; height: 46px; border-radius: 50%;
+      border: none; cursor: pointer;
+      display: grid; place-items: center;
+      background: var(--accent-grad); color: #fff;
+      box-shadow: 0 10px 24px rgba(99, 102, 241, 0.35);
+      opacity: 0; transform: translateY(14px); pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .to-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .to-top:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(99, 102, 241, 0.45); }
+    .to-top svg { width: 20px; height: 20px; }
 
     /* ============================================================
        Responsive
        ============================================================ */
+    @media (max-width: 1080px) {
+      .nav-links {
+        position: fixed; top: 70px; right: 0; left: 0;
+        flex-direction: column; align-items: stretch; gap: 4px;
+        background: var(--bg); border-bottom: 1px solid var(--border);
+        padding: 16px 24px 24px; box-shadow: var(--shadow-md);
+        transform: translateY(-120%); visibility: hidden;
+        transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.34s;
+        max-height: calc(100vh - 70px); overflow-y: auto;
+      }
+      .nav-links.open { transform: translateY(0); visibility: visible; }
+      .nav-links a { padding: 13px 16px; font-size: 1rem; border-radius: 11px; }
+      .hamburger { display: grid; }
+    }
+
     @media (max-width: 940px) {
       .hero-grid { grid-template-columns: 1fr; gap: 44px; text-align: center; }
       .hero-copy .eyebrow { margin-left: auto; margin-right: auto; }
@@ -587,18 +660,8 @@
 
     @media (max-width: 720px) {
       section { padding: 76px 0; }
-      .nav-links {
-        position: fixed; top: 70px; right: 0; left: 0;
-        flex-direction: column; align-items: stretch; gap: 4px;
-        background: var(--bg); border-bottom: 1px solid var(--border);
-        padding: 16px 24px 24px; box-shadow: var(--shadow-md);
-        transform: translateY(-120%); transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
-        max-height: calc(100vh - 70px); overflow-y: auto;
-      }
-      .nav-links.open { transform: translateY(0); }
-      .nav-links a { padding: 13px 16px; font-size: 1rem; border-radius: 11px; }
-      .hamburger { display: grid; }
       .stats { grid-template-columns: repeat(2, 1fr); gap: 28px 18px; }
+      .to-top { right: 16px; bottom: 16px; }
       .focus-cards { grid-template-columns: 1fr; }
       .metric-row { gap: 10px; }
       .metric { min-width: calc(50% - 5px); }
@@ -620,6 +683,8 @@
   </style>
 </head>
 <body>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <!-- ===================== NAV ===================== -->
   <header id="header">
@@ -648,14 +713,17 @@
           <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
           <svg id="hamIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         </button>
       </div>
     </div>
+    <span class="scroll-progress" id="scrollProgress" aria-hidden="true"></span>
   </header>
 
-  <main>
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <main id="main">
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="home">
       <div class="wrap hero-grid">
@@ -1097,7 +1165,11 @@
             </a>
           </div>
           <div class="contact-meta">
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> faizanzafar40@gmail.com</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> faizanzafar40@gmail.com
+              <button class="copy-btn" id="copyEmail" type="button" aria-label="Copy email address" data-tip="Copy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> <span data-i18n="contact.loc">Munich, Germany</span></span>
           </div>
         </div>
@@ -1120,6 +1192,10 @@
     </div>
   </footer>
 
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
   <!-- ===================== SCRIPTS ===================== -->
   <script>
     (function () {
@@ -1139,6 +1215,7 @@
          on demand. Choice is remembered in localStorage and reflected on
          <html lang>. data-i18n swaps textContent, data-i18n-html swaps innerHTML. */
       var I18N_DE = {
+        'skip': 'Zum Inhalt springen',
         'nav.about': 'Über mich',
         'nav.experience': 'Erfahrung',
         'nav.skills': 'Kompetenzen',
@@ -1292,11 +1369,14 @@
       /* ---- Mobile menu ---- */
       var hamburger = document.getElementById('hamburger');
       var navLinks = document.getElementById('navLinks');
+      var navBackdrop = document.getElementById('navBackdrop');
       var hamIcon = document.getElementById('hamIcon');
       var openPath = 'M18 6 6 18M6 6l12 12';
       var closedPath = 'M3 6h18M3 12h18M3 18h18';
       function setMenu(open) {
         navLinks.classList.toggle('open', open);
+        navBackdrop.classList.toggle('show', open);
+        document.body.style.overflow = open ? 'hidden' : '';
         hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
         hamIcon.innerHTML = '<path d="' + (open ? openPath : closedPath) + '"/>';
       }
@@ -1306,17 +1386,72 @@
       navLinks.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () { setMenu(false); });
       });
+      navBackdrop.addEventListener('click', function () { setMenu(false); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+          setMenu(false);
+          hamburger.focus();
+        }
+      });
+      // Close the drawer (and unlock scrolling) if the viewport grows past the breakpoint
+      var desktopNav = window.matchMedia('(min-width: 1081px)');
+      function onNavBreak() { if (desktopNav.matches) setMenu(false); }
+      if (desktopNav.addEventListener) desktopNav.addEventListener('change', onNavBreak);
+      else if (desktopNav.addListener) desktopNav.addListener(onNavBreak);
 
-      /* ---- Sticky header shadow ---- */
+      /* ---- Sticky header shadow + scroll progress + back-to-top ---- */
       var header = document.getElementById('header');
-      function onScroll() { header.classList.toggle('scrolled', window.scrollY > 12); }
+      var scrollProgress = document.getElementById('scrollProgress');
+      var toTop = document.getElementById('toTop');
+      function onScroll() {
+        var y = window.scrollY;
+        header.classList.toggle('scrolled', y > 12);
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        scrollProgress.style.width = (max > 0 ? Math.min((y / max) * 100, 100) : 0) + '%';
+        toTop.classList.toggle('show', y > 600);
+      }
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
 
       /* ---- Footer year ---- */
       document.getElementById('year').textContent = new Date().getFullYear();
 
       var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---- Back to top ---- */
+      toTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
+
+      /* ---- Copy email ---- */
+      var copyBtn = document.getElementById('copyEmail');
+      if (copyBtn) {
+        var copyTimer;
+        copyBtn.addEventListener('click', function () {
+          var email = 'faizanzafar40@gmail.com';
+          var de = root.getAttribute('lang') === 'de';
+          function done() {
+            copyBtn.setAttribute('data-tip', de ? 'Kopiert!' : 'Copied!');
+            copyBtn.classList.add('copied');
+            clearTimeout(copyTimer);
+            copyTimer = setTimeout(function () {
+              copyBtn.classList.remove('copied');
+              copyBtn.setAttribute('data-tip', de ? 'Kopieren' : 'Copy');
+            }, 1800);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(done).catch(function () {});
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = email;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); done(); } catch (e) {}
+            document.body.removeChild(ta);
+          }
+        });
+      }
 
       /* ---- Scroll reveal ---- */
       var reveals = document.querySelectorAll('.reveal');
@@ -1381,9 +1516,12 @@
         var so = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              Object.keys(linkMap).forEach(function (id) { linkMap[id].classList.remove('active'); });
+              Object.keys(linkMap).forEach(function (id) {
+                linkMap[id].classList.remove('active');
+                linkMap[id].removeAttribute('aria-current');
+              });
               var active = linkMap[entry.target.id];
-              if (active) active.classList.add('active');
+              if (active) { active.classList.add('active'); active.setAttribute('aria-current', 'true'); }
             }
           });
         }, { rootMargin: '-45% 0px -50% 0px' });
