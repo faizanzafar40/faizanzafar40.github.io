@@ -12,7 +12,7 @@ no framework, no dependencies beyond one external Google Font.
 - 🎨 Modern UI — gradient hero, glassmorphism navbar, scroll-reveal animations, animated stats
 - 🌗 Light & dark mode — respects your system preference, remembers your choice, no flash on load
 - 📱 Fully responsive — mobile drawer nav, fluid type, works phone → desktop
-- ♿ Accessible — semantic HTML, ARIA labels, honors `prefers-reduced-motion`
+- ♿ Accessible — semantic HTML, ARIA labels, honours `prefers-reduced-motion`
 - ⚡ Fast & dependency-free — only an external Google Font; everything else is inline
 
 ## Project structure
@@ -29,7 +29,7 @@ faizanzafar40.github.io/
 └── .nojekyll             ← tells GitHub Pages to serve files as-is
 ```
 
-The page is organized into sections: **about**, **experience**, **skills**, **projects**,
+The page is organised into sections: **about**, **experience**, **skills**, **projects**,
 **certifications**, **education**, and **contact**.
 
 ## Run locally
@@ -52,5 +52,5 @@ served untouched.
 
 - **Content:** all of my copy lives directly in the HTML body — I search for the section I want
   (`about`, `experience`, `certs`, etc.) and edit in place.
-- **Accent color / theme:** I edit the CSS variables under `:root` and `[data-theme="dark"]`
+- **Accent colour / theme:** I edit the CSS variables under `:root` and `[data-theme="dark"]`
   at the top of `index.html` (`--accent`, `--accent-2`, `--accent-grad`, …).
