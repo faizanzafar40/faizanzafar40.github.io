@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  RSS 2.0 feed for the blog. Hand-maintained, like the rest of the site.
+
+  When I publish a post I add an <item> at the TOP of the list below and
+  update <lastBuildDate>. Dates are RFC-822 (e.g. "Sun, 26 Jul 2026
+  09:00:00 +0200"), which is what RSS requires — not the ISO dates used
+  in the HTML.
+-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Faizan Zafar — Blog</title>
+    <link>https://faizanzafar.de/blog/</link>
+    <description>Notes and thoughts on product management, SaaS and what I learn along the way.</description>
+    <language>en-GB</language>
+    <copyright>Faizan Zafar</copyright>
+    <managingEditor>faizanzafar40@gmail.com (Faizan Zafar)</managingEditor>
+    <webMaster>faizanzafar40@gmail.com (Faizan Zafar)</webMaster>
+    <lastBuildDate>Sun, 26 Jul 2026 09:00:00 +0200</lastBuildDate>
+    <atom:link href="https://faizanzafar.de/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://faizanzafar.de/assets/me.png</url>
+      <title>Faizan Zafar — Blog</title>
+      <link>https://faizanzafar.de/blog/</link>
+    </image>
+
+    <item>
+      <title>Hello, world — why I'm starting to write</title>
+      <link>https://faizanzafar.de/blog/hello-world.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/hello-world.html</guid>
+      <pubDate>Sun, 26 Jul 2026 09:00:00 +0200</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Product Management</category>
+      <category>Career</category>
+      <description>Four years into product management, I've noticed that the lessons I remember are the ones I had to explain to someone else. So I'm going to start explaining them here.</description>
+    </item>
+
+  </channel>
+</rss>

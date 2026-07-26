@@ -1,2 +1,7 @@
 User-agent: *
 Allow: /
+
+# The blog post template is scaffolding, not content.
+Disallow: /blog/_template.html
+
+Sitemap: https://faizanzafar.de/sitemap.xml

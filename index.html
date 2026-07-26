@@ -31,6 +31,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/me.png" />
   <link rel="canonical" href="https://faizanzafar.de" />
+  <link rel="alternate" type="application/rss+xml" title="Faizan Zafar — Blog" href="/blog/feed.xml" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -702,6 +703,7 @@
         <a href="#experience" data-i18n="nav.experience">Experience</a>
         <a href="#skills" data-i18n="nav.skills">Skills</a>
         <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="blog/" data-i18n="nav.blog">Blog</a>
         <a href="#certs" data-i18n="nav.certs">Certifications</a>
         <a href="#education" data-i18n="nav.education">Education</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -1215,6 +1217,7 @@
         'nav.experience': 'Erfahrung',
         'nav.skills': 'Kompetenzen',
         'nav.projects': 'Projekte',
+        'nav.blog': 'Blog',
         'nav.certs': 'Zertifizierungen',
         'nav.education': 'Ausbildung',
         'nav.contact': 'Kontakt',
@@ -1503,7 +1506,10 @@
       var sections = document.querySelectorAll('main section[id]');
       var linkMap = {};
       document.querySelectorAll('.nav-links a').forEach(function (a) {
-        linkMap[a.getAttribute('href').slice(1)] = a;
+        // Only in-page anchors take part in the spy — the Blog link points
+        // at another page and has no section to track.
+        var href = a.getAttribute('href') || '';
+        if (href.charAt(0) === '#') linkMap[href.slice(1)] = a;
       });
       if ('IntersectionObserver' in window) {
         var so = new IntersectionObserver(function (entries) {
