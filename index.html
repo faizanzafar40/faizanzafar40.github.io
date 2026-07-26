@@ -439,7 +439,8 @@
       content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-grad);
     }
     .project-tag {
-      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+      /* No uppercase transform: it would render "M.Sc." as "M.SC." */
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;
       color: var(--accent); background: var(--accent-soft); padding: 5px 12px; border-radius: 999px;
     }
     .project-card h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 700; letter-spacing: -0.01em; margin: 16px 0 6px; line-height: 1.25; }
