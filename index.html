@@ -516,6 +516,8 @@
     .edu-card .cap svg { width: 25px; height: 25px; }
     .edu-card .deg { font-size: 1.08rem; font-weight: 700; }
     .edu-card .uni { color: var(--text); font-weight: 600; font-size: 0.95rem; margin-top: 2px; }
+    .edu-card .uni a { border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+    .edu-card .uni a:hover { color: var(--accent); border-bottom-color: var(--accent); }
     .edu-card .e-meta { font-size: 0.85rem; color: var(--text-subtle); margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
 
     .lang-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-sm); }
@@ -783,7 +785,8 @@
     <section id="about">
       <div class="wrap about-grid">
         <div class="reveal">
-          <p class="about-lead" data-i18n-html="about.lead">
+          <span class="eyebrow" data-i18n="about.eyebrow">About Me</span>
+          <p class="about-lead" style="margin-top:18px;" data-i18n-html="about.lead">
             I turn customer needs into <span class="hl">impactful, value-driven products</span> — working
             shoulder-to-shoulder across product and business functions.
           </p>
@@ -1105,7 +1108,7 @@
               <span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
               <div>
                 <div class="deg">M.Sc. Data Science</div>
-                <div class="uni">RWTH Aachen University</div>
+                <div class="uni"><a href="https://www.rwth-aachen.de/cms/~a/root/?lidx=1" target="_blank" rel="noopener">RWTH Aachen University</a></div>
                 <div class="e-meta">
                   <span data-i18n="edu.msc.loc">📍 Aachen, Germany</span><span>🗓 2019 — 2022</span>
                 </div>
@@ -1115,7 +1118,7 @@
               <span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
               <div>
                 <div class="deg">B.Eng. Software Engineering</div>
-                <div class="uni">National University of Sciences &amp; Technology (NUST)</div>
+                <div class="uni"><a href="https://nust.edu.pk/" target="_blank" rel="noopener">National University of Sciences &amp; Technology (NUST)</a></div>
                 <div class="e-meta">
                   <span>📍 Islamabad, Pakistan</span><span>🗓 2014 — 2018</span>
                 </div>
@@ -1228,6 +1231,7 @@
         'stats.certs': 'Zertifizierungen',
         'stats.degrees': 'Abschlüsse',
 
+        'about.eyebrow': 'Über mich',
         'about.lead': 'Ich verwandle Kundenbedürfnisse in <span class="hl">wirkungsvolle, wertorientierte Produkte</span> — in enger, bereichsübergreifender Zusammenarbeit zwischen Produkt und Business.',
         'about.sub': 'In über 4 Jahren im SaaS-Umfeld habe ich Produkte in den Bereichen Workforce Management, Reality Capture und Process Mining betreut — Beta-Programme geleitet, Roadmaps gestaltet und die Cloud-Einführung vorangetrieben. Mein Hintergrund in Data Science hält mich nah an den Kennzahlen, die belegen, dass ein Produkt funktioniert.',
 
