@@ -1,38 +1,364 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  RSS 2.0 feed for the blog. Hand-maintained, like the rest of the site.
-
-  When I publish a post I add an <item> at the TOP of the list below and
-  update <lastBuildDate>. Dates are RFC-822 (e.g. "Sun, 26 Jul 2026
-  09:00:00 +0200"), which is what RSS requires — not the ISO dates used
-  in the HTML.
+  RSS 2.0 feed for the blog. Generated from the posts in this folder.
+  When I add a post I add an <item> at the top and update <lastBuildDate>.
 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Faizan Zafar — Blog</title>
+    <title>The Solitary Mind &#8212; Faizan Zafar</title>
     <link>https://faizanzafar.de/blog/</link>
-    <description>Notes and thoughts on product management, SaaS and what I learn along the way.</description>
+    <description>Thoughts on life in computing, education and design — written between 2019 and today.</description>
     <language>en-GB</language>
     <copyright>Faizan Zafar</copyright>
     <managingEditor>faizanzafar40@gmail.com (Faizan Zafar)</managingEditor>
     <webMaster>faizanzafar40@gmail.com (Faizan Zafar)</webMaster>
-    <lastBuildDate>Sun, 26 Jul 2026 09:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 07 Sep 2019 12:37:56 +0000</lastBuildDate>
     <atom:link href="https://faizanzafar.de/blog/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://faizanzafar.de/assets/me.png</url>
-      <title>Faizan Zafar — Blog</title>
+      <title>The Solitary Mind &#8212; Faizan Zafar</title>
       <link>https://faizanzafar.de/blog/</link>
     </image>
 
     <item>
-      <title>Hello, world — why I'm starting to write</title>
-      <link>https://faizanzafar.de/blog/hello-world.html</link>
-      <guid isPermaLink="true">https://faizanzafar.de/blog/hello-world.html</guid>
-      <pubDate>Sun, 26 Jul 2026 09:00:00 +0200</pubDate>
+      <title>Engineering Technology vs Engineering</title>
+      <link>https://faizanzafar.de/blog/engineering-technology-vs-engineering.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/engineering-technology-vs-engineering.html</guid>
+      <pubDate>Sat, 07 Sep 2019 12:37:56 +0000</pubDate>
       <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
-      <category>Product Management</category>
-      <category>Career</category>
-      <description>Four years into product management, I've noticed that the lessons I remember are the ones I had to explain to someone else. So I'm going to start explaining them here.</description>
+      <category>Academic Musings</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/engineering-technology-vs-engineering-cover.jpg" type="image/jpeg" length="0" />
+      <description>A central question for high school students, looking to build their career path towards an engineering major at undergraduate level</description>
+    </item>
+    <item>
+      <title>Review: Code Complete</title>
+      <link>https://faizanzafar.de/blog/code-complete-by-steve-mcconnell.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/code-complete-by-steve-mcconnell.html</guid>
+      <pubDate>Sun, 18 Aug 2019 08:49:35 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Reviews</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/code-complete-by-steve-mcconnell-cover.jpg" type="image/jpeg" length="0" />
+      <description>Code Complete, 2nd Edition by Steve McConnell is a comprehensive piece of literature in the field of software development and construction.</description>
+    </item>
+    <item>
+      <title>Is the use of recidivism prediction software in the criminal justice system justified ethically?</title>
+      <link>https://faizanzafar.de/blog/to-what-extent-is-the-use-of-recidivism-prediction-and-sentencing-software-in-the-criminal-justice-s.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/to-what-extent-is-the-use-of-recidivism-prediction-and-sentencing-software-in-the-criminal-justice-s.html</guid>
+      <pubDate>Sun, 18 Aug 2019 05:00:41 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Opinions Matter</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/to-what-extent-is-the-use-of-recidivism-predicti-cover.jpg" type="image/jpeg" length="0" />
+      <description>This post targets the ethical implications revolving around the use of recidivism prediction AI tools in the criminal justice system.</description>
+    </item>
+    <item>
+      <title>German Universities with ZERO application fees</title>
+      <link>https://faizanzafar.de/blog/german-universities-with-zero-application-fees.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/german-universities-with-zero-application-fees.html</guid>
+      <pubDate>Fri, 16 Aug 2019 21:05:40 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/german-universities-with-zero-application-fees-cover.jpg" type="image/jpeg" length="0" />
+      <description>A list of universities in Germany which have ZERO application fees associated with one or all of their Masters degree programs.</description>
+    </item>
+    <item>
+      <title>Applying for a Masters program</title>
+      <link>https://faizanzafar.de/blog/applying-for-a-masters-program.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/applying-for-a-masters-program.html</guid>
+      <pubDate>Fri, 16 Aug 2019 20:19:58 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/applying-for-a-masters-program-cover.jpg" type="image/jpeg" length="0" />
+      <description>With respect to the medium of applications, all universities in Germany can be divided into two groups</description>
+    </item>
+    <item>
+      <title>Getting ready for Germany</title>
+      <link>https://faizanzafar.de/blog/getting-ready-for-germany.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/getting-ready-for-germany.html</guid>
+      <pubDate>Sat, 10 Aug 2019 17:24:31 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/getting-ready-for-germany-cover.jpg" type="image/jpeg" length="0" />
+      <description>Moving to an entirely different country can be a difficult task. Similarly, deciding what to carry and what not to is a related complicated</description>
+    </item>
+    <item>
+      <title>Funds Transfer to Blocked Account</title>
+      <link>https://faizanzafar.de/blog/funds-transfer-to-blocked-account.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/funds-transfer-to-blocked-account.html</guid>
+      <pubDate>Sat, 03 Aug 2019 21:51:41 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/funds-transfer-to-blocked-account-cover.jpg" type="image/jpeg" length="0" />
+      <description>Now that your blocked account is operational, you will have access to your account details. The next step is to transfer the funds in it.</description>
+    </item>
+    <item>
+      <title>Processing Period: Post Visa Appointment</title>
+      <link>https://faizanzafar.de/blog/processing-period-post-visa-appointment.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/processing-period-post-visa-appointment.html</guid>
+      <pubDate>Wed, 31 Jul 2019 21:07:57 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/processing-period-post-visa-appointment-cover.png" type="image/png" length="0" />
+      <description>After you are done with your visa interview, you will have around a month (maybe less or more) before departing for Germany.</description>
+    </item>
+    <item>
+      <title>Tips for Visa Appointment</title>
+      <link>https://faizanzafar.de/blog/tips-for-visa-appointment.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/tips-for-visa-appointment.html</guid>
+      <pubDate>Wed, 31 Jul 2019 21:06:36 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/tips-for-visa-appointment-cover.png" type="image/png" length="0" />
+      <description>The visa appointment interview at the German Embassy can a stressful and delightful experience.</description>
+    </item>
+    <item>
+      <title>Student Visa Application Requirements</title>
+      <link>https://faizanzafar.de/blog/student-visa-application-requirements.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/student-visa-application-requirements.html</guid>
+      <pubDate>Wed, 31 Jul 2019 21:02:53 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/student-visa-application-requirements-cover.jpg" type="image/jpeg" length="0" />
+      <description>It is now time to look into the specific requirements for the student visa application at the the German Embassy.</description>
+    </item>
+    <item>
+      <title>Blocked Account: Everything you need to know</title>
+      <link>https://faizanzafar.de/blog/blocked-account-everything-you-need-to-know.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/blocked-account-everything-you-need-to-know.html</guid>
+      <pubDate>Mon, 29 Jul 2019 23:10:15 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/blocked-account-everything-you-need-to-know-cover.jpg" type="image/jpeg" length="0" />
+      <description>Student visa applicants are required to prove sufficient funds for the duration of their study in Germany, via blocked account.</description>
+    </item>
+    <item>
+      <title>Searching for housing options</title>
+      <link>https://faizanzafar.de/blog/searching-for-housing-options.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/searching-for-housing-options.html</guid>
+      <pubDate>Mon, 29 Jul 2019 23:02:25 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/searching-for-housing-options-cover.jpg" type="image/jpeg" length="0" />
+      <description>Now that you have received an admit, the first thing to do is search for housing and accommodation.</description>
+    </item>
+    <item>
+      <title>Pakistan Student Associations in Germany</title>
+      <link>https://faizanzafar.de/blog/pakistan-student-associations-in-germany.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/pakistan-student-associations-in-germany.html</guid>
+      <pubDate>Mon, 29 Jul 2019 17:00:23 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/pakistan-student-associations-in-germany-cover.jpg" type="image/jpeg" length="0" />
+      <description>For your convenience, I have compiled a list of all the Pakistan Student Associations (or PSAs) across different cities in Germany.</description>
+    </item>
+    <item>
+      <title>Applying for a Student Visa Appointment</title>
+      <link>https://faizanzafar.de/blog/applying-for-a-student-visa-appointment.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/applying-for-a-student-visa-appointment.html</guid>
+      <pubDate>Mon, 29 Jul 2019 16:59:09 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/applying-for-a-student-visa-appointment-cover.jpg" type="image/jpeg" length="0" />
+      <description>Since Fall 2018, the German Embassy Islamabad has implemented a waiting list method for applying for a student visa appointment.</description>
+    </item>
+    <item>
+      <title>Applying via uni-assist</title>
+      <link>https://faizanzafar.de/blog/applying-via-uni-assist.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/applying-via-uni-assist.html</guid>
+      <pubDate>Sun, 28 Jul 2019 23:15:31 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/applying-via-uni-assist-cover.jpg" type="image/jpeg" length="0" />
+      <description>Uni-assist is a facility for the preliminary examination of international applications, submitted by more than 180 universities in Germany.</description>
+    </item>
+    <item>
+      <title>Notarization and Attestation</title>
+      <link>https://faizanzafar.de/blog/notarization-and-attestation.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/notarization-and-attestation.html</guid>
+      <pubDate>Wed, 24 Jul 2019 21:47:57 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/notarization-and-attestation-cover.jpg" type="image/jpeg" length="0" />
+      <description>Official Notarizations and Attestations of your documents are necessary for a successful admission application and visa appointment.</description>
+    </item>
+    <item>
+      <title>Essential Documents for a Successful Application</title>
+      <link>https://faizanzafar.de/blog/essential-documents-for-a-successful-application.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/essential-documents-for-a-successful-application.html</guid>
+      <pubDate>Wed, 24 Jul 2019 21:40:42 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/essential-documents-for-a-successful-application-cover.jpg" type="image/jpeg" length="0" />
+      <description>Let us dive into the set of required documents which are mandatory to ensure a successful application.</description>
+    </item>
+    <item>
+      <title>Choosing the &#x27;right&#x27; program of study</title>
+      <link>https://faizanzafar.de/blog/choosing-the-right-program-of-study.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/choosing-the-right-program-of-study.html</guid>
+      <pubDate>Tue, 23 Jul 2019 22:24:50 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/choosing-the-right-program-of-study-img-1.jpg" type="image/jpeg" length="0" />
+      <description>Choosing the right program for yourself is the initial great challenge. Prospective students can choose from hundreds of programs.</description>
+    </item>
+    <item>
+      <title>Formal Writing: A Sample</title>
+      <link>https://faizanzafar.de/blog/job-descriptions-a-sample.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/job-descriptions-a-sample.html</guid>
+      <pubDate>Sun, 07 Jul 2019 13:29:57 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Tech Writing</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/job-descriptions-a-sample-cover.jpg" type="image/jpeg" length="0" />
+      <description>This post is a short sample from my work for an educational consultancy startup initiated by a few of my fellows from high school.</description>
+    </item>
+    <item>
+      <title>Intro to Programming in Python</title>
+      <link>https://faizanzafar.de/blog/intro-to-programming-in-python.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/intro-to-programming-in-python.html</guid>
+      <pubDate>Fri, 05 Jul 2019 14:13:07 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Tech Writing</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/intro-to-programming-in-python-cover.png" type="image/png" length="0" />
+      <description>As an advocate of open source and e-learning, this week I dedicated my efforts in drafting a beginner&#x27;s tutorial for programming in python.</description>
+    </item>
+    <item>
+      <title>Purpose of this blog</title>
+      <link>https://faizanzafar.de/blog/purpose-of-this-blog.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/purpose-of-this-blog.html</guid>
+      <pubDate>Tue, 02 Jul 2019 10:45:30 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Academic Musings</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/purpose-of-this-blog-cover.jpg" type="image/jpeg" length="0" />
+      <description>With this post, I would like to take a step back and rethink my purpose for this blog and its future.</description>
+    </item>
+    <item>
+      <title>Game Theory: Basics and Limitations</title>
+      <link>https://faizanzafar.de/blog/game-theory.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/game-theory.html</guid>
+      <pubDate>Thu, 27 Jun 2019 22:57:10 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Tech Writing</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/game-theory-cover.jpg" type="image/jpeg" length="0" />
+      <description>This blog post discusses on a simplified introduction to game theory, revolves around its basic concepts and touches on its limitations.</description>
+    </item>
+    <item>
+      <title>Sample SOPs</title>
+      <link>https://faizanzafar.de/blog/standard-operating-procedures-a-sample.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/standard-operating-procedures-a-sample.html</guid>
+      <pubDate>Thu, 27 Jun 2019 22:53:44 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Tech Writing</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/standard-operating-procedures-a-sample-cover.jpg" type="image/jpeg" length="0" />
+      <description>I have always had a keen interest in organizational structures and take pleasure in understanding the official workflows.</description>
+    </item>
+    <item>
+      <title>Beginner&#x27;s view into Android Development</title>
+      <link>https://faizanzafar.de/blog/beginner-s-view-into-android-development.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/beginner-s-view-into-android-development.html</guid>
+      <pubDate>Thu, 27 Jun 2019 22:16:23 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Tech Writing</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/beginner-s-view-into-android-development-cover.png" type="image/png" length="0" />
+      <description>Android OS powers millions of apps on a range of smartphone devices. These apps may be able to perform a number of actions including setting up your daily alarm or addressing some unique business requirements. The Android community is quite popular when it comes to designing applications with great user experience and wider compatibility.For this post, I have composed a slide-by-slide guide, targeted towards beginners looking to get some experience in the initial stages of Android App Developmen</description>
+    </item>
+    <item>
+      <title>Bootstrap: An overview</title>
+      <link>https://faizanzafar.de/blog/bootstrap-an-overview.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/bootstrap-an-overview.html</guid>
+      <pubDate>Thu, 27 Jun 2019 22:04:33 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Tech Writing</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/bootstrap-an-overview-cover.jpg" type="image/jpeg" length="0" />
+      <description>You might have heard about responsive design in websites, and seen some cool sites which fit to any screen size. Well, Bootstrap is what makes that happen (one of the things at least).Budding web developers can get frustrated by typing long HTML and CSS scripts. And often, these scripts execute quite redundant or tedious tasks. Bootstrap makes use of predefined classes to bring about amazing functionalities and designs in a web page. As someone not new to web design, I used some authentic online</description>
+    </item>
+    <item>
+      <title>Erasmus Mundus Masters Scholarship</title>
+      <link>https://faizanzafar.de/blog/erasmus-mundus-master-scholarship.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/erasmus-mundus-master-scholarship.html</guid>
+      <pubDate>Thu, 27 Jun 2019 21:17:48 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Academic Musings</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/erasmus-mundus-master-scholarship-cover.jpg" type="image/jpeg" length="0" />
+      <description>In this blog post, I introduce to you the prestigious Erasmus Mundus Joint Masters Degree Programme.</description>
+    </item>
+    <item>
+      <title>Asia-Pacific as a Changing Landscape</title>
+      <link>https://faizanzafar.de/blog/asia-pacific-as-a-changing-landscape.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/asia-pacific-as-a-changing-landscape.html</guid>
+      <pubDate>Thu, 27 Jun 2019 19:32:59 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Opinions Matter</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/asia-pacific-as-a-changing-landscape-cover.png" type="image/png" length="0" />
+      <description>The phenomenon of globalization fits well with the Asian-Pacific region.</description>
+    </item>
+    <item>
+      <title>Chronic Illiteracy in Pakistan</title>
+      <link>https://faizanzafar.de/blog/chronic-illiteracy-in-pakistan.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/chronic-illiteracy-in-pakistan.html</guid>
+      <pubDate>Thu, 27 Jun 2019 19:29:36 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Opinions Matter</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/chronic-illiteracy-in-pakistan-cover.png" type="image/png" length="0" />
+      <description>I consider Education as the single important entity by which an individual is equipped with the skills to survive and flourish in the modern</description>
+    </item>
+    <item>
+      <title>Masters Degree</title>
+      <link>https://faizanzafar.de/blog/masters-degree.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/masters-degree.html</guid>
+      <pubDate>Thu, 20 Jun 2019 18:05:50 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/masters-degree-cover.jpg" type="image/jpeg" length="0" />
+      <description>I explain meticulously the application procedure for admission into a Master&#x27;s degree at a German university.</description>
+    </item>
+    <item>
+      <title>Guide to Study in Germany for graduates from Pakistan</title>
+      <link>https://faizanzafar.de/blog/guide-to-study-in-germany-for-graduates-from-pakistan.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/guide-to-study-in-germany-for-graduates-from-pakistan.html</guid>
+      <pubDate>Wed, 19 Jun 2019 18:02:09 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Guide to Study in Germany</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/guide-to-study-in-germany-for-graduates-from-pak-cover.jpg" type="image/jpeg" length="0" />
+      <description>I believe that striving to push the boundaries of human knowledge is in and of itself a noble pursuit in life. My passion for higher education and love for writing, have motivated me to help the young graduates and professionals in Pakistan, who are aiming to excel in their respective fields. Hence, I have taken the liberty of documenting a comprehensive guide to study in Germany aimed at graduates hailing from Pakistan. I will be posting about the complete application procedure for Masters and </description>
+    </item>
+    <item>
+      <title>Warum Deutschland?</title>
+      <link>https://faizanzafar.de/blog/warum-deutschland.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/warum-deutschland.html</guid>
+      <pubDate>Tue, 11 Jun 2019 19:42:46 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Academic Musings</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/warum-deutschland-cover.jpg" type="image/jpeg" length="0" />
+      <description>Since I’ve taken up graduate studies, I get these questions from friends, family and former colleagues repetitively, Why Germany?</description>
+    </item>
+    <item>
+      <title>Tools in Digital Forensics</title>
+      <link>https://faizanzafar.de/blog/tools-in-digital-forensics.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/tools-in-digital-forensics.html</guid>
+      <pubDate>Fri, 07 Jun 2019 17:56:12 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Tech Writing</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/tools-in-digital-forensics-cover.jpg" type="image/jpeg" length="0" />
+      <description>Digital Forensics is a subdomain of forensic science that involves the recovery and investigation of relevant material found in digital</description>
+    </item>
+    <item>
+      <title>Review: Samsung Galaxy S6 Edge</title>
+      <link>https://faizanzafar.de/blog/review-samsung-galaxy-s6-edge.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/review-samsung-galaxy-s6-edge.html</guid>
+      <pubDate>Fri, 07 Jun 2019 16:51:31 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Reviews</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/review-samsung-galaxy-s6-edge-img-1.jpg" type="image/jpeg" length="0" />
+      <description>This was my first review of a mobile phone device which helped me get a part time job as a freelance content writer in the summer of 2015.</description>
+    </item>
+    <item>
+      <title>Review: Who Moved My Cheese?</title>
+      <link>https://faizanzafar.de/blog/review-who-moved-my-cheese.html</link>
+      <guid isPermaLink="true">https://faizanzafar.de/blog/review-who-moved-my-cheese.html</guid>
+      <pubDate>Fri, 07 Jun 2019 13:30:06 +0000</pubDate>
+      <author>faizanzafar40@gmail.com (Faizan Zafar)</author>
+      <category>Reviews</category>
+      <enclosure url="https://faizanzafar.de/assets/blog/review-who-moved-my-cheese-img-1.jpg" type="image/jpeg" length="0" />
+      <description>I found this interesting piece of writing online about change and behavioral adaptation.</description>
     </item>
 
   </channel>

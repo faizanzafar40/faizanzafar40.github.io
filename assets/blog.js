@@ -131,8 +131,9 @@
     'nav.contact': 'Kontakt',
 
     'blog.eyebrow': 'Notizen & Gedanken',
-    'blog.h1': 'Blog',
-    'blog.lead': 'Gedanken zu Produktmanagement, SaaS und dem, was ich unterwegs lerne.',
+    // The blog's name is a proper noun and stays as it is in German.
+    'blog.h1': 'The Solitary Mind',
+    'blog.lead': 'Gedanken zum Leben mit Computern, zu Bildung und Design — geschrieben zwischen 2019 und heute.',
     'blog.subscribe': 'Per RSS abonnieren',
     'blog.home': 'Zurück zur Startseite',
     'blog.filter': 'Filter',

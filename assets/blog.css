@@ -271,49 +271,73 @@ header.scrolled { border-bottom-color: var(--border); box-shadow: var(--shadow-s
 /* ============================================================
    Post list
    ============================================================ */
-.post-list { display: grid; gap: 20px; padding-bottom: 40px; }
+/* A responsive grid, so a long archive stays browsable rather than becoming
+   one endless column. */
+.post-list {
+  display: grid; gap: 22px; padding-bottom: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  align-items: start;
+}
 
 .post-card {
-  position: relative; display: block;
+  position: relative; display: flex; flex-direction: column; height: 100%;
   background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: 30px 32px;
+  border-radius: var(--radius-lg); overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .post-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent-ring); }
 .post-card.is-hidden { display: none; }
 
+.post-card .cover {
+  display: block; aspect-ratio: 16 / 9;
+  background: var(--surface-2); border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.post-card .cover img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.post-card:hover .cover img { transform: scale(1.04); }
+
+.post-card .card-body {
+  display: flex; flex-direction: column; flex: 1 1 auto;
+  padding: 22px 24px 24px;
+}
+
 .post-meta {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
-  font-size: 0.84rem; color: var(--text-subtle); margin-bottom: 12px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+  font-size: 0.82rem; color: var(--text-subtle); margin-bottom: 12px;
 }
 .post-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); opacity: 0.5; }
 .post-meta .pill {
-  font-size: 0.76rem; font-weight: 600; letter-spacing: 0.04em;
+  font-size: 0.74rem; font-weight: 600; letter-spacing: 0.03em;
   color: var(--accent); background: var(--accent-soft);
-  padding: 4px 11px; border-radius: 999px;
+  padding: 4px 10px; border-radius: 999px;
 }
+/* On a card the category sits on its own line, so "12 May 2019 · 3 min read"
+   never wraps mid-way and strands the separator dot. */
+.post-card .post-meta { flex-direction: column; align-items: flex-start; gap: 9px; }
+.post-card .post-meta .meta-line { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
 
 .post-card h2 {
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2.6vw, 1.6rem);
-  font-weight: 700; letter-spacing: -0.015em; line-height: 1.25;
+  font-size: 1.18rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.3;
   margin-bottom: 10px;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
 .post-card:hover h2 { color: var(--accent); }
-.post-card .excerpt { color: var(--text-muted); font-size: 1rem; max-width: 68ch; }
+.post-card .excerpt {
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  color: var(--text-muted); font-size: 0.94rem; line-height: 1.6;
+}
 .post-card .more {
   display: inline-flex; align-items: center; gap: 7px;
-  margin-top: 18px; font-size: 0.9rem; font-weight: 600; color: var(--accent);
+  margin-top: auto; padding-top: 18px;
+  font-size: 0.88rem; font-weight: 600; color: var(--accent);
 }
 .post-card .more svg { width: 16px; height: 16px; transition: transform 0.2s ease; }
 .post-card:hover .more svg { transform: translateX(4px); }
-
-/* Featured (first) card gets the gradient rule from the project cards */
-.post-card.featured { overflow: hidden; }
-.post-card.featured::before {
-  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-grad);
-}
 
 /* Shown only when the tag filter matches nothing */
 .empty-state {
@@ -348,9 +372,16 @@ header.scrolled { border-bottom-color: var(--border); box-shadow: var(--shadow-s
 .post-head .post-meta { margin: 22px 0 0; }
 .post-head .rule { height: 1px; background: var(--border); margin: 34px 0 0; }
 
-/* Optional lead image */
-.post-figure { margin: 34px 0 0; }
-.post-figure img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+/* Optional lead image. Cover art came in wildly different sizes — some only a
+   few hundred pixels — so never scale one up past its natural size, and cap
+   how much vertical space it may claim before the article starts. */
+.post-figure { margin: 34px 0 0; text-align: center; }
+.post-figure img {
+  display: inline-block;
+  width: auto; max-width: 100%; max-height: 420px;
+  border-radius: var(--radius); border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
 
 /* Table of contents — built by blog.js from the h2s in .prose */
 .toc {
@@ -451,8 +482,13 @@ header.scrolled { border-bottom-color: var(--border); box-shadow: var(--shadow-s
 }
 .prose pre code { background: none; border: none; padding: 0; font-size: inherit; }
 
-.prose img { border-radius: var(--radius); border: 1px solid var(--border); }
-.prose figure { margin-top: 1.6em; }
+.prose img {
+  /* Screenshots keep their own size (scaled down to fit, never up). */
+  width: auto; max-width: 100%; margin-inline: auto;
+  border-radius: var(--radius); border: 1px solid var(--border);
+}
+.prose figure { margin-top: 1.6em; text-align: center; }
+.prose figure img { display: inline-block; }
 .prose figcaption {
   margin-top: 10px; font-size: 0.86rem; color: var(--text-subtle); text-align: center;
 }

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools in Digital Forensics &mdash; Faizan Zafar</title>
+  <meta name="description" content="Digital Forensics is a subdomain of forensic science that involves the recovery and investigation of relevant material found in digital" />
+  <meta name="author" content="Faizan Zafar" />
+  <meta name="theme-color" content="#6366f1" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Faizan Zafar" />
+  <meta property="og:title" content="Tools in Digital Forensics" />
+  <meta property="og:description" content="Digital Forensics is a subdomain of forensic science that involves the recovery and investigation of relevant material found in digital" />
+  <meta property="og:image" content="https://faizanzafar.de/assets/blog/tools-in-digital-forensics-cover.jpg" />
+  <meta property="og:url" content="https://faizanzafar.de/blog/tools-in-digital-forensics.html" />
+  <meta property="article:published_time" content="2019-06-07T17:56:12.000Z" />
+  <meta property="article:section" content="Tech Writing" />
+  <meta property="article:author" content="Faizan Zafar" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tools in Digital Forensics" />
+  <meta name="twitter:description" content="Digital Forensics is a subdomain of forensic science that involves the recovery and investigation of relevant material found in digital" />
+  <meta name="twitter:image" content="https://faizanzafar.de/assets/blog/tools-in-digital-forensics-cover.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="../assets/me.png" />
+  <link rel="canonical" href="https://faizanzafar.de/blog/tools-in-digital-forensics.html" />
+  <link rel="alternate" type="application/rss+xml" title="Faizan Zafar &mdash; The Solitary Mind" href="/blog/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', stored || (prefersDark ? 'dark' : 'light'));
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../assets/blog.css" />
+
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Tools in Digital Forensics",
+    "description": "Digital Forensics is a subdomain of forensic science that involves the recovery and investigation of relevant material found in digital",
+    "datePublished": "2019-06-07T17:56:12.000Z",
+    "dateModified": "2019-08-16T17:50:43.693Z",
+    "inLanguage": "en-GB",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://faizanzafar.de/blog/tools-in-digital-forensics.html"
+    },
+    "image": "https://faizanzafar.de/assets/blog/tools-in-digital-forensics-cover.jpg",
+    "author": {
+        "@type": "Person",
+        "name": "Faizan Zafar",
+        "url": "https://faizanzafar.de",
+        "jobTitle": "Product Manager"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "Faizan Zafar",
+        "url": "https://faizanzafar.de"
+    },
+    "articleSection": "Tech Writing"
+}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header id="header">
+    <div class="wrap nav">
+      <a href="../index.html" class="brand" aria-label="Faizan Zafar — home">
+        <span class="logo">FZ</span>
+        <span class="label">Faizan Zafar</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">About</a>
+        <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+        <a href="./" class="active" aria-current="page" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#certs" data-i18n="nav.certs">Certifications</a>
+        <a href="../index.html#education" data-i18n="nav.education">Education</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn lang-toggle" id="langToggle" aria-label="Auf Deutsch umschalten" title="Sprache / Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-code" id="langCode">DE</span>
+        </button>
+        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <svg id="hamIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+    <span class="scroll-progress" id="scrollProgress" aria-hidden="true"></span>
+  </header>
+
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <main id="main">
+    <article>
+      <div class="post-head">
+        <div class="wrap-narrow">
+          <a class="back-link" href="./">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 12H5M12 19l-7-7 7-7"/></svg>
+            <span data-i18n="blog.back">Back to blog</span>
+          </a>
+
+          <h1>Tools in Digital Forensics</h1>
+
+          <p class="standfirst">Digital Forensics is a subdomain of forensic science that involves the recovery and investigation of relevant material found in digital</p>
+
+          <div class="post-meta">
+            <span class="pill">Tech Writing</span>
+            <time datetime="2019-06-07" data-date>2019-06-07</time>
+            <span class="dot" aria-hidden="true"></span>
+            <span data-read-time="3">3 min read</span>
+          </div>
+
+          <figure class="post-figure">
+            <img src="../assets/blog/tools-in-digital-forensics-cover.jpg" alt="" />
+          </figure>
+
+          <nav class="toc" id="toc" aria-label="Table of contents">
+            <p class="toc-title" data-i18n="blog.toc">Contents</p>
+          </nav>
+
+          <div class="rule"></div>
+        </div>
+      </div>
+
+      <div class="wrap-narrow">
+        <div class="prose">
+          <p>Digital Forensics is a subdomain of forensic science that involves the recovery and investigation of relevant material found in digital devices. The practical applications of this field come with its set of technical and human challenges. Moreover, with rapidly evolving IT infrastructures, organizations need to deploy effective forensics policies to enhance security and standardization in their systems. This implies that individuals in technology-oriented careers need to have a specific technical skillset for overcoming challenges at work. Interestingly, individuals can train themselves in forensics technologies and add value to their organizations by ensuring professional integrity and survivability.</p>
+
+          <p>In this blog post, I adopt a sequential approach to configure an open source forensics tool, explore its features and demonstrate the usage of the tool in the context of gaining insights into a real world problem. I have chosen <strong>Remnux</strong> and linked it with the case study of <strong>analysis of malicious PDF documents</strong>.</p>
+
+          <ol><li>Remnux is an open source Linux toolkit which helps malware analysts with reverse-engineering malicious software</li>
+          <li>Few of its main features are listed below:</li>
+          <li>It can examine and handle network interactions</li>
+          <li>It has a wide array of options for examining malicious documents and browser malwares</li>
+          <li>It is specifically useful for memory forensics and reverse engineering malware</li>
+          <li>It can also be used for static analysis of malicious executables and web pages</li>
+          </ol>
+
+          <h2>Configuration</h2>
+
+          <p>Now, let us look into the steps required for configuring Remnux on your local computer:</p>
+
+          <ol><li>Download the Remnux file with OVA format from the Remnux <a href="https://remnux.org/" target="_blank" rel="noopener">website</a></li>
+          <li>Open your virtualization software such as VMware or VirtualBox</li>
+          <li>Create a New Virtual Machine using the OVA file downloaded earlier</li>
+          <li>The virtualization software will automatically start importing the Remnux toolkit</li>
+          <li>After importing successfully, select <strong>Remnux</strong> from the left panel of your virtualization software and click on <em>Play/Run</em> Virtual Machine</li>
+          </ol>
+
+          <figure><img src="../assets/blog/tools-in-digital-forensics-img-1.png" alt="a1" /></figure>
+
+          <p>Remnux: All set up!</p>
+
+          <h2>Case Study: Analysis of PDF files for malicious content</h2>
+
+          <p>PDF files are the most common and universal medium of digital communication in written format encountered in offices, academic institutions and governments globally. Generally, a PDF file is comprised of a header, various document objects and cross reference tables. The language of the PDF structure is quite rich and complex.</p>
+
+          <p>The PDF file can easily be used to transmit sensitive information between cross-platform systems. This portability feature provides a window of opportunity to malicious users. The embedded JavaScript (or JS) elements are specified by the “/JavaScript” objects in the objects tree structure. A malicious pdf contains obfuscated JS objects as hackers are able to embed JS code in the PDF document. Upon downloading this document, the embedded scripts are executed automatically to activate malicious functions.</p>
+
+          <h3>Steps involved</h3>
+
+          <p>I studied in detail and then executed a subset of commands from the Remnux Distro to first, understand the structure of the PDF file and then, extract meaningful information from it which enabled me to come to an outcome eventually. Please note that all commands are executed on a malicious test file <em>pdf3.pdf.</em></p>
+
+          <figure><img src="../assets/blog/tools-in-digital-forensics-img-2.png" alt="a2" /></figure>
+
+          <p>Displaying file info</p>
+
+          <p>1. In the first step, I obtained the document information of the PDF file using <strong>pdfinfo</strong></p>
+
+          <figure><img src="../assets/blog/tools-in-digital-forensics-img-3.png" alt="a4" /></figure>
+
+          <p>Executing <em>pdfinfo</em></p>
+
+          <p>2. Then, I identified document objects of all types present in the PDF file using <strong>pdfid</strong></p>
+
+          <figure><img src="../assets/blog/tools-in-digital-forensics-img-4.png" alt="a3" /></figure>
+
+          <p>Executing <em>pdfid</em></p>
+
+          <p>3. Next, I used <strong>pdfparser</strong> to list all the JS objects contained in the file</p>
+
+          <figure><img src="../assets/blog/tools-in-digital-forensics-img-5.png" alt="a5" /></figure>
+
+          <p>Executing <em>pdf-parser</em></p>
+
+          <p>4. To get a visual sense of the relations and dependencies between the PDF objects, I used the <strong>pdfobjflow </strong>command</p>
+
+          <figure><img src="../assets/blog/tools-in-digital-forensics-img-6.png" alt="obj" /></figure>
+
+          <p>Executing <em>pdfobjflow</em></p>
+
+          <p>5. After identifying the JS objects, it is feasible to deploy to an open source JS unpacker to extract the suspicious JavaScript code from the file. I used <strong>j</strong>sunpackn for this purpose and obtained these results:</p>
+
+          <figure><img src="../assets/blog/tools-in-digital-forensics-img-7.png" alt="jsun" /></figure>
+
+          <p>Executing<em> jsunpackn</em></p>
+
+          <figure><img src="../assets/blog/tools-in-digital-forensics-img-8.png" alt="out" /></figure>
+
+          <p>Output of <em>jsunpackn</em></p>
+
+          <p>6. After removing the jsunpackn header, I saved the file with .js extension and run the same on Mozilla’s JS engine Spidermonkey.</p>
+
+          <figure><img src="../assets/blog/tools-in-digital-forensics-img-9.png" alt="sm" /></figure>
+
+          <p>Output from <em>SpiderMonkey</em></p>
+
+          <h3>Outcome</h3>
+
+          <p>From the steps above, I determined that the malicious JS code is collecting email information of the user without their knowledge. I can use this important information for my benefit when dealing with the source of this PDF file.</p>
+
+          <h3>Additional Step(s)</h3>
+
+          <p>Further analyses requires extracting the shellcode, then analyzing the shellcode and emulating it with <strong>libemu/sctest</strong> to get more detailed information.</p>
+
+          <p>I hope you found this tutorial/walkthrough interesting and engaging. Follow my blog for posts on similar topics!</p>
+
+          <p><strong>Fin.</strong></p>
+        </div>
+      </div>
+
+      <div class="post-foot">
+        <div class="wrap-narrow">
+          <div class="rule"></div>
+
+          <div class="post-tags" aria-label="Topics">
+            <a href="./#tag=tech-writing">#Tech Writing</a>
+          </div>
+
+          <div class="share-row">
+            <span class="share-label" data-i18n="blog.share">Share</span>
+            <a class="share-btn" id="shareLinkedIn" href="https://www.linkedin.com/in/faizanzafar40/" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a class="share-btn" id="shareMail" href="mailto:" aria-label="Share by email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+            </a>
+            <button class="share-btn" id="shareCopy" type="button" aria-label="Copy link" data-tip="Copy link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.1 0l3-3a5 5 0 0 0-7.1-7.1l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.1 0l-3 3a5 5 0 0 0 7.1 7.1l1.7-1.7"/></svg>
+            </button>
+          </div>
+
+          <nav class="post-nav" aria-label="More posts">
+            <a class="prev" href="review-samsung-galaxy-s6-edge.html">
+              <span class="dir" data-i18n="blog.prev">Previous post</span>
+              <span class="ttl">Review: Samsung Galaxy S6 Edge</span>
+            </a>
+            <a class="next" href="warum-deutschland.html">
+              <span class="dir" data-i18n="blog.next">Next post</span>
+              <span class="ttl">Warum Deutschland?</span>
+            </a>
+          </nav>
+
+          <div class="post-cta">
+            <h2 data-i18n="blog.cta.h2">Let's keep the conversation going</h2>
+            <p data-i18n="blog.cta.p">If something here resonated, I'd genuinely like to hear from you.</p>
+            <a class="btn btn-white" href="../index.html#contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+              <span data-i18n="blog.cta.btn">Get in touch</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a href="../index.html" class="brand"><span class="logo">FZ</span><span>Faizan Zafar</span></a>
+        <div class="foot-links">
+          <a href="https://www.linkedin.com/in/faizanzafar40/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+          <a href="https://github.com/faizanzafar40" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a>
+          <a href="mailto:faizanzafar40@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+          <a href="feed.xml" aria-label="RSS feed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.5" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <p class="foot-note">&copy; <span id="year"></span> <span data-i18n="footer.note">Faizan Zafar &middot; Product Manager, Munich &middot; Built with HTML, CSS &amp; JavaScript.</span></p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../assets/blog.js"></script>
+</body>
+</html>
